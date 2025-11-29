@@ -38,6 +38,8 @@ COMPLEX_DATASET=""
 AUTO_START_SERVER=true
 USE_ENHANCED_EVAL=false
 RUN_ALL_COMPLEX=false
+USE_BATCH_PROCESSING=false
+BATCH_SIZE=50
 
 # Function to show usage
 show_usage() {
@@ -59,6 +61,8 @@ show_usage() {
     echo "                        Omit to test all queries in the dataset"
     echo "  --complex-dataset FILE Complex query dataset to use [default: $DEFAULT_COMPLEX_DATASET]"
     echo "  --all-complex         Run ALL 5 complex query types (3,022 queries total)"
+    echo "  --batch               Enable batch processing for complex queries (4 GPU acceleration)"
+    echo "  --batch-size N        Batch size for GPU processing [default: 50]"
     echo "  --no-auto-start       Don't automatically start vLLM servers"
     echo "  --enhanced-eval       Use enhanced evaluation with semantic metrics (for complex)"
     echo "  --help, -h            Show this help message"
@@ -125,6 +129,14 @@ parse_arguments() {
             --enhanced-eval)
                 USE_ENHANCED_EVAL=true
                 shift
+                ;;
+            --batch)
+                USE_BATCH_PROCESSING=true
+                shift
+                ;;
+            --batch-size)
+                BATCH_SIZE="$2"
+                shift 2
                 ;;
             --help|-h)
                 show_usage
@@ -208,6 +220,7 @@ ensure_server_running() {
     local port=$2
     local server_name=$3
 
+    # Check if server is already running and responding
     if curl -s http://localhost:$port/v1/models > /dev/null 2>&1; then
         print_color $GREEN "✅ $server_name server already running on port $port"
         return 0
@@ -216,11 +229,39 @@ ensure_server_running() {
     if [ "$AUTO_START_SERVER" = true ]; then
         print_color $BLUE "🚀 Starting $server_name server..."
 
-        # Start server directly without killing existing ones
+        # Ensure logs directory exists
+        mkdir -p logs
+
+        # Clean up any zombie processes for this model first
+        print_color $YELLOW "🧹 Cleaning up any stuck processes..."
+        case $model in
+            qwen)
+                pkill -9 -f "Qwen2.5-7B-Instruct" 2>/dev/null
+                pkill -9 -f "port 8002" 2>/dev/null
+                ;;
+            llama3)
+                pkill -9 -f "Llama-3.1-8B-Instruct" 2>/dev/null
+                pkill -9 -f "port 8003" 2>/dev/null
+                ;;
+        esac
+
+        # Give GPU memory time to be released
+        sleep 5
+
+        # Check if port is actually free
+        if lsof -i :$port > /dev/null 2>&1 || netstat -tlnp 2>/dev/null | grep -q ":$port "; then
+            print_color $RED "❌ Port $port is still in use. Waiting for it to be released..."
+            sleep 10
+            # Force kill any process on the port
+            lsof -ti :$port | xargs kill -9 2>/dev/null
+            sleep 3
+        fi
+
+        # Start server
         case $model in
             qwen)
                 if [ -f "./qwen.sh" ]; then
-                    ./qwen.sh &
+                    bash ./qwen.sh
                 else
                     print_color $RED "❌ qwen.sh not found"
                     exit 1
@@ -228,7 +269,7 @@ ensure_server_running() {
                 ;;
             llama3)
                 if [ -f "./llama.sh" ]; then
-                    ./llama.sh &
+                    bash ./llama.sh
                 else
                     print_color $RED "❌ llama.sh not found"
                     exit 1
@@ -238,9 +279,10 @@ ensure_server_running() {
 
         # Wait for server to start (models take 3-5 minutes to load)
         print_color $YELLOW "⏳ Waiting for $server_name server to start (model loading takes 3-5 minutes)..."
+        print_color $YELLOW "   Monitor logs: tail -f logs/${model}_server.log"
         local attempts=0
-        local max_attempts=150  # 5 minutes at 2-second intervals
-        local last_gpu_check=0
+        local max_attempts=180  # 6 minutes at 2-second intervals
+        local last_status_check=0
 
         while [ $attempts -lt $max_attempts ]; do
             if curl -s http://localhost:$port/v1/models > /dev/null 2>&1; then
@@ -248,11 +290,22 @@ ensure_server_running() {
                 return 0
             fi
 
+            # Every 30 seconds, show progress
+            if [ $((attempts % 15)) -eq 0 ] && [ $attempts -gt 0 ]; then
+                print_color $CYAN "   Still loading... ($((attempts * 2)) seconds elapsed)"
+                # Check if process is actually running
+                if ! pgrep -f "vllm.entrypoints.openai.api_server.*port $port" > /dev/null; then
+                    print_color $RED "❌ Server process died. Check logs/qwen_server.log or logs/llama_server.log"
+                    exit 1
+                fi
+            fi
+
             sleep 2
             attempts=$((attempts + 1))
         done
         print_color $RED "❌ $server_name server failed to start after $((max_attempts * 2)) seconds"
-        print_color $YELLOW "   Try manually starting: ./${model}.sh"
+        print_color $YELLOW "   Check logs: logs/${model}_server.log"
+        print_color $YELLOW "   Or try manually: ./${model}.sh"
         exit 1
     else
         print_color $RED "❌ $server_name server not running on port $port"
@@ -279,8 +332,24 @@ run_all_complex_evaluations() {
 
     cd experiments
 
+    # Use batch processing if enabled
+    if [ "$USE_BATCH_PROCESSING" = true ]; then
+        print_color $CYAN "   🚀 Using batch processing with 4 GPUs (batch_size=$BATCH_SIZE)"
+
+        # Extract base architecture name and model
+        local base_arch="${architecture%_*}"
+        local model="${architecture##*_}"
+
+        # Use batch evaluation script
+        time python evaluate_complex_queries_batch.py \
+            --architectures $base_arch \
+            --models $model \
+            --query_types organ_specific severity_filtered drug_comparison reverse_lookup combination \
+            --batch_size $BATCH_SIZE \
+            --limit $TEST_SIZE_COMPLEX
+
     # Use enhanced evaluation for new architectures or when flag is set
-    if [[ "$architecture" == enhanced_graphrag_* ]] || [[ "$architecture" == advanced_rag_format_b_* ]] || [ "$USE_ENHANCED_EVAL" = true ]; then
+    elif [[ "$architecture" == enhanced_graphrag_* ]] || [[ "$architecture" == advanced_rag_format_b_* ]] || [ "$USE_ENHANCED_EVAL" = true ]; then
         print_color $YELLOW "   Using enhanced evaluation with Chain-of-Thought and semantic metrics"
 
         # Extract base architecture name and model

@@ -267,15 +267,15 @@ class RobustEmbeddingClient:
         if not texts:
             return []
 
-        # Use smaller batch size for large datasets to avoid rate limits
+        # Optimized batch sizes and delays for better throughput
         if len(texts) > 1000:
-            batch_size = min(batch_size, 20)  # Very conservative for large datasets
-            delay_between_batches = 2.0  # 2 second delays
+            batch_size = min(batch_size, 50)  # Increased from 20 to 50
+            delay_between_batches = 0.5  # Reduced from 2.0s to 0.5s
         elif len(texts) > 500:
-            batch_size = min(batch_size, 30)
-            delay_between_batches = 1.0  # 1 second delays
+            batch_size = min(batch_size, 50)  # Increased from 30 to 50
+            delay_between_batches = 0.3  # Reduced from 1.0s to 0.3s
         else:
-            delay_between_batches = 0.5  # 0.5 second delays
+            delay_between_batches = 0.2  # Reduced from 0.5s to 0.2s
 
         logger.info(f"🚀 BATCH EMBEDDING: {len(texts)} embeddings in batches of {batch_size} (delay: {delay_between_batches}s)")
 

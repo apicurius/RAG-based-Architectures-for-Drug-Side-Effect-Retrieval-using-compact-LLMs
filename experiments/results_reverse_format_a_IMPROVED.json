@@ -1,0 +1,73 @@
+{
+  "strategy": "format_a_higher_topk_lower_threshold",
+  "description": "Format A with top_k=2000, threshold=0.3, increased context",
+  "metrics": {
+    "precision": 1.0,
+    "recall": 0.022596987908625136,
+    "f1_score": 0.043195769713243924,
+    "avg_predicted_count": 6.75,
+    "avg_expected_count": 608.5
+  },
+  "detailed_results": [
+    {
+      "side_effect": "dry mouth",
+      "retrieved_docs": 462,
+      "predicted_count": 10,
+      "expected_count": 543,
+      "true_positives": 10,
+      "false_positives": 0,
+      "false_negatives": 533,
+      "precision": 1.0,
+      "recall": 0.01841620626151013,
+      "f1_score": 0.03616636528028933
+    },
+    {
+      "side_effect": "nausea",
+      "retrieved_docs": 916,
+      "predicted_count": 2,
+      "expected_count": 1140,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 1138,
+      "precision": 1.0,
+      "recall": 0.0017543859649122807,
+      "f1_score": 0.0035026269702276708
+    },
+    {
+      "side_effect": "candida infection",
+      "retrieved_docs": 142,
+      "predicted_count": 10,
+      "expected_count": 162,
+      "true_positives": 10,
+      "false_positives": 0,
+      "false_negatives": 152,
+      "precision": 1.0,
+      "recall": 0.06172839506172839,
+      "f1_score": 0.11627906976744184
+    },
+    {
+      "side_effect": "thrombocytopenia",
+      "retrieved_docs": 517,
+      "predicted_count": 5,
+      "expected_count": 589,
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 584,
+      "precision": 1.0,
+      "recall": 0.008488964346349746,
+      "f1_score": 0.016835016835016835
+    },
+    {
+      "side_effect": "increased blood pressure",
+      "retrieved_docs": 0,
+      "predicted_count": 1,
+      "expected_count": 0,
+      "true_positives": 0,
+      "false_positives": 1,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0,
+      "f1_score": 0
+    }
+  ]
+}

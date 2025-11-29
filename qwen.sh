@@ -25,10 +25,15 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3
     --host 0.0.0.0 \
     --port 8002 \
     --dtype float16 \
-    --max-model-len 4096 \
+    --max-model-len 32768 \
     --gpu-memory-utilization 0.90 \
     --enable-chunked-prefill \
-    --max-num-batched-tokens 8192 \
+    --max-num-batched-tokens 32768 \
     --enforce-eager \
     --max-num-seqs 256 \
-    --distributed-executor-backend mp
+    --distributed-executor-backend mp \
+    > /home/omeerdogan23/drugRAG/logs/qwen_server.log 2>&1 &
+
+echo "🚀 Qwen server starting in background..."
+echo "📋 Logs: /home/omeerdogan23/drugRAG/logs/qwen_server.log"
+echo "⏳ Server will be ready in 2-3 minutes..."

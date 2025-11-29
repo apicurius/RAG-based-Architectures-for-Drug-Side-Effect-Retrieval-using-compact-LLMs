@@ -5,6 +5,7 @@
 ### 🎯 Optimized Architecture Strategy
 - **Binary Queries**: Use 4 basic architectures (Pure LLM, Format A, Format B, GraphRAG)
 - **Complex Queries**: Use 3 enhanced architectures ONLY (no basic architectures)
+- **Reverse Binary Queries** ⭐ NEW: 1,200 balanced queries testing reverse lookup with binary verification
 - **Enhanced GraphRAG**: Multi-hop graph traversal with Chain-of-Thought reasoning
 - **Advanced RAG Format B**: Hierarchical retrieval with semantic expansion
 - **Enhanced Format B**: Metadata-aware retrieval with token management
@@ -33,12 +34,17 @@ drugrag/
 │       ├── embedding_client.py   # Robust OpenAI embeddings
 │       └── token_manager.py      # Context truncation
 ├── data/processed/                # All evaluation datasets
+│   ├── evaluation_dataset.csv    # 19,520 binary queries
+│   ├── reverse_queries_binary.csv # NEW: 1,200 reverse binary queries
+│   └── comprehensive_*.csv       # 2,905 complex queries
 ├── experiments/                   # Experiment scripts
 │   ├── evaluate_vllm.py         # Binary query evaluation
 │   ├── evaluate_complex_queries.py # Complex query evaluation
-│   └── evaluate_enhanced_complex_queries.py # NEW: Enhanced evaluation
+│   ├── evaluate_enhanced_complex_queries.py # Enhanced evaluation
+│   └── evaluate_reverse_binary.py # NEW: Reverse binary evaluation
 ├── results/                      # Evaluation results
-├── run_evaluations.sh           # UPDATED: Comprehensive evaluation script
+├── run_evaluations.sh           # Comprehensive evaluation script
+├── run_reverse_binary_eval.sh   # NEW: Reverse binary evaluation script
 └── config.json                  # Configuration file
 ```
 
@@ -135,6 +141,44 @@ drugrag/
 ./run_evaluations.sh --llm both --query complex \
     --strategy advanced_rag_b --all-complex --enhanced-eval
 ```
+
+### 4️⃣ Reverse Binary Evaluation ⭐ NEW
+
+The **reverse binary evaluation** tests the system's ability to answer reverse lookup queries like "Which drugs cause dizziness?" with binary verification (YES/NO for each drug).
+
+**Dataset:** `data/processed/reverse_queries_binary.csv`
+- **1,200 queries** (600 YES + 600 NO)
+- **200 unique side effects**, 706 unique drugs
+- **Balanced** positive and negative examples per side effect
+
+```bash
+# Quick test - 100 queries with LLAMA3 GraphRAG
+./run_reverse_binary_eval.sh --llm llama3 --strategy graphrag --test-size 100
+
+# Full evaluation - all 1,200 queries with Qwen Format B
+./run_reverse_binary_eval.sh --llm qwen --strategy format_b
+
+# Evaluate all architectures with both LLMs (12 runs = 6 architectures × 2 LLMs)
+./run_reverse_binary_eval.sh --llm both --strategy all
+
+# Test enhanced architectures
+./run_reverse_binary_eval.sh --llm both --strategy enhanced_graphrag --test-size 200
+```
+
+**Supported Architectures:** `pure`, `format_a`, `format_b`, `graphrag`, `enhanced_b`, `enhanced_graphrag`, `all`
+
+**Example Queries:**
+```
+Query:  "Which drugs cause dizziness?"  |  Drug: "octreotide"   →  YES ✓
+Query:  "Which drugs cause dizziness?"  |  Drug: "minoxidil"    →  NO  ✓
+Query:  "Which drugs cause nausea?"     |  Drug: "doripenem"    →  YES ✓
+Query:  "Which drugs cause nausea?"     |  Drug: "tafluprost"   →  NO  ✓
+```
+
+**Time Estimates:**
+- Quick test (100 queries): ~5-10 minutes per architecture
+- Full evaluation (1,200 queries): ~30-60 minutes per architecture
+- All architectures (12 runs): ~6-12 hours total
 
 ### ⏱️ Time Estimates (Per Evaluation Type)
 
@@ -370,10 +414,10 @@ ORDER BY importance DESC
 
 ### vLLM Server Management
 ```bash
-# Start Qwen server (7 GPUs, port 8002)
+# Start Qwen server (4 GPUs, port 8002)
 ./manage_llm_servers.sh switch-qwen
 
-# Start LLAMA3 server (8 GPUs, port 8003)
+# Start LLAMA3 server (4 GPUs, port 8003)
 ./manage_llm_servers.sh switch-llama
 
 # Check server status

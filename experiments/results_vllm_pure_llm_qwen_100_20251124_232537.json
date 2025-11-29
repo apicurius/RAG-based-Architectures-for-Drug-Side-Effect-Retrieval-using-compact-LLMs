@@ -1,0 +1,927 @@
+{
+  "configuration": {
+    "architecture": "pure_llm_qwen",
+    "test_size": 100,
+    "gpu_config": "4x RTX A4000 with tensor parallelism"
+  },
+  "metrics": {
+    "accuracy": 0.62,
+    "accuracy_percent": 62.0,
+    "f1_score": 0.45714285714285713,
+    "precision": 0.8,
+    "sensitivity": 0.32,
+    "specificity": 0.92,
+    "tp": 16,
+    "tn": 46,
+    "fp": 4,
+    "fn": 34,
+    "prediction_distribution": {
+      "NO": 80,
+      "YES": 20
+    },
+    "elapsed_time": 6.349100351333618,
+    "throughput": 15.750262945362827
+  },
+  "detailed_results": [
+    {
+      "drug": "diclofenac",
+      "side_effect": "blindness unilateral",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "tacrolimus",
+      "side_effect": "retrograde ejaculation",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "saxagliptin",
+      "side_effect": "post procedural swelling",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "travoprost",
+      "side_effect": "infestation",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "levetiracetam",
+      "side_effect": "convulsion",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "rosiglitazone",
+      "side_effect": "fatigue",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "choline",
+      "side_effect": "abdominal discomfort",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "mometasone",
+      "side_effect": "myocardial ischaemia",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "amiloride",
+      "side_effect": "neutropenia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "lacosamide",
+      "side_effect": "type iv hypersensitivity reaction",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "olsalazine",
+      "side_effect": "somnolence",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "mometasone",
+      "side_effect": "arthralgia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "streptozotocin",
+      "side_effect": "cystitis haemorrhagic",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "diclofenac",
+      "side_effect": "intestinal ulcer",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "vardenafil",
+      "side_effect": "fraction of inspired oxygen",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "lorazepam",
+      "side_effect": "dysarthria",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "clobetasol",
+      "side_effect": "alanine aminotransferase decreased",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "propylthiouracil",
+      "side_effect": "floppy infant",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "pge1",
+      "side_effect": "injection site pain",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "iodixanol",
+      "side_effect": "motor dysfunction",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "atosiban",
+      "side_effect": "bradycardia",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "citric",
+      "side_effect": "trisomy 21",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "clobetasol",
+      "side_effect": "glycosuria",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "orphenadrine",
+      "side_effect": "dizziness",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "rosuvastatin",
+      "side_effect": "post-traumatic pain",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "bisacodyl",
+      "side_effect": "headache",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "vardenafil",
+      "side_effect": "myocardial ischaemia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "anthracycline",
+      "side_effect": "prostate cancer metastatic",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "fludarabine",
+      "side_effect": "diarrhoea",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "choline",
+      "side_effect": "postictal state",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "niacin",
+      "side_effect": "gastrointestinal pain",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "tamsulosin",
+      "side_effect": "insomnia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "diazepam",
+      "side_effect": "complication of device insertion",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "amd3100",
+      "side_effect": "urticaria",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "trospium",
+      "side_effect": "mean arterial pressure",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "atosiban",
+      "side_effect": "cardiac disorder",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "norethisterone",
+      "side_effect": "lymphocytic infiltration",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "bisacodyl",
+      "side_effect": "jaundice hepatocellular",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "diazepam",
+      "side_effect": "loss of libido",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "norethisterone",
+      "side_effect": "hypersensitivity",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "retinoic",
+      "side_effect": "thrombocytopenia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "etravirine",
+      "side_effect": "gastrointestinal pain",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "prucalopride",
+      "side_effect": "back pain",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "travoprost",
+      "side_effect": "micturition urgency",
+      "true_label": 0,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "propylthiouracil",
+      "side_effect": "lupus-like syndrome",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "rosuvastatin",
+      "side_effect": "asthenia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "iodixanol",
+      "side_effect": "tonic convulsion",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "amoxicillin",
+      "side_effect": "coma",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "pge1",
+      "side_effect": "salivary gland pain",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "arsenic",
+      "side_effect": "atrial fibrillation",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "atropine",
+      "side_effect": "rash",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "tacrolimus",
+      "side_effect": "herpes dermatitis",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "topotecan",
+      "side_effect": "dermatitis bullous",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "citric",
+      "side_effect": "hypotension",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "procaine",
+      "side_effect": "somnolence",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "amd3100",
+      "side_effect": "synovitis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "fluvastatin",
+      "side_effect": "chest pain",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "losartan",
+      "side_effect": "glycosylated haemoglobin decreased",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "acitretin",
+      "side_effect": "insomnia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "rosiglitazone",
+      "side_effect": "blood fibrinogen decreased",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "fluvastatin",
+      "side_effect": "erythromelalgia",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "retinoic",
+      "side_effect": "sudden cardiac death",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "lorazepam",
+      "side_effect": "parasomnia",
+      "true_label": 0,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "trospium",
+      "side_effect": "haematuria",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "lacosamide",
+      "side_effect": "automatism",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "topotecan",
+      "side_effect": "spinal osteoarthritis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "anthracycline",
+      "side_effect": "dehydration",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "olsalazine",
+      "side_effect": "choreoathetosis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "niacin",
+      "side_effect": "vertebrobasilar insufficiency",
+      "true_label": 0,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "tamsulosin",
+      "side_effect": "application site swelling",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "gentamicin",
+      "side_effect": "herpes dermatitis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "sufentanil",
+      "side_effect": "euphoric mood",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "procaine",
+      "side_effect": "encephalocele",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "fluocinonide",
+      "side_effect": "atrophy",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "fluocinonide",
+      "side_effect": "rhinitis atrophic",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "prucalopride",
+      "side_effect": "macular degeneration",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "amoxicillin",
+      "side_effect": "volume blood increased",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "8-mop",
+      "side_effect": "erythema",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "levetiracetam",
+      "side_effect": "intestinal ulcer",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "fludarabine",
+      "side_effect": "phenylketonuria",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "arsenic",
+      "side_effect": "embolism arterial",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "etravirine",
+      "side_effect": "erythrasma",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "amiloride",
+      "side_effect": "feeling abnormal",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "gentamicin",
+      "side_effect": "tinnitus",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "doxapram",
+      "side_effect": "arrhythmia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "retinoic",
+      "side_effect": "pulmonary embolism",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "diazoxide",
+      "side_effect": "haemoglobin",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "retinoic",
+      "side_effect": "blood cholesterol increased",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "streptozotocin",
+      "side_effect": "aggression",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "amiloride",
+      "side_effect": "graft thrombosis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "sufentanil",
+      "side_effect": "haematotoxicity",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "atropine",
+      "side_effect": "ocular icterus",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "acitretin",
+      "side_effect": "respiratory paralysis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "8-mop",
+      "side_effect": "hypopnoea",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "saxagliptin",
+      "side_effect": "thrombocytopenia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "amiloride",
+      "side_effect": "penile oedema",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "diazoxide",
+      "side_effect": "hepatic atrophy",
+      "true_label": 0,
+      "predicted": "YES",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "YES"
+    },
+    {
+      "drug": "losartan",
+      "side_effect": "arrhythmia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "orphenadrine",
+      "side_effect": "congenital genital malformation",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    },
+    {
+      "drug": "doxapram",
+      "side_effect": "hypochondriasis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.95,
+      "prompt": "N/A",
+      "full_response": "NO"
+    }
+  ]
+}

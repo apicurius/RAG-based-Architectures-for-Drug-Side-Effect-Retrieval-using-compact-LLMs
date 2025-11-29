@@ -1,0 +1,11 @@
+misspelled_input,qwen_correction,ground_truth,is_correct,edit_distance_from_truth,edit_distance_from_input,unchanged,confidence,raw_response
+lormetazerpam,lormetazepam,lormetazepam,True,0,1,False,0.865,lormetazepam
+grisefulvin,griseofulvin,griseofulvin,True,0,1,False,0.865,griseofulvin
+lercanipidine,lercanidipine,lercanidipine,True,0,2,False,0.7949999999999999,lercanidipine
+miglitilol,miglitol,miglitol,True,0,2,False,0.7949999999999999,miglitol
+floxetine,fluoxetine,fluoxetine,True,0,1,False,0.865,fluoxetine
+ropirinole,ropinirole,ropinirole,True,0,2,False,0.7949999999999999,ropinirole
+latanaprost,latanoprost,latanoprost,True,0,1,False,0.865,latanoprost
+netaglinide,netaglinide,nateglinide,False,2,0,True,0.95,netaglinide
+adeflovir,adefovir,adefovir,True,0,1,False,0.865,adefovir
+levabnolol,levabunolol,levobunolol,False,1,1,False,0.865,levabunolol

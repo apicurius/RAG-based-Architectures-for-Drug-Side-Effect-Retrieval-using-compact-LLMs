@@ -1,0 +1,261 @@
+{
+  "monolithic": {
+    "strategy": "monolithic",
+    "model": "qwen",
+    "queries": {
+      "dry mouth": {
+        "side_effect": "dry mouth",
+        "strategy": "monolithic",
+        "model": "qwen",
+        "expected_count": 543,
+        "extracted_count": 419,
+        "retrieved_pairs": 462,
+        "recall_estimate": 0.7716390423572744,
+        "elapsed_time": 205.39464807510376,
+        "chunks_processed": null,
+        "chunk_size": null,
+        "sample_drugs": [
+          "cas",
+          "salmon",
+          "hydroxybutyrate",
+          "melatonin",
+          "sodium",
+          "delta",
+          "moxonidine",
+          "miglustat",
+          "chlorhexidine",
+          "vacv"
+        ]
+      },
+      "nausea": {
+        "side_effect": "nausea",
+        "strategy": "monolithic",
+        "model": "qwen",
+        "expected_count": 1140,
+        "extracted_count": 565,
+        "retrieved_pairs": 915,
+        "recall_estimate": 0.4956140350877193,
+        "elapsed_time": 272.0098168849945,
+        "chunks_processed": null,
+        "chunk_size": null,
+        "sample_drugs": [
+          "misoprostol",
+          "trimethoprim",
+          "nevirapine",
+          "ibuprofen",
+          "loperamide",
+          "procaine",
+          "folate",
+          "betaine",
+          "metronidazole",
+          "metoclopramide"
+        ]
+      },
+      "candida infection": {
+        "side_effect": "candida infection",
+        "strategy": "monolithic",
+        "model": "qwen",
+        "expected_count": 162,
+        "extracted_count": 141,
+        "retrieved_pairs": 142,
+        "recall_estimate": 0.8703703703703703,
+        "elapsed_time": 70.4531352519989,
+        "chunks_processed": null,
+        "chunk_size": null,
+        "sample_drugs": [
+          "citalopram",
+          "cefazolin",
+          "vinflunine",
+          "saquinavir",
+          "clofarabine",
+          "anidulafungin",
+          "posaconazole",
+          "paroxetine",
+          "ciclesonide",
+          "cidofovir"
+        ]
+      },
+      "thrombocytopenia": {
+        "side_effect": "thrombocytopenia",
+        "strategy": "monolithic",
+        "model": "qwen",
+        "expected_count": 589,
+        "extracted_count": 407,
+        "retrieved_pairs": 517,
+        "recall_estimate": 0.6910016977928692,
+        "elapsed_time": 181.94700169563293,
+        "chunks_processed": null,
+        "chunk_size": null,
+        "sample_drugs": [
+          "cytarabine",
+          "heparin",
+          "hydroxyurea",
+          "thalidomide",
+          "clofarabine",
+          "bortezomib",
+          "anagrelide",
+          "prostacyclin",
+          "topotecan",
+          "vorinostat"
+        ]
+      },
+      "increased blood pressure": {
+        "side_effect": "increased blood pressure",
+        "strategy": "monolithic",
+        "model": "qwen",
+        "expected_count": 0,
+        "extracted_count": 3,
+        "retrieved_pairs": 0,
+        "recall_estimate": 0.0,
+        "elapsed_time": 5.3204123973846436,
+        "chunks_processed": null,
+        "chunk_size": null,
+        "sample_drugs": [
+          "Based on the provided RAG results",
+          "no drugs are paired with increased blood pressure. Therefore",
+          "there are no drugs to list.\n\nAnswer:"
+        ]
+      }
+    },
+    "aggregate": {
+      "avg_recall_estimate": 0.5657250291216467,
+      "total_extracted": 1535,
+      "total_expected": 2434,
+      "total_time": 735.1257240772247
+    },
+    "timestamp": "2025-11-02T12:34:36.784116"
+  },
+  "chunked": {
+    "strategy": "chunked",
+    "model": "qwen",
+    "queries": {
+      "dry mouth": {
+        "side_effect": "dry mouth",
+        "strategy": "chunked",
+        "model": "qwen",
+        "expected_count": 543,
+        "extracted_count": 461,
+        "retrieved_pairs": 462,
+        "recall_estimate": 0.848987108655617,
+        "elapsed_time": 212.694753408432,
+        "chunks_processed": 3,
+        "chunk_size": 200,
+        "sample_drugs": [
+          "25(oh)2d3",
+          "5-asa",
+          "5-fluorocytosine",
+          "acamprosate",
+          "acetaminophen",
+          "acitretin",
+          "adenosine",
+          "agomelatine",
+          "alfuzosin",
+          "almotriptan"
+        ]
+      },
+      "nausea": {
+        "side_effect": "nausea",
+        "strategy": "chunked",
+        "model": "qwen",
+        "expected_count": 1140,
+        "extracted_count": 900,
+        "retrieved_pairs": 915,
+        "recall_estimate": 0.7894736842105263,
+        "elapsed_time": 421.8514721393585,
+        "chunks_processed": 5,
+        "chunk_size": 200,
+        "sample_drugs": [
+          "17-hydroxyprogesterone",
+          "2-hydroxysuccinaldehyde",
+          "25(oh)2d3",
+          "4-methylpyrazole",
+          "4-pba",
+          "5-aminolevulinic",
+          "5-asa",
+          "5-aza-2'-deoxycytidine",
+          "5-azacytidine",
+          "5-fluorocytosine"
+        ]
+      },
+      "candida infection": {
+        "side_effect": "candida infection",
+        "strategy": "chunked",
+        "model": "qwen",
+        "expected_count": 162,
+        "extracted_count": 141,
+        "retrieved_pairs": 142,
+        "recall_estimate": 0.8703703703703703,
+        "elapsed_time": 71.36193656921387,
+        "chunks_processed": 1,
+        "chunk_size": 200,
+        "sample_drugs": [
+          "5-asa",
+          "5-aza-2'-deoxycytidine",
+          "6-mercaptopurine",
+          "acitretin",
+          "amoxicillin",
+          "amphotericin",
+          "anidulafungin",
+          "aprepitant",
+          "aripiprazole",
+          "arsenic"
+        ]
+      },
+      "thrombocytopenia": {
+        "side_effect": "thrombocytopenia",
+        "strategy": "chunked",
+        "model": "qwen",
+        "expected_count": 589,
+        "extracted_count": 496,
+        "retrieved_pairs": 517,
+        "recall_estimate": 0.8421052631578947,
+        "elapsed_time": 239.27597069740295,
+        "chunks_processed": 3,
+        "chunk_size": 200,
+        "sample_drugs": [
+          "4-pba",
+          "5-Aminolevulinic",
+          "5-asa",
+          "5-aza-2'-deoxycytidine",
+          "5-azacytidine",
+          "5-fluorocytosine",
+          "5-fu",
+          "6-mercaptopurine",
+          "Acamprosate",
+          "Acetazolamide"
+        ]
+      },
+      "increased blood pressure": {
+        "side_effect": "increased blood pressure",
+        "strategy": "chunked",
+        "model": "qwen",
+        "expected_count": 0,
+        "extracted_count": 0,
+        "retrieved_pairs": 0,
+        "recall_estimate": 0.0,
+        "elapsed_time": 1.6526334285736084,
+        "chunks_processed": 0,
+        "chunk_size": null,
+        "sample_drugs": []
+      }
+    },
+    "aggregate": {
+      "avg_recall_estimate": 0.6701872852788816,
+      "total_extracted": 1998,
+      "total_expected": 2434,
+      "total_time": 946.8376216888428
+    },
+    "timestamp": "2025-11-02T12:50:23.666210"
+  },
+  "comparison": {
+    "recall_improvement_pct": 18.465199660588574,
+    "time_overhead_pct": 28.799413580224243,
+    "per_query_improvements": {
+      "dry mouth": 10.023866348448687,
+      "nausea": 59.29203539823009,
+      "candida infection": 0.0,
+      "thrombocytopenia": 21.867321867321866,
+      "increased blood pressure": -100.0
+    }
+  }
+}

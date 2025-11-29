@@ -28,7 +28,12 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3
     --max-model-len 4096 \
     --gpu-memory-utilization 0.90 \
     --enable-chunked-prefill \
-    --max-num-batched-tokens 8192 \
+    --max-num-batched-tokens 4096 \
     --enforce-eager \
     --max-num-seqs 256 \
-    --distributed-executor-backend mp
+    --distributed-executor-backend mp \
+    > /home/omeerdogan23/drugRAG/logs/llama_server.log 2>&1 &
+
+echo "🚀 Llama server starting in background..."
+echo "📋 Logs: /home/omeerdogan23/drugRAG/logs/llama_server.log"
+echo "⏳ Server will be ready in 2-3 minutes..."

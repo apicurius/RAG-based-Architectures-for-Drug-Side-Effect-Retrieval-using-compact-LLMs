@@ -1,0 +1,549 @@
+{
+  "model": "Qwen 7B",
+  "model_info": {
+    "use_fewshot": true,
+    "temperature": 0.0
+  },
+  "correction_accuracy": {
+    "accuracy": 0.0,
+    "exact_matches": 0,
+    "total_tested": 10,
+    "avg_edit_distance_from_truth": 10.6,
+    "unchanged_rate": 0.0,
+    "unchanged_count": 0,
+    "failure_count": 10,
+    "detailed_results": [
+      {
+        "misspelled_input": "lormetazerpam",
+        "qwen_correction": "",
+        "ground_truth": "lormetazepam",
+        "is_correct": false,
+        "edit_distance_from_truth": 12,
+        "edit_distance_from_input": 13,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "grisefulvin",
+        "qwen_correction": "",
+        "ground_truth": "griseofulvin",
+        "is_correct": false,
+        "edit_distance_from_truth": 12,
+        "edit_distance_from_input": 11,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "lercanipidine",
+        "qwen_correction": "",
+        "ground_truth": "lercanidipine",
+        "is_correct": false,
+        "edit_distance_from_truth": 13,
+        "edit_distance_from_input": 13,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "miglitilol",
+        "qwen_correction": "",
+        "ground_truth": "miglitol",
+        "is_correct": false,
+        "edit_distance_from_truth": 8,
+        "edit_distance_from_input": 10,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "floxetine",
+        "qwen_correction": "",
+        "ground_truth": "fluoxetine",
+        "is_correct": false,
+        "edit_distance_from_truth": 10,
+        "edit_distance_from_input": 9,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "ropirinole",
+        "qwen_correction": "",
+        "ground_truth": "ropinirole",
+        "is_correct": false,
+        "edit_distance_from_truth": 10,
+        "edit_distance_from_input": 10,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "latanaprost",
+        "qwen_correction": "",
+        "ground_truth": "latanoprost",
+        "is_correct": false,
+        "edit_distance_from_truth": 11,
+        "edit_distance_from_input": 11,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "netaglinide",
+        "qwen_correction": "",
+        "ground_truth": "nateglinide",
+        "is_correct": false,
+        "edit_distance_from_truth": 11,
+        "edit_distance_from_input": 11,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "adeflovir",
+        "qwen_correction": "",
+        "ground_truth": "adefovir",
+        "is_correct": false,
+        "edit_distance_from_truth": 8,
+        "edit_distance_from_input": 9,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "levabnolol",
+        "qwen_correction": "",
+        "ground_truth": "levobunolol",
+        "is_correct": false,
+        "edit_distance_from_truth": 11,
+        "edit_distance_from_input": 10,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      }
+    ],
+    "failures": [
+      {
+        "misspelled_input": "lormetazerpam",
+        "qwen_correction": "",
+        "ground_truth": "lormetazepam",
+        "is_correct": false,
+        "edit_distance_from_truth": 12,
+        "edit_distance_from_input": 13,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "grisefulvin",
+        "qwen_correction": "",
+        "ground_truth": "griseofulvin",
+        "is_correct": false,
+        "edit_distance_from_truth": 12,
+        "edit_distance_from_input": 11,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "lercanipidine",
+        "qwen_correction": "",
+        "ground_truth": "lercanidipine",
+        "is_correct": false,
+        "edit_distance_from_truth": 13,
+        "edit_distance_from_input": 13,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "miglitilol",
+        "qwen_correction": "",
+        "ground_truth": "miglitol",
+        "is_correct": false,
+        "edit_distance_from_truth": 8,
+        "edit_distance_from_input": 10,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "floxetine",
+        "qwen_correction": "",
+        "ground_truth": "fluoxetine",
+        "is_correct": false,
+        "edit_distance_from_truth": 10,
+        "edit_distance_from_input": 9,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "ropirinole",
+        "qwen_correction": "",
+        "ground_truth": "ropinirole",
+        "is_correct": false,
+        "edit_distance_from_truth": 10,
+        "edit_distance_from_input": 10,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "latanaprost",
+        "qwen_correction": "",
+        "ground_truth": "latanoprost",
+        "is_correct": false,
+        "edit_distance_from_truth": 11,
+        "edit_distance_from_input": 11,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "netaglinide",
+        "qwen_correction": "",
+        "ground_truth": "nateglinide",
+        "is_correct": false,
+        "edit_distance_from_truth": 11,
+        "edit_distance_from_input": 11,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "adeflovir",
+        "qwen_correction": "",
+        "ground_truth": "adefovir",
+        "is_correct": false,
+        "edit_distance_from_truth": 8,
+        "edit_distance_from_input": 9,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      },
+      {
+        "misspelled_input": "levabnolol",
+        "qwen_correction": "",
+        "ground_truth": "levobunolol",
+        "is_correct": false,
+        "edit_distance_from_truth": 11,
+        "edit_distance_from_input": 10,
+        "unchanged": false,
+        "confidence": 0.32999999999999996,
+        "raw_response": ""
+      }
+    ]
+  },
+  "overcorrection_test": {
+    "over_correction_rate": 1.0,
+    "over_correction_count": 50,
+    "false_changes": [
+      {
+        "correct_original": "pregabalin",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "aripiprazole",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "citalopram",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "pramipexole",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 11
+      },
+      {
+        "correct_original": "ropinirole",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "bortezomib",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "risperidone",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 11
+      },
+      {
+        "correct_original": "paroxetine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "tramadol",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 8
+      },
+      {
+        "correct_original": "tacrolimus",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "venlafaxine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 11
+      },
+      {
+        "correct_original": "fluoxetine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "k779",
+        "wrong_correction": "",
+        "confidence": 0.575,
+        "edit_distance": 4
+      },
+      {
+        "correct_original": "topiramate",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "bupropion",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 9
+      },
+      {
+        "correct_original": "gabapentin",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "fentanyl",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 8
+      },
+      {
+        "correct_original": "lenalidomide",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "doxorubicin",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 11
+      },
+      {
+        "correct_original": "ciprofloxacin",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 13
+      },
+      {
+        "correct_original": "capecitabine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "ofloxacin",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 9
+      },
+      {
+        "correct_original": "rivastigmine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "olanzapine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "fluvoxamine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 11
+      },
+      {
+        "correct_original": "ribavirin",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 9
+      },
+      {
+        "correct_original": "memantine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 9
+      },
+      {
+        "correct_original": "posaconazole",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "paclitaxel",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "cevimeline",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "clomipramine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "moxifloxacin",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "sitaxsentan",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 11
+      },
+      {
+        "correct_original": "everolimus",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "deprenyl",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 8
+      },
+      {
+        "correct_original": "lansoprazole",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "retinoic",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 8
+      },
+      {
+        "correct_original": "quetiapine",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "estradiol",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 9
+      },
+      {
+        "correct_original": "riluzole",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 8
+      },
+      {
+        "correct_original": "sertraline",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "copolymer",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 9
+      },
+      {
+        "correct_original": "mycophenolic",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "voriconazole",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "testosterone",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "diclofenac",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 10
+      },
+      {
+        "correct_original": "thalidomide",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 11
+      },
+      {
+        "correct_original": "paliperidone",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 12
+      },
+      {
+        "correct_original": "5-asa",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 5
+      },
+      {
+        "correct_original": "ziprasidone",
+        "wrong_correction": "",
+        "confidence": 0.32999999999999996,
+        "edit_distance": 11
+      }
+    ],
+    "tested_count": 50,
+    "skipped": false
+  },
+  "timestamp": "20251109_141744"
+}

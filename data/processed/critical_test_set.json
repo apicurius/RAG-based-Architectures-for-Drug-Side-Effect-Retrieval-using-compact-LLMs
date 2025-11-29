@@ -1,0 +1,11 @@
+{
+  "side_effects": [
+    "nausea",
+    "headache",
+    "vomiting",
+    "rash",
+    "dermatitis"
+  ],
+  "description": "Top 5 most common side effects for quick validation",
+  "use_case": "Priority 1 testing - quick validation in 45 min"
+}

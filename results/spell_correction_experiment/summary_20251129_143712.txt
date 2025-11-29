@@ -1,0 +1,21 @@
+================================================================================
+SPELL CORRECTION ACCURACY EVALUATION - SUMMARY (Qwen 7B)
+================================================================================
+
+MODEL: Qwen2.5-7B-Instruct (vLLM)
+Few-shot: True
+Temperature: 0.0
+Timestamp: 20251129_143712
+
+CORRECTION ACCURACY:
+--------------------------------------------------------------------------------
+Exact Match Accuracy:      80.00%
+Exact Matches:             8/10
+Avg Edit Distance (truth): 0.30
+Unchanged Rate:            10.00%
+Failures:                  2
+
+OVER-CORRECTION TEST:
+--------------------------------------------------------------------------------
+Over-correction Rate:      2.00%
+False Changes:             1/50

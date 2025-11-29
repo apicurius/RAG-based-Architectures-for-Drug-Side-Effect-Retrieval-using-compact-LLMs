@@ -1,0 +1,35 @@
+========================================================================
+FINAL QWEN EVALUATION - FULL DATASET (19,520 samples)
+WITH RAY EXECUTOR (Fixed VllmWorker crash issue)
+========================================================================
+Date: Sat Nov 22 19:51:15 +03 2025
+Model: Qwen 2.5-7B-Instruct via vLLM + Ray
+Settings:
+  - distributed_executor_backend: ray (was: mp)
+  - GPU mem: 0.50
+  - max_seqs: 8
+  - max_batched_tokens: 4096
+  - max_workers: 1
+  - max_model_len: 32768
+
+FORMAT A RESULTS:
+-----------------
+2025-11-22 19:27:09,345 - INFO - COMPREHENSIVE BINARY CLASSIFICATION RESULTS
+2025-11-22 19:27:09,346 - INFO - ================================================================================
+2025-11-22 19:27:09,346 - INFO - Accuracy:    0.5000 (50.00%)
+2025-11-22 19:27:09,347 - INFO - F1 Score:    0.0000
+2025-11-22 19:27:09,348 - INFO - Precision:   0.0000
+2025-11-22 19:27:09,348 - INFO - Sensitivity: 0.0000
+2025-11-22 19:27:09,349 - INFO - Specificity: 1.0000
+2025-11-22 19:27:09,349 - INFO - 
+2025-11-22 19:27:09,350 - INFO - Confusion Matrix: TP=0, TN=9760, FP=0, FN=9760
+2025-11-22 19:27:09,351 - INFO - Prediction Distribution: {'UNKNOWN': 19520}
+2025-11-22 19:27:09,351 - INFO - Time: 9563.10 seconds
+2025-11-22 19:27:09,352 - INFO - Throughput: 2.04 queries/second
+2025-11-22 19:27:09,353 - INFO - 
+
+FORMAT B RESULTS:
+-----------------
+
+
+========================================================================

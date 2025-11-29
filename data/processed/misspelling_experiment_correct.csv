@@ -1,0 +1,181 @@
+drug,side_effect,label,query
+ropinirole,actinic keratosis,1,Is actinic keratosis an adverse effect of ropinirole?
+ropinirole,laryngeal cancer,1,Is laryngeal cancer an adverse effect of ropinirole?
+ropinirole,dysuria,1,Is dysuria an adverse effect of ropinirole?
+ropinirole,balanoposthitis,1,Is balanoposthitis an adverse effect of ropinirole?
+ropinirole,lymphadenopathy,1,Is lymphadenopathy an adverse effect of ropinirole?
+ropinirole,phlebitis superficial,1,Is phlebitis superficial an adverse effect of ropinirole?
+ropinirole,cholecystitis,1,Is cholecystitis an adverse effect of ropinirole?
+ropinirole,hypokalaemia,1,Is hypokalaemia an adverse effect of ropinirole?
+ropinirole,gout,1,Is gout an adverse effect of ropinirole?
+ropinirole,atrioventricular block,1,Is atrioventricular block an adverse effect of ropinirole?
+ropinirole,tendinous contracture,0,Is tendinous contracture an adverse effect of ropinirole?
+ropinirole,atrial flutter,0,Is atrial flutter an adverse effect of ropinirole?
+ropinirole,gingival ulceration,0,Is gingival ulceration an adverse effect of ropinirole?
+ropinirole,acute leukaemia,0,Is acute leukaemia an adverse effect of ropinirole?
+ropinirole,meningioma,0,Is meningioma an adverse effect of ropinirole?
+ropinirole,metastasis,0,Is metastasis an adverse effect of ropinirole?
+ropinirole,nodal arrhythmia,0,Is nodal arrhythmia an adverse effect of ropinirole?
+ropinirole,parotid gland enlargement,0,Is parotid gland enlargement an adverse effect of ropinirole?
+ropinirole,skin discomfort,0,Is skin discomfort an adverse effect of ropinirole?
+ropinirole,lip oedema,0,Is lip oedema an adverse effect of ropinirole?
+fluoxetine,dysgeusia,1,Is dysgeusia an adverse effect of fluoxetine?
+fluoxetine,urinary tract infection,1,Is urinary tract infection an adverse effect of fluoxetine?
+fluoxetine,gastroenteritis,1,Is gastroenteritis an adverse effect of fluoxetine?
+fluoxetine,albuminuria,1,Is albuminuria an adverse effect of fluoxetine?
+fluoxetine,thrombocytosis,1,Is thrombocytosis an adverse effect of fluoxetine?
+fluoxetine,hypertension,1,Is hypertension an adverse effect of fluoxetine?
+fluoxetine,teratogenicity,1,Is teratogenicity an adverse effect of fluoxetine?
+fluoxetine,blood pressure increased,1,Is blood pressure increased an adverse effect of fluoxetine?
+fluoxetine,mental disorder,1,Is mental disorder an adverse effect of fluoxetine?
+fluoxetine,grand mal convulsion,1,Is grand mal convulsion an adverse effect of fluoxetine?
+fluoxetine,endotracheal intubation complication,0,Is endotracheal intubation complication an adverse effect of fluoxetine?
+fluoxetine,postpartum disorder,0,Is postpartum disorder an adverse effect of fluoxetine?
+fluoxetine,factor i deficiency,0,Is factor i deficiency an adverse effect of fluoxetine?
+fluoxetine,gastric disorder,0,Is gastric disorder an adverse effect of fluoxetine?
+fluoxetine,scleroderma,0,Is scleroderma an adverse effect of fluoxetine?
+fluoxetine,electrocardiogram st segment abnormal,0,Is electrocardiogram st segment abnormal an adverse effect of fluoxetine?
+fluoxetine,diabetic vascular disorder,0,Is diabetic vascular disorder an adverse effect of fluoxetine?
+fluoxetine,acute graft versus host disease,0,Is acute graft versus host disease an adverse effect of fluoxetine?
+fluoxetine,tongue neoplasm malignant stage unspecified,0,Is tongue neoplasm malignant stage unspecified an adverse effect of fluoxetine?
+fluoxetine,adenovirus infection,0,Is adenovirus infection an adverse effect of fluoxetine?
+lercanidipine,angina pectoris,1,Is angina pectoris an adverse effect of lercanidipine?
+lercanidipine,pruritus,1,Is pruritus an adverse effect of lercanidipine?
+lercanidipine,cough,1,Is cough an adverse effect of lercanidipine?
+lercanidipine,lymphadenopathy,1,Is lymphadenopathy an adverse effect of lercanidipine?
+lercanidipine,bronchospasm,1,Is bronchospasm an adverse effect of lercanidipine?
+lercanidipine,eye disorder,1,Is eye disorder an adverse effect of lercanidipine?
+lercanidipine,dysphonia,1,Is dysphonia an adverse effect of lercanidipine?
+lercanidipine,face oedema,1,Is face oedema an adverse effect of lercanidipine?
+lercanidipine,pollakiuria,1,Is pollakiuria an adverse effect of lercanidipine?
+lercanidipine,vomiting,1,Is vomiting an adverse effect of lercanidipine?
+lercanidipine,mesenteric artery thrombosis,0,Is mesenteric artery thrombosis an adverse effect of lercanidipine?
+lercanidipine,organ failure,0,Is organ failure an adverse effect of lercanidipine?
+lercanidipine,cardiopulmonary failure,0,Is cardiopulmonary failure an adverse effect of lercanidipine?
+lercanidipine,osteomalacia,0,Is osteomalacia an adverse effect of lercanidipine?
+lercanidipine,epicondylitis,0,Is epicondylitis an adverse effect of lercanidipine?
+lercanidipine,rectal discharge,0,Is rectal discharge an adverse effect of lercanidipine?
+lercanidipine,gastrointestinal hypermotility,0,Is gastrointestinal hypermotility an adverse effect of lercanidipine?
+lercanidipine,mean platelet volume decreased,0,Is mean platelet volume decreased an adverse effect of lercanidipine?
+lercanidipine,lichen planus,0,Is lichen planus an adverse effect of lercanidipine?
+lercanidipine,faecalith,0,Is faecalith an adverse effect of lercanidipine?
+lormetazepam,libido decreased,1,Is libido decreased an adverse effect of lormetazepam?
+lormetazepam,dysgeusia,1,Is dysgeusia an adverse effect of lormetazepam?
+lormetazepam,somnolence,1,Is somnolence an adverse effect of lormetazepam?
+lormetazepam,visual impairment,1,Is visual impairment an adverse effect of lormetazepam?
+lormetazepam,angioedema,1,Is angioedema an adverse effect of lormetazepam?
+lormetazepam,hallucination,1,Is hallucination an adverse effect of lormetazepam?
+lormetazepam,tension,1,Is tension an adverse effect of lormetazepam?
+lormetazepam,urticaria,1,Is urticaria an adverse effect of lormetazepam?
+lormetazepam,micturition disorder,1,Is micturition disorder an adverse effect of lormetazepam?
+lormetazepam,disturbance in attention,1,Is disturbance in attention an adverse effect of lormetazepam?
+lormetazepam,transplant failure,0,Is transplant failure an adverse effect of lormetazepam?
+lormetazepam,loss of libido,0,Is loss of libido an adverse effect of lormetazepam?
+lormetazepam,major depression,0,Is major depression an adverse effect of lormetazepam?
+lormetazepam,renal infarct,0,Is renal infarct an adverse effect of lormetazepam?
+lormetazepam,respiratory acidosis,0,Is respiratory acidosis an adverse effect of lormetazepam?
+lormetazepam,laryngeal disorder,0,Is laryngeal disorder an adverse effect of lormetazepam?
+lormetazepam,neoplasm prostate,0,Is neoplasm prostate an adverse effect of lormetazepam?
+lormetazepam,aura,0,Is aura an adverse effect of lormetazepam?
+lormetazepam,low density lipoprotein increased,0,Is low density lipoprotein increased an adverse effect of lormetazepam?
+lormetazepam,hypoplastic anaemia,0,Is hypoplastic anaemia an adverse effect of lormetazepam?
+adefovir,myalgia,1,Is myalgia an adverse effect of adefovir?
+adefovir,anaemia,1,Is anaemia an adverse effect of adefovir?
+adefovir,fracture,1,Is fracture an adverse effect of adefovir?
+adefovir,liver disorder,1,Is liver disorder an adverse effect of adefovir?
+adefovir,alanine aminotransferase increased,1,Is alanine aminotransferase increased an adverse effect of adefovir?
+adefovir,blood creatinine increased,1,Is blood creatinine increased an adverse effect of adefovir?
+adefovir,weight decreased,1,Is weight decreased an adverse effect of adefovir?
+adefovir,hepatic failure,1,Is hepatic failure an adverse effect of adefovir?
+adefovir,skin disorder,1,Is skin disorder an adverse effect of adefovir?
+adefovir,hepatobiliary disease,1,Is hepatobiliary disease an adverse effect of adefovir?
+adefovir,progesterone,0,Is progesterone an adverse effect of adefovir?
+adefovir,postoperative wound infection,0,Is postoperative wound infection an adverse effect of adefovir?
+adefovir,mesenteric artery thrombosis,0,Is mesenteric artery thrombosis an adverse effect of adefovir?
+adefovir,blood phosphorus increased,0,Is blood phosphorus increased an adverse effect of adefovir?
+adefovir,ear pruritus,0,Is ear pruritus an adverse effect of adefovir?
+adefovir,ingrown hair,0,Is ingrown hair an adverse effect of adefovir?
+adefovir,laceration,0,Is laceration an adverse effect of adefovir?
+adefovir,vaginal mucosal blistering,0,Is vaginal mucosal blistering an adverse effect of adefovir?
+adefovir,intermittent explosive disorder,0,Is intermittent explosive disorder an adverse effect of adefovir?
+adefovir,postmenopausal haemorrhage,0,Is postmenopausal haemorrhage an adverse effect of adefovir?
+latanoprost,chest pain,1,Is chest pain an adverse effect of latanoprost?
+latanoprost,eye irritation,1,Is eye irritation an adverse effect of latanoprost?
+latanoprost,retinal detachment,1,Is retinal detachment an adverse effect of latanoprost?
+latanoprost,rash,1,Is rash an adverse effect of latanoprost?
+latanoprost,sensation of foreign body,1,Is sensation of foreign body an adverse effect of latanoprost?
+latanoprost,pain,1,Is pain an adverse effect of latanoprost?
+latanoprost,diplopia,1,Is diplopia an adverse effect of latanoprost?
+latanoprost,keratitis,1,Is keratitis an adverse effect of latanoprost?
+latanoprost,iris hyperpigmentation,1,Is iris hyperpigmentation an adverse effect of latanoprost?
+latanoprost,conjunctivitis,1,Is conjunctivitis an adverse effect of latanoprost?
+latanoprost,application site oedema,0,Is application site oedema an adverse effect of latanoprost?
+latanoprost,anastomotic ulcer,0,Is anastomotic ulcer an adverse effect of latanoprost?
+latanoprost,lung infection,0,Is lung infection an adverse effect of latanoprost?
+latanoprost,proctitis ulcerative,0,Is proctitis ulcerative an adverse effect of latanoprost?
+latanoprost,medication overuse headache,0,Is medication overuse headache an adverse effect of latanoprost?
+latanoprost,accident,0,Is accident an adverse effect of latanoprost?
+latanoprost,clonus,0,Is clonus an adverse effect of latanoprost?
+latanoprost,spinal cord haemorrhage,0,Is spinal cord haemorrhage an adverse effect of latanoprost?
+latanoprost,paraesthesia oral,0,Is paraesthesia oral an adverse effect of latanoprost?
+latanoprost,type 1 diabetes mellitus,0,Is type 1 diabetes mellitus an adverse effect of latanoprost?
+levobunolol,shock,1,Is shock an adverse effect of levobunolol?
+levobunolol,loss of consciousness,1,Is loss of consciousness an adverse effect of levobunolol?
+levobunolol,erectile dysfunction,1,Is erectile dysfunction an adverse effect of levobunolol?
+levobunolol,bradycardia,1,Is bradycardia an adverse effect of levobunolol?
+levobunolol,nasal congestion,1,Is nasal congestion an adverse effect of levobunolol?
+levobunolol,visual impairment,1,Is visual impairment an adverse effect of levobunolol?
+levobunolol,diplopia,1,Is diplopia an adverse effect of levobunolol?
+levobunolol,chest pain,1,Is chest pain an adverse effect of levobunolol?
+levobunolol,cardiac failure congestive,1,Is cardiac failure congestive an adverse effect of levobunolol?
+levobunolol,dyspnoea,1,Is dyspnoea an adverse effect of levobunolol?
+levobunolol,haemorrhage urinary tract,0,Is haemorrhage urinary tract an adverse effect of levobunolol?
+levobunolol,injection site pruritus,0,Is injection site pruritus an adverse effect of levobunolol?
+levobunolol,immunodeficiency,0,Is immunodeficiency an adverse effect of levobunolol?
+levobunolol,sexual dysfunction,0,Is sexual dysfunction an adverse effect of levobunolol?
+levobunolol,transient global amnesia,0,Is transient global amnesia an adverse effect of levobunolol?
+levobunolol,joint swelling,0,Is joint swelling an adverse effect of levobunolol?
+levobunolol,adrenal atrophy,0,Is adrenal atrophy an adverse effect of levobunolol?
+levobunolol,temporomandibular joint syndrome,0,Is temporomandibular joint syndrome an adverse effect of levobunolol?
+levobunolol,urethral haemorrhage,0,Is urethral haemorrhage an adverse effect of levobunolol?
+levobunolol,erythromelalgia,0,Is erythromelalgia an adverse effect of levobunolol?
+nateglinide,urine output increased,1,Is urine output increased an adverse effect of nateglinide?
+nateglinide,influenza,1,Is influenza an adverse effect of nateglinide?
+nateglinide,gastrointestinal pain,1,Is gastrointestinal pain an adverse effect of nateglinide?
+nateglinide,hepatobiliary disease,1,Is hepatobiliary disease an adverse effect of nateglinide?
+nateglinide,dermatitis,1,Is dermatitis an adverse effect of nateglinide?
+nateglinide,osteoarthritis,1,Is osteoarthritis an adverse effect of nateglinide?
+nateglinide,tremor,1,Is tremor an adverse effect of nateglinide?
+nateglinide,asthenia,1,Is asthenia an adverse effect of nateglinide?
+nateglinide,hepatic enzyme increased,1,Is hepatic enzyme increased an adverse effect of nateglinide?
+nateglinide,neuropathy peripheral,1,Is neuropathy peripheral an adverse effect of nateglinide?
+nateglinide,conjunctival oedema,0,Is conjunctival oedema an adverse effect of nateglinide?
+nateglinide,cardiac hypertrophy,0,Is cardiac hypertrophy an adverse effect of nateglinide?
+nateglinide,optic nerve disorder,0,Is optic nerve disorder an adverse effect of nateglinide?
+nateglinide,intermittent claudication,0,Is intermittent claudication an adverse effect of nateglinide?
+nateglinide,blood alkaline phosphatase increased,0,Is blood alkaline phosphatase increased an adverse effect of nateglinide?
+nateglinide,dental discomfort,0,Is dental discomfort an adverse effect of nateglinide?
+nateglinide,abortion,0,Is abortion an adverse effect of nateglinide?
+nateglinide,breech presentation,0,Is breech presentation an adverse effect of nateglinide?
+nateglinide,hypnagogic hallucination,0,Is hypnagogic hallucination an adverse effect of nateglinide?
+nateglinide,oesophageal achalasia,0,Is oesophageal achalasia an adverse effect of nateglinide?
+griseofulvin,angioedema,1,Is angioedema an adverse effect of griseofulvin?
+griseofulvin,agranulocytosis,1,Is agranulocytosis an adverse effect of griseofulvin?
+griseofulvin,vomiting,1,Is vomiting an adverse effect of griseofulvin?
+griseofulvin,erythema multiforme,1,Is erythema multiforme an adverse effect of griseofulvin?
+griseofulvin,systemic lupus erythematosus,1,Is systemic lupus erythematosus an adverse effect of griseofulvin?
+griseofulvin,nausea,1,Is nausea an adverse effect of griseofulvin?
+griseofulvin,rash,1,Is rash an adverse effect of griseofulvin?
+griseofulvin,diarrhoea,1,Is diarrhoea an adverse effect of griseofulvin?
+griseofulvin,gastrointestinal haemorrhage,1,Is gastrointestinal haemorrhage an adverse effect of griseofulvin?
+griseofulvin,asthenia,1,Is asthenia an adverse effect of griseofulvin?
+griseofulvin,testicular pain,0,Is testicular pain an adverse effect of griseofulvin?
+griseofulvin,intranasal hypoaesthesia,0,Is intranasal hypoaesthesia an adverse effect of griseofulvin?
+griseofulvin,penis disorder,0,Is penis disorder an adverse effect of griseofulvin?
+griseofulvin,episcleritis,0,Is episcleritis an adverse effect of griseofulvin?
+griseofulvin,rheumatoid arthritis,0,Is rheumatoid arthritis an adverse effect of griseofulvin?
+griseofulvin,gastritis viral,0,Is gastritis viral an adverse effect of griseofulvin?
+griseofulvin,hyperviscosity syndrome,0,Is hyperviscosity syndrome an adverse effect of griseofulvin?
+griseofulvin,antitussive therapy,0,Is antitussive therapy an adverse effect of griseofulvin?
+griseofulvin,polymorphic light eruption,0,Is polymorphic light eruption an adverse effect of griseofulvin?
+griseofulvin,breast calcifications,0,Is breast calcifications an adverse effect of griseofulvin?

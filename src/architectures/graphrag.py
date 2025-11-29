@@ -38,24 +38,37 @@ class GraphRAG:
             self.config = json.load(f)
 
         # Initialize Neo4j driver with direct bolt connection (bypass routing)
-        try:
-            # Use direct bolt:// connection to bypass routing discovery issues
-            self.driver = GraphDatabase.driver(
-                "bolt://9d0e641a.databases.neo4j.io:7687",
-                auth=(self.config['neo4j_username'], self.config['neo4j_password']),
-                encrypted=True,
-                trust="TRUST_ALL_CERTIFICATES",
-                max_connection_pool_size=1,
-                connection_timeout=30
-            )
-            # Test connection
-            with self.driver.session() as session:
-                session.run("RETURN 1").single()
-            logger.info("✅ Neo4j connection established (direct bolt)")
-        except Exception as e:
-            logger.error(f"Failed to connect to Neo4j: {e}")
-            self.driver = None
-            raise
+        # Retry logic for connection stability
+        max_retries = 3
+        retry_delay = 2
+
+        for attempt in range(max_retries):
+            try:
+                # Use direct bolt:// connection to bypass routing discovery issues
+                self.driver = GraphDatabase.driver(
+                    "bolt://9d0e641a.databases.neo4j.io:7687",
+                    auth=(self.config['neo4j_username'], self.config['neo4j_password']),
+                    encrypted=True,
+                    trust="TRUST_ALL_CERTIFICATES",
+                    max_connection_pool_size=1,
+                    connection_timeout=60,  # Increased from 30 to 60 seconds
+                    max_connection_lifetime=3600
+                )
+                # Test connection
+                with self.driver.session() as session:
+                    session.run("RETURN 1").single()
+                logger.info(f"✅ Neo4j connection established (direct bolt) on attempt {attempt + 1}")
+                break
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    logger.warning(f"⚠️  Neo4j connection attempt {attempt + 1} failed: {e}")
+                    logger.info(f"   Retrying in {retry_delay}s...")
+                    import time
+                    time.sleep(retry_delay)
+                else:
+                    logger.error(f"Failed to connect to Neo4j after {max_retries} attempts: {e}")
+                    self.driver = None
+                    raise
 
         # Initialize vLLM for reasoning
         self.model = model
@@ -140,7 +153,9 @@ FINAL ANSWER: [YES or NO]"""
                     'model': f'vllm_{self.model}',
                     'cypher_query': cypher,
                     'graph_result': graph_result,
-                    'llm_reasoning': llm_response[:200]
+                    'llm_reasoning': llm_response[:200],
+                    'prompt': prompt,  # Full prompt for detailed logging
+                    'full_response': llm_response  # Full response for detailed logging
                 }
 
         except Exception as e:
@@ -568,6 +583,100 @@ FINAL ANSWER: [YES or NO]"""
     def binary_query_batch(self, queries: List[Dict[str, str]]) -> List[Dict[str, Any]]:
         """Alias for query_batch for consistency"""
         return self.query_batch(queries)
+
+    def reverse_query(self, side_effect: str) -> Dict[str, Any]:
+        """
+        Reverse lookup: Find all drugs that cause a specific side effect
+        Uses direct Cypher query for maximum precision and recall
+
+        Args:
+            side_effect: The adverse effect to query
+
+        Returns:
+            Dict with 'drugs' list and metadata
+        """
+        if not self.driver:
+            return {'drugs': [], 'error': 'No Neo4j connection'}
+
+        # Normalize side effect name (lowercase, escaped)
+        side_effect_escaped = self.escape_special_characters(side_effect.lower())
+
+        # Cypher query for reverse lookup
+        cypher = f"""
+        MATCH (drug)-[r:HAS_SIDE_EFFECT]->(effect)
+        WHERE effect.name = '{side_effect_escaped}'
+        RETURN drug.name AS drug_name
+        ORDER BY drug.name
+        """
+
+        try:
+            with self.driver.session() as session:
+                result = session.run(cypher)
+                drugs = [record['drug_name'] for record in result]
+
+                return {
+                    'side_effect': side_effect,
+                    'drugs': drugs,
+                    'drug_count': len(drugs),
+                    'architecture': 'graphrag',
+                    'model': f'neo4j_cypher',
+                    'cypher_query': cypher
+                }
+
+        except Exception as e:
+            logger.error(f"Reverse query error: {e}")
+            return {
+                'side_effect': side_effect,
+                'drugs': [],
+                'error': str(e),
+                'architecture': 'graphrag',
+                'model': f'neo4j_cypher'
+            }
+
+    def reverse_query_with_llm_verification(self, side_effect: str) -> Dict[str, Any]:
+        """
+        Reverse lookup with optional vLLM verification
+        Gets drugs from graph, then uses LLM to verify/rank
+        """
+        # Get drugs directly from graph
+        graph_result = self.reverse_query(side_effect)
+
+        if 'error' in graph_result or not graph_result['drugs']:
+            return graph_result
+
+        drugs = graph_result['drugs']
+
+        # Use vLLM for verification
+        prompt = f"""The graph database query found the following drugs that cause {side_effect}:
+
+Drugs: {', '.join(drugs[:100])}
+
+Question: Verify this list and provide confidence assessment.
+
+Instructions:
+- Review the drug list for obvious errors
+- Indicate confidence level (HIGH/MEDIUM/LOW)
+- Suggest any missing drugs you're confident about
+
+Answer:"""
+
+        try:
+            response = self.llm.generate_response(prompt, max_tokens=500, temperature=0.1)
+
+            return {
+                'side_effect': side_effect,
+                'drugs': drugs,
+                'drug_count': len(drugs),
+                'architecture': 'graphrag',
+                'model': f'vllm_{self.model}_with_verification',
+                'cypher_query': graph_result['cypher_query'],
+                'llm_verification': response
+            }
+
+        except Exception as e:
+            logger.error(f"LLM verification error: {e}")
+            # Return original graph result without verification
+            return graph_result
 
     def __del__(self):
         """Close Neo4j driver on cleanup"""

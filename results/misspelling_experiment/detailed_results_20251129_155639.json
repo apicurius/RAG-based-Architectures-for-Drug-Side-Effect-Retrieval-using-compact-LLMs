@@ -1,0 +1,266 @@
+[
+  {
+    "architecture": "pure_llm",
+    "model": "qwen",
+    "arch_key": "pure_llm_qwen",
+    "correct_metrics": {
+      "accuracy": 0.6055555555555555,
+      "precision": 0.7435897435897436,
+      "sensitivity": 0.32222222222222224,
+      "specificity": 0.8888888888888888,
+      "f1_score": 0.44961240310077527,
+      "tp": 29,
+      "tn": 80,
+      "fp": 10,
+      "fn": 61
+    },
+    "misspelled_metrics": {
+      "accuracy": 0.6277777777777778,
+      "precision": 0.7804878048780488,
+      "sensitivity": 0.35555555555555557,
+      "specificity": 0.9,
+      "f1_score": 0.48854961832061067,
+      "tp": 32,
+      "tn": 81,
+      "fp": 9,
+      "fn": 58
+    },
+    "degradation": {
+      "accuracy": {
+        "correct": 0.6055555555555555,
+        "misspelled": 0.6277777777777778,
+        "absolute_degradation": -0.022222222222222254,
+        "percentage_degradation": -3.6697247706422074,
+        "robustness_score": 1.036697247706422
+      },
+      "f1_score": {
+        "correct": 0.44961240310077527,
+        "misspelled": 0.48854961832061067,
+        "absolute_degradation": -0.0389372152198354,
+        "percentage_degradation": -8.660173729928907,
+        "robustness_score": 1.086601737299289
+      },
+      "precision": {
+        "correct": 0.7435897435897436,
+        "misspelled": 0.7804878048780488,
+        "absolute_degradation": -0.036898061288305195,
+        "percentage_degradation": -4.96215306980656,
+        "robustness_score": 1.0496215306980656
+      },
+      "sensitivity": {
+        "correct": 0.32222222222222224,
+        "misspelled": 0.35555555555555557,
+        "absolute_degradation": -0.033333333333333326,
+        "percentage_degradation": -10.344827586206893,
+        "robustness_score": 1.103448275862069
+      },
+      "specificity": {
+        "correct": 0.8888888888888888,
+        "misspelled": 0.9,
+        "absolute_degradation": -0.011111111111111183,
+        "percentage_degradation": -1.250000000000008,
+        "robustness_score": 1.0125000000000002
+      }
+    },
+    "correct_time": 10.737378597259521,
+    "misspelled_time": 3.32362961769104
+  },
+  {
+    "architecture": "format_a",
+    "model": "qwen",
+    "arch_key": "format_a_qwen",
+    "correct_metrics": {
+      "accuracy": 0.9,
+      "precision": 1.0,
+      "sensitivity": 0.8,
+      "specificity": 1.0,
+      "f1_score": 0.888888888888889,
+      "tp": 72,
+      "tn": 90,
+      "fp": 0,
+      "fn": 18
+    },
+    "misspelled_metrics": {
+      "accuracy": 0.5,
+      "precision": 0.0,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "f1_score": 0.0,
+      "tp": 0,
+      "tn": 90,
+      "fp": 0,
+      "fn": 90
+    },
+    "degradation": {
+      "accuracy": {
+        "correct": 0.9,
+        "misspelled": 0.5,
+        "absolute_degradation": 0.4,
+        "percentage_degradation": 44.44444444444445,
+        "robustness_score": 0.5555555555555556
+      },
+      "f1_score": {
+        "correct": 0.888888888888889,
+        "misspelled": 0.0,
+        "absolute_degradation": 0.888888888888889,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "precision": {
+        "correct": 1.0,
+        "misspelled": 0.0,
+        "absolute_degradation": 1.0,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "sensitivity": {
+        "correct": 0.8,
+        "misspelled": 0.0,
+        "absolute_degradation": 0.8,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "specificity": {
+        "correct": 1.0,
+        "misspelled": 1.0,
+        "absolute_degradation": 0.0,
+        "percentage_degradation": 0.0,
+        "robustness_score": 1.0
+      }
+    },
+    "correct_time": 113.09391140937805,
+    "misspelled_time": 104.48062753677368
+  },
+  {
+    "architecture": "format_b",
+    "model": "qwen",
+    "arch_key": "format_b_qwen",
+    "correct_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "f1_score": 1.0,
+      "tp": 90,
+      "tn": 90,
+      "fp": 0,
+      "fn": 0
+    },
+    "misspelled_metrics": {
+      "accuracy": 0.5,
+      "precision": 0.0,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "f1_score": 0.0,
+      "tp": 0,
+      "tn": 90,
+      "fp": 0,
+      "fn": 90
+    },
+    "degradation": {
+      "accuracy": {
+        "correct": 1.0,
+        "misspelled": 0.5,
+        "absolute_degradation": 0.5,
+        "percentage_degradation": 50.0,
+        "robustness_score": 0.5
+      },
+      "f1_score": {
+        "correct": 1.0,
+        "misspelled": 0.0,
+        "absolute_degradation": 1.0,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "precision": {
+        "correct": 1.0,
+        "misspelled": 0.0,
+        "absolute_degradation": 1.0,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "sensitivity": {
+        "correct": 1.0,
+        "misspelled": 0.0,
+        "absolute_degradation": 1.0,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "specificity": {
+        "correct": 1.0,
+        "misspelled": 1.0,
+        "absolute_degradation": 0.0,
+        "percentage_degradation": 0.0,
+        "robustness_score": 1.0
+      }
+    },
+    "correct_time": 108.23835158348083,
+    "misspelled_time": 103.43682146072388
+  },
+  {
+    "architecture": "graphrag",
+    "model": "qwen",
+    "arch_key": "graphrag_qwen",
+    "correct_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "f1_score": 1.0,
+      "tp": 90,
+      "tn": 90,
+      "fp": 0,
+      "fn": 0
+    },
+    "misspelled_metrics": {
+      "accuracy": 0.5,
+      "precision": 0.0,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "f1_score": 0.0,
+      "tp": 0,
+      "tn": 90,
+      "fp": 0,
+      "fn": 90
+    },
+    "degradation": {
+      "accuracy": {
+        "correct": 1.0,
+        "misspelled": 0.5,
+        "absolute_degradation": 0.5,
+        "percentage_degradation": 50.0,
+        "robustness_score": 0.5
+      },
+      "f1_score": {
+        "correct": 1.0,
+        "misspelled": 0.0,
+        "absolute_degradation": 1.0,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "precision": {
+        "correct": 1.0,
+        "misspelled": 0.0,
+        "absolute_degradation": 1.0,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "sensitivity": {
+        "correct": 1.0,
+        "misspelled": 0.0,
+        "absolute_degradation": 1.0,
+        "percentage_degradation": 100.0,
+        "robustness_score": 0.0
+      },
+      "specificity": {
+        "correct": 1.0,
+        "misspelled": 1.0,
+        "absolute_degradation": 0.0,
+        "percentage_degradation": 0.0,
+        "robustness_score": 1.0
+      }
+    },
+    "correct_time": 43.86731243133545,
+    "misspelled_time": 41.87449336051941
+  }
+]

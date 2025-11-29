@@ -1,0 +1,226 @@
+[
+  {
+    "architecture": "pure_llm",
+    "model": "qwen",
+    "results": {
+      "perfect": {
+        "metrics": {
+          "accuracy": 0.6111111111111112,
+          "precision": 0.7083333333333334,
+          "sensitivity": 0.37777777777777777,
+          "specificity": 0.8444444444444444,
+          "f1_score": 0.49275362318840576,
+          "tp": 34,
+          "tn": 76,
+          "fp": 14,
+          "fn": 56
+        }
+      },
+      "raw_misspelled": {
+        "metrics": {
+          "accuracy": 0.5777777777777777,
+          "precision": 0.6590909090909091,
+          "sensitivity": 0.32222222222222224,
+          "specificity": 0.8333333333333334,
+          "f1_score": 0.43283582089552236,
+          "tp": 29,
+          "tn": 75,
+          "fp": 15,
+          "fn": 61
+        }
+      },
+      "llm_corrected": {
+        "metrics": {
+          "accuracy": 0.6111111111111112,
+          "precision": 0.717391304347826,
+          "sensitivity": 0.36666666666666664,
+          "specificity": 0.8555555555555555,
+          "f1_score": 0.4852941176470588,
+          "tp": 33,
+          "tn": 77,
+          "fp": 13,
+          "fn": 57
+        }
+      }
+    },
+    "recovery_analysis": {
+      "perfect_f1": 0.49275362318840576,
+      "raw_misspelled_f1": 0.43283582089552236,
+      "llm_corrected_f1": 0.4852941176470588,
+      "raw_degradation": 0.059917802292883404,
+      "remaining_degradation": 0.007459505541346945,
+      "recovery_percentage": 87.55043533658956,
+      "full_recovery": false,
+      "partial_recovery": true,
+      "no_recovery": false
+    }
+  },
+  {
+    "architecture": "format_a",
+    "model": "qwen",
+    "results": {
+      "perfect": {
+        "metrics": {
+          "accuracy": 0.9,
+          "precision": 1.0,
+          "sensitivity": 0.8,
+          "specificity": 1.0,
+          "f1_score": 0.888888888888889,
+          "tp": 72,
+          "tn": 90,
+          "fp": 0,
+          "fn": 18
+        }
+      },
+      "raw_misspelled": {
+        "metrics": {
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "tp": 0,
+          "tn": 90,
+          "fp": 0,
+          "fn": 90
+        }
+      },
+      "llm_corrected": {
+        "metrics": {
+          "accuracy": 0.7888888888888889,
+          "precision": 1.0,
+          "sensitivity": 0.5777777777777777,
+          "specificity": 1.0,
+          "f1_score": 0.732394366197183,
+          "tp": 52,
+          "tn": 90,
+          "fp": 0,
+          "fn": 38
+        }
+      }
+    },
+    "recovery_analysis": {
+      "perfect_f1": 0.888888888888889,
+      "raw_misspelled_f1": 0.0,
+      "llm_corrected_f1": 0.732394366197183,
+      "raw_degradation": 0.888888888888889,
+      "remaining_degradation": 0.15649452269170594,
+      "recovery_percentage": 82.39436619718307,
+      "full_recovery": false,
+      "partial_recovery": true,
+      "no_recovery": false
+    }
+  },
+  {
+    "architecture": "format_b",
+    "model": "qwen",
+    "results": {
+      "perfect": {
+        "metrics": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "f1_score": 1.0,
+          "tp": 90,
+          "tn": 90,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "raw_misspelled": {
+        "metrics": {
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "tp": 0,
+          "tn": 90,
+          "fp": 0,
+          "fn": 90
+        }
+      },
+      "llm_corrected": {
+        "metrics": {
+          "accuracy": 0.8888888888888888,
+          "precision": 1.0,
+          "sensitivity": 0.7777777777777778,
+          "specificity": 1.0,
+          "f1_score": 0.8750000000000001,
+          "tp": 70,
+          "tn": 90,
+          "fp": 0,
+          "fn": 20
+        }
+      }
+    },
+    "recovery_analysis": {
+      "perfect_f1": 1.0,
+      "raw_misspelled_f1": 0.0,
+      "llm_corrected_f1": 0.8750000000000001,
+      "raw_degradation": 1.0,
+      "remaining_degradation": 0.12499999999999989,
+      "recovery_percentage": 87.50000000000001,
+      "full_recovery": false,
+      "partial_recovery": true,
+      "no_recovery": false
+    }
+  },
+  {
+    "architecture": "graphrag",
+    "model": "qwen",
+    "results": {
+      "perfect": {
+        "metrics": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "f1_score": 1.0,
+          "tp": 90,
+          "tn": 90,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "raw_misspelled": {
+        "metrics": {
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "tp": 0,
+          "tn": 90,
+          "fp": 0,
+          "fn": 90
+        }
+      },
+      "llm_corrected": {
+        "metrics": {
+          "accuracy": 0.8888888888888888,
+          "precision": 1.0,
+          "sensitivity": 0.7777777777777778,
+          "specificity": 1.0,
+          "f1_score": 0.8750000000000001,
+          "tp": 70,
+          "tn": 90,
+          "fp": 0,
+          "fn": 20
+        }
+      }
+    },
+    "recovery_analysis": {
+      "perfect_f1": 1.0,
+      "raw_misspelled_f1": 0.0,
+      "llm_corrected_f1": 0.8750000000000001,
+      "raw_degradation": 1.0,
+      "remaining_degradation": 0.12499999999999989,
+      "recovery_percentage": 87.50000000000001,
+      "full_recovery": false,
+      "partial_recovery": true,
+      "no_recovery": false
+    }
+  }
+]

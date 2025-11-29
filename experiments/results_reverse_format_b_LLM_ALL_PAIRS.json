@@ -1,0 +1,73 @@
+{
+  "strategy": "format_b_metadata_filter_llm_all_pairs",
+  "description": "Format B with metadata filter + LLM extraction from ALL pairs (no [:100] limit)",
+  "metrics": {
+    "precision": 0.4978165938864629,
+    "recall": 0.3221045631266626,
+    "f1_score": 0.3796939927153338,
+    "avg_predicted_count": 92.5,
+    "avg_expected_count": 608.5
+  },
+  "detailed_results": [
+    {
+      "side_effect": "dry mouth",
+      "retrieved_pairs": 462,
+      "predicted_count": 229,
+      "expected_count": 543,
+      "true_positives": 227,
+      "false_positives": 2,
+      "false_negatives": 316,
+      "precision": 0.9912663755458515,
+      "recall": 0.4180478821362799,
+      "f1_score": 0.5880829015544042
+    },
+    {
+      "side_effect": "nausea",
+      "retrieved_pairs": 915,
+      "predicted_count": 0,
+      "expected_count": 1140,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 1140,
+      "precision": 0,
+      "recall": 0.0,
+      "f1_score": 0
+    },
+    {
+      "side_effect": "candida infection",
+      "retrieved_pairs": 142,
+      "predicted_count": 141,
+      "expected_count": 162,
+      "true_positives": 141,
+      "false_positives": 0,
+      "false_negatives": 21,
+      "precision": 1.0,
+      "recall": 0.8703703703703703,
+      "f1_score": 0.9306930693069307
+    },
+    {
+      "side_effect": "thrombocytopenia",
+      "retrieved_pairs": 517,
+      "predicted_count": 0,
+      "expected_count": 589,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 589,
+      "precision": 0,
+      "recall": 0.0,
+      "f1_score": 0
+    },
+    {
+      "side_effect": "increased blood pressure",
+      "retrieved_pairs": 0,
+      "predicted_count": 3,
+      "expected_count": 0,
+      "true_positives": 0,
+      "false_positives": 3,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0,
+      "f1_score": 0
+    }
+  ]
+}

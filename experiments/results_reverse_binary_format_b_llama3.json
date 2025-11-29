@@ -1,0 +1,20 @@
+{
+  "architecture": "format_b_llama3",
+  "dataset": "reverse_queries_binary.csv",
+  "total_queries": 1200,
+  "test_size": 1200,
+  "correct": 1057,
+  "unknown_count": 0,
+  "accuracy": 0.8808333333333334,
+  "precision": 0.8764415156507414,
+  "recall": 0.8866666666666667,
+  "specificity": 0.875,
+  "f1_score": 0.8815244407622204,
+  "true_positives": 532,
+  "true_negatives": 525,
+  "false_positives": 75,
+  "false_negatives": 68,
+  "elapsed_time_s": 388.0310778617859,
+  "queries_per_sec": 3.0925358005150096,
+  "timestamp": "2025-10-20 17:19:07"
+}

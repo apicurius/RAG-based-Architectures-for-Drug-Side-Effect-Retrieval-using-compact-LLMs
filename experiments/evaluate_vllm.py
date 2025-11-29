@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-ULTRA-FAST DrugRAG Evaluation with vLLM (8 GPU Tensor Parallelism)
-This uses vLLM server with tensor-parallel-size=8 for MAXIMUM SPEED
+Ultra-FAST DrugRAG Evaluation with vLLM (4 GPU Tensor Parallelism)
+This uses vLLM server with tensor-parallel-size=4 for MAXIMUM SPEED
 
 Usage:
 1. Start vLLM server: ./start_vllm_server.sh
@@ -119,7 +119,7 @@ class VLLMFormatARAG:
         # Initialize vLLM for reasoning - ULTRA FAST
         self.llm = VLLMModel(config_path)
 
-        logger.info(f"✅ Format A RAG initialized with vLLM (8 GPU tensor parallelism)")
+        logger.info(f"✅ Format A RAG initialized with vLLM (4 GPU tensor parallelism)")
 
     def get_embedding(self, text: str) -> List[float]:
         """Generate embedding using robust client that handles 400 errors"""
@@ -314,7 +314,7 @@ FINAL ANSWER:"""
 
 
 class UltraFastEvaluator:
-    """Ultra-fast evaluator using vLLM with 8 GPU tensor parallelism"""
+    """Ultra-fast evaluator using vLLM with 4 GPU tensor parallelism"""
 
     def __init__(self, config_path: str = "config.json"):
         self.config_path = config_path
@@ -452,6 +452,8 @@ class UltraFastEvaluator:
                     analysis_logger.warning(f"  Ground Truth: {true_answer}")
                     analysis_logger.warning(f"  Predicted: {predicted}")
                     analysis_logger.warning(f"  Confidence: {result.get('confidence', 'N/A')}")
+                    if 'prompt' in result:
+                        analysis_logger.warning(f"  Prompt: {result['prompt'][:500]}...")  # First 500 chars
                     if 'full_response' in result:
                         analysis_logger.warning(f"  Full Response: {result['full_response']}")
 
@@ -464,6 +466,7 @@ class UltraFastEvaluator:
                     'predicted': predicted,
                     'is_correct': is_correct,
                     'confidence': result.get('confidence', 0.0),
+                    'prompt': result.get('prompt', 'N/A'),  # Full prompt for detailed logging
                     'full_response': result.get('full_response', result.get('reasoning', '')),
                     'model': result.get('model', 'unknown'),
                     'architecture': architecture,
@@ -540,7 +543,9 @@ class UltraFastEvaluator:
                 'side_effect': query['side_effect'],
                 'true_label': query['label'],
                 'predicted': result.get('answer'),
-                'confidence': result.get('confidence')
+                'confidence': result.get('confidence'),
+                'prompt': result.get('prompt', 'N/A'),  # Full prompt for detailed logging
+                'full_response': result.get('full_response', result.get('reasoning', ''))  # Full response
             })
 
         with open(results_file, 'w') as f:
@@ -548,7 +553,7 @@ class UltraFastEvaluator:
                 'configuration': {
                     'architecture': architecture,
                     'test_size': test_size,
-                    'gpu_config': '8x RTX A4000 with tensor parallelism'
+                    'gpu_config': '4x RTX A4000 with tensor parallelism'
                 },
                 'metrics': {
                     'accuracy': comprehensive_metrics['accuracy'],
@@ -569,6 +574,10 @@ class UltraFastEvaluator:
             }, f, indent=2)
 
         logger.info(f"\n✅ Results saved to {results_file}")
+        logger.info(f"📋 Detailed prompt-answer pairs saved in:")
+        logger.info(f"   - CSV: {detailed_csv_path}")
+        logger.info(f"   - JSON: {results_file}")
+        logger.info(f"   Each entry includes: prompt, full_response, confidence, labels")
 
         return {
             'accuracy': comprehensive_metrics['accuracy'],

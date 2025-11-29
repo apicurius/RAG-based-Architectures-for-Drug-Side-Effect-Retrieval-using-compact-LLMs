@@ -1,0 +1,114 @@
+[
+  {
+    "architecture": "format_b",
+    "model": "qwen",
+    "results": {
+      "perfect": {
+        "metrics": {
+          "accuracy": 0.9444444444444444,
+          "precision": 0.9,
+          "sensitivity": 1.0,
+          "specificity": 0.8888888888888888,
+          "f1_score": 0.9473684210526316,
+          "tp": 90,
+          "tn": 80,
+          "fp": 10,
+          "fn": 0
+        }
+      },
+      "raw_misspelled": {
+        "metrics": {
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "tp": 0,
+          "tn": 90,
+          "fp": 0,
+          "fn": 90
+        }
+      },
+      "llm_corrected": {
+        "metrics": {
+          "accuracy": 0.8444444444444444,
+          "precision": 0.8974358974358975,
+          "sensitivity": 0.7777777777777778,
+          "specificity": 0.9111111111111111,
+          "f1_score": 0.8333333333333333,
+          "tp": 70,
+          "tn": 82,
+          "fp": 8,
+          "fn": 20
+        }
+      }
+    },
+    "recovery_analysis": {
+      "perfect_f1": 0.9473684210526316,
+      "raw_misspelled_f1": 0.0,
+      "llm_corrected_f1": 0.8333333333333333,
+      "raw_degradation": 0.9473684210526316,
+      "remaining_degradation": 0.11403508771929838,
+      "recovery_percentage": 87.96296296296295,
+      "full_recovery": false,
+      "partial_recovery": true,
+      "no_recovery": false
+    }
+  },
+  {
+    "architecture": "graphrag",
+    "model": "qwen",
+    "results": {
+      "perfect": {
+        "metrics": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "f1_score": 1.0,
+          "tp": 90,
+          "tn": 90,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "raw_misspelled": {
+        "metrics": {
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1_score": 0.0,
+          "tp": 0,
+          "tn": 90,
+          "fp": 0,
+          "fn": 90
+        }
+      },
+      "llm_corrected": {
+        "metrics": {
+          "accuracy": 0.8888888888888888,
+          "precision": 1.0,
+          "sensitivity": 0.7777777777777778,
+          "specificity": 1.0,
+          "f1_score": 0.8750000000000001,
+          "tp": 70,
+          "tn": 90,
+          "fp": 0,
+          "fn": 20
+        }
+      }
+    },
+    "recovery_analysis": {
+      "perfect_f1": 1.0,
+      "raw_misspelled_f1": 0.0,
+      "llm_corrected_f1": 0.8750000000000001,
+      "raw_degradation": 1.0,
+      "remaining_degradation": 0.12499999999999989,
+      "recovery_percentage": 87.50000000000001,
+      "full_recovery": false,
+      "partial_recovery": true,
+      "no_recovery": false
+    }
+  }
+]

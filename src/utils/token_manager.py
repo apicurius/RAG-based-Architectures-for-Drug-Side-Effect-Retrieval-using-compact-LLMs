@@ -205,10 +205,12 @@ def create_token_manager(model_type: str = "qwen", max_tokens: int = None) -> To
         model_type: "qwen" or "llama3" (determines context window size)
         max_tokens: Override default token limit
     """
-    # Set conservative defaults based on model type
+    # Set defaults based on model type and updated vLLM configuration
     if max_tokens is None:
         if model_type == "qwen":
-            max_tokens = 3500  # Conservative for Qwen models
+            # Qwen2.5-7B-Instruct supports 32K context (updated from 8K)
+            # Reserve ~2K for output, use ~30K for input
+            max_tokens = 30000  # Updated to match new 32768 vLLM config
         elif model_type == "llama3":
             max_tokens = 3500  # Conservative for LLAMA3 models
         else:

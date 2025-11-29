@@ -1,0 +1,927 @@
+{
+  "configuration": {
+    "architecture": "format_a_qwen",
+    "test_size": 100,
+    "gpu_config": "4x RTX A4000 with tensor parallelism"
+  },
+  "metrics": {
+    "accuracy": 0.93,
+    "accuracy_percent": 93.0,
+    "f1_score": 0.924731182795699,
+    "precision": 1.0,
+    "sensitivity": 0.86,
+    "specificity": 1.0,
+    "tp": 43,
+    "tn": 50,
+    "fp": 0,
+    "fn": 7,
+    "prediction_distribution": {
+      "NO": 57,
+      "YES": 43
+    },
+    "elapsed_time": 61.824289083480835,
+    "throughput": 1.6174872607911563
+  },
+  "detailed_results": [
+    {
+      "drug": "diclofenac",
+      "side_effect": "blindness unilateral",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that blindness unilateral is not listed as an adverse effect of diclofenac."
+    },
+    {
+      "drug": "tacrolimus",
+      "side_effect": "retrograde ejaculation",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that retrograde ejaculation is not listed as an adverse effect of tacrolimus."
+    },
+    {
+      "drug": "saxagliptin",
+      "side_effect": "post procedural swelling",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that post procedural swelling is not listed as an adverse effect, adverse reaction, or side effect of saxagliptin."
+    },
+    {
+      "drug": "travoprost",
+      "side_effect": "infestation",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results list various side effects and adverse reactions of travoprost but do not mention \"infestation\" as one of them."
+    },
+    {
+      "drug": "levetiracetam",
+      "side_effect": "convulsion",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"convulsion\" as one of the adverse reactions associated with levetiracetam."
+    },
+    {
+      "drug": "rosiglitazone",
+      "side_effect": "fatigue",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"fatigue\" as one of the adverse effects or reactions associated with rosiglitazone."
+    },
+    {
+      "drug": "choline",
+      "side_effect": "abdominal discomfort",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nAbdominal discomfort is listed as one of the adverse effects of choline in the provided RAG results."
+    },
+    {
+      "drug": "mometasone",
+      "side_effect": "myocardial ischaemia",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that myocardial ischaemia is not listed as an adverse effect of mometasone."
+    },
+    {
+      "drug": "amiloride",
+      "side_effect": "neutropenia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"neutropenia\" as one of the adverse reactions associated with amiloride."
+    },
+    {
+      "drug": "lacosamide",
+      "side_effect": "type iv hypersensitivity reaction",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG results list \"drug hypersensitivity\" as an adverse reaction to lacosamide but do not specifically mention type IV hypersensitivity reaction. Since type IV hypersensitivity is a subset of drug hypersensitivity, and the information provided does not explicitly include it, the answer is NO."
+    },
+    {
+      "drug": "olsalazine",
+      "side_effect": "somnolence",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results list a variety of adverse effects for olsalazine but do not specifically mention somnolence as one of them."
+    },
+    {
+      "drug": "mometasone",
+      "side_effect": "arthralgia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"arthralgia\" as one of the adverse reactions caused by mometasone, confirming that arthralgia is indeed an adverse effect of this drug."
+    },
+    {
+      "drug": "streptozotocin",
+      "side_effect": "cystitis haemorrhagic",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that cystitis haemorrhagic is not listed as an adverse effect of streptozotocin."
+    },
+    {
+      "drug": "diclofenac",
+      "side_effect": "intestinal ulcer",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG results list \"colitis ulcerative\" as an adverse reaction to diclofenac, which includes intestinal ulcers as a subset."
+    },
+    {
+      "drug": "vardenafil",
+      "side_effect": "fraction of inspired oxygen",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that fraction of inspired oxygen is not listed as an adverse effect of vardenafil."
+    },
+    {
+      "drug": "lorazepam",
+      "side_effect": "dysarthria",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"dysarthria\" as one of the adverse reactions associated with lorazepam."
+    },
+    {
+      "drug": "clobetasol",
+      "side_effect": "alanine aminotransferase decreased",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nThe RAG Results clearly state that alanine aminotransferase decreased is not listed as an adverse effect of clobetasol. Therefore, the answer is no."
+    },
+    {
+      "drug": "propylthiouracil",
+      "side_effect": "floppy infant",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nThe RAG Results clearly state that \"floppy infant\" is not listed as an adverse effect of propylthiouracil."
+    },
+    {
+      "drug": "pge1",
+      "side_effect": "injection site pain",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"injection site pain\" as one of the adverse reactions associated with the drug PGE1."
+    },
+    {
+      "drug": "iodixanol",
+      "side_effect": "motor dysfunction",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"motor dysfunction\" as one of the adverse reactions associated with iodixanol."
+    },
+    {
+      "drug": "atosiban",
+      "side_effect": "bradycardia",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that bradycardia is not listed as an adverse effect of atosiban."
+    },
+    {
+      "drug": "citric",
+      "side_effect": "trisomy 21",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that trisomy 21 is not listed as an adverse effect of citric."
+    },
+    {
+      "drug": "clobetasol",
+      "side_effect": "glycosuria",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"glycosuria\" as one of the adverse reactions associated with clobetasol."
+    },
+    {
+      "drug": "orphenadrine",
+      "side_effect": "dizziness",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"dizziness\" as one of the side effects or adverse reactions associated with orphenadrine."
+    },
+    {
+      "drug": "rosuvastatin",
+      "side_effect": "post-traumatic pain",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that post-traumatic pain is not listed as an adverse effect, adverse reaction, or side effect of rosuvastatin."
+    },
+    {
+      "drug": "bisacodyl",
+      "side_effect": "headache",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"headache\" as one of the adverse effects or side effects of bisacodyl."
+    },
+    {
+      "drug": "vardenafil",
+      "side_effect": "myocardial ischaemia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG results list \"angina pectoris\" and \"angina unstable\" as adverse reactions to vardenafil, which are related to myocardial ischaemia. Therefore, myocardial ischaemia can be considered an adverse effect of vardenafil. However, since the question asks if it is specifically listed as such and \"angina pectoris\" and \"angina unstable\" are more specific terms, the direct answer based on the provided information is"
+    },
+    {
+      "drug": "anthracycline",
+      "side_effect": "prostate cancer metastatic",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that prostate cancer metastatic is not listed as an adverse effect of anthracycline."
+    },
+    {
+      "drug": "fludarabine",
+      "side_effect": "diarrhoea",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"diarrhoea\" as one of the side effects or adverse reactions associated with fludarabine."
+    },
+    {
+      "drug": "choline",
+      "side_effect": "postictal state",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that postictal state is not listed as an adverse effect of choline."
+    },
+    {
+      "drug": "niacin",
+      "side_effect": "gastrointestinal pain",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG results list \"gastrointestinal pain\" as one of the adverse effects of niacin."
+    },
+    {
+      "drug": "tamsulosin",
+      "side_effect": "insomnia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"insomnia\" as one of the adverse reactions associated with tamsulosin."
+    },
+    {
+      "drug": "diazepam",
+      "side_effect": "complication of device insertion",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that complications of device insertion are not listed as adverse effects, adverse reactions, or side effects of diazepam."
+    },
+    {
+      "drug": "amd3100",
+      "side_effect": "urticaria",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"urticaria\" as one of the adverse reactions associated with the drug amd3100."
+    },
+    {
+      "drug": "trospium",
+      "side_effect": "mean arterial pressure",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that mean arterial pressure is not listed as an adverse effect, adverse reaction, or side effect of the drug trospium."
+    },
+    {
+      "drug": "atosiban",
+      "side_effect": "cardiac disorder",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"cardiac disorder\" as one of the adverse reactions associated with atosiban."
+    },
+    {
+      "drug": "norethisterone",
+      "side_effect": "lymphocytic infiltration",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that lymphocytic infiltration is not listed as an adverse effect of norethisterone."
+    },
+    {
+      "drug": "bisacodyl",
+      "side_effect": "jaundice hepatocellular",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that jaundice hepatocellular is not listed as an adverse effect of bisacodyl."
+    },
+    {
+      "drug": "diazepam",
+      "side_effect": "loss of libido",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG results list \"disturbance in sexual arousal\" as an adverse reaction to diazepam, which includes loss of libido as a specific manifestation."
+    },
+    {
+      "drug": "norethisterone",
+      "side_effect": "hypersensitivity",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"hypersensitivity\" as one of the adverse reactions associated with norethisterone."
+    },
+    {
+      "drug": "retinoic",
+      "side_effect": "thrombocytopenia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG results list numerous adverse effects of retinoic, but thrombocytopenia is not mentioned among them. Therefore, based on the provided information, thrombocytopenia is not listed as an adverse effect of retinoic."
+    },
+    {
+      "drug": "etravirine",
+      "side_effect": "gastrointestinal pain",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results explicitly list \"gastrointestinal pain\" as one of the adverse effects of etravirine."
+    },
+    {
+      "drug": "prucalopride",
+      "side_effect": "back pain",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"back pain\" as one of the adverse reactions associated with prucalopride."
+    },
+    {
+      "drug": "travoprost",
+      "side_effect": "micturition urgency",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that micturition urgency is not listed as an adverse effect of travoprost."
+    },
+    {
+      "drug": "propylthiouracil",
+      "side_effect": "lupus-like syndrome",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"lupus-like syndrome\" as one of the adverse reactions associated with propylthiouracil."
+    },
+    {
+      "drug": "rosuvastatin",
+      "side_effect": "asthenia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"asthenia\" as one of the adverse reactions associated with rosuvastatin."
+    },
+    {
+      "drug": "iodixanol",
+      "side_effect": "tonic convulsion",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that tonic convulsion is not listed as an adverse effect of iodixanol."
+    },
+    {
+      "drug": "amoxicillin",
+      "side_effect": "coma",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"coma\" as one of the adverse reactions associated with amoxicillin."
+    },
+    {
+      "drug": "pge1",
+      "side_effect": "salivary gland pain",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that salivary gland pain is not listed as an adverse effect of pge1."
+    },
+    {
+      "drug": "arsenic",
+      "side_effect": "atrial fibrillation",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"atrial fibrillation\" as one of the adverse reactions associated with arsenic."
+    },
+    {
+      "drug": "atropine",
+      "side_effect": "rash",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG results list \"dermatitis\" as an adverse reaction to atropine, which falls under the broader category of rash. Therefore, based on the information provided, a rash can indeed be an adverse effect of atropine."
+    },
+    {
+      "drug": "tacrolimus",
+      "side_effect": "herpes dermatitis",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG results list various side effects of tacrolimus but do not mention herpes dermatitis as one of them. Therefore, based on the provided information, herpes dermatitis is not listed as an adverse effect of tacrolimus."
+    },
+    {
+      "drug": "topotecan",
+      "side_effect": "dermatitis bullous",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"dermatitis bullous\" as one of the adverse reactions associated with topotecan."
+    },
+    {
+      "drug": "citric",
+      "side_effect": "hypotension",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"hypotension\" as one of the adverse effects of citric."
+    },
+    {
+      "drug": "procaine",
+      "side_effect": "somnolence",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"somnolence\" as one of the adverse effects of procaine."
+    },
+    {
+      "drug": "amd3100",
+      "side_effect": "synovitis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that synovitis is not listed as an adverse effect of the drug amd3100."
+    },
+    {
+      "drug": "fluvastatin",
+      "side_effect": "chest pain",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"chest pain\" as one of the adverse reactions associated with fluvastatin."
+    },
+    {
+      "drug": "losartan",
+      "side_effect": "glycosylated haemoglobin decreased",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG results clearly state that glycosylated hemoglobin decreased is not listed as an adverse effect of losartan."
+    },
+    {
+      "drug": "acitretin",
+      "side_effect": "insomnia",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG results list various side effects of acitretin but do not mention insomnia as one of them. Therefore, based on the provided information, insomnia is not listed as an adverse effect of acitretin."
+    },
+    {
+      "drug": "rosiglitazone",
+      "side_effect": "blood fibrinogen decreased",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that blood fibrinogen decreased is not listed as an adverse effect of rosiglitazone."
+    },
+    {
+      "drug": "fluvastatin",
+      "side_effect": "erythromelalgia",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that erythromelalgia is not listed as an adverse effect of fluvastatin."
+    },
+    {
+      "drug": "retinoic",
+      "side_effect": "sudden cardiac death",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that sudden cardiac death is not listed as an adverse effect of retinoic."
+    },
+    {
+      "drug": "lorazepam",
+      "side_effect": "parasomnia",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that parasomnia is not listed as an adverse effect of lorazepam."
+    },
+    {
+      "drug": "trospium",
+      "side_effect": "haematuria",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"haematuria\" as one of the adverse reactions associated with trospium."
+    },
+    {
+      "drug": "lacosamide",
+      "side_effect": "automatism",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that automatism is not listed as an adverse effect of lacosamide."
+    },
+    {
+      "drug": "topotecan",
+      "side_effect": "spinal osteoarthritis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that spinal osteoarthritis is not listed as an adverse effect of topotecan."
+    },
+    {
+      "drug": "anthracycline",
+      "side_effect": "dehydration",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"dehydration\" as one of the adverse reactions associated with anthracycline."
+    },
+    {
+      "drug": "olsalazine",
+      "side_effect": "choreoathetosis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that choreoathetosis is not listed as an adverse effect of olsalazine."
+    },
+    {
+      "drug": "niacin",
+      "side_effect": "vertebrobasilar insufficiency",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that vertebrobasilar insufficiency is not listed as an adverse effect of niacin."
+    },
+    {
+      "drug": "tamsulosin",
+      "side_effect": "application site swelling",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that application site swelling is not listed as an adverse effect, adverse reaction, or side effect of tamsulosin."
+    },
+    {
+      "drug": "gentamicin",
+      "side_effect": "herpes dermatitis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that herpes dermatitis is not listed as an adverse effect of gentamicin."
+    },
+    {
+      "drug": "sufentanil",
+      "side_effect": "euphoric mood",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nEuphoric mood is listed as one of the adverse reactions of sufentanil in the provided RAG results."
+    },
+    {
+      "drug": "procaine",
+      "side_effect": "encephalocele",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that encephalocele is not listed as an adverse effect of procaine."
+    },
+    {
+      "drug": "fluocinonide",
+      "side_effect": "atrophy",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"skin atrophy\" as an adverse reaction caused by fluocinonide, which directly answers the question affirmatively."
+    },
+    {
+      "drug": "fluocinonide",
+      "side_effect": "rhinitis atrophic",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that rhinitis atrophic is not listed as an adverse effect of fluocinonide."
+    },
+    {
+      "drug": "prucalopride",
+      "side_effect": "macular degeneration",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that macular degeneration is not listed as an adverse effect of prucalopride."
+    },
+    {
+      "drug": "amoxicillin",
+      "side_effect": "volume blood increased",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nThe RAG Results clearly state that \"volume blood increased\" is not listed as an adverse effect of amoxicillin. Therefore, based on the provided information, the answer is no."
+    },
+    {
+      "drug": "8-mop",
+      "side_effect": "erythema",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nErythema is listed as one of the adverse reactions for 8-mop in the provided RAG results."
+    },
+    {
+      "drug": "levetiracetam",
+      "side_effect": "intestinal ulcer",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that intestinal ulcer is not listed as an adverse effect of levetiracetam."
+    },
+    {
+      "drug": "fludarabine",
+      "side_effect": "phenylketonuria",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that phenylketonuria is not listed as an adverse effect of fludarabine."
+    },
+    {
+      "drug": "arsenic",
+      "side_effect": "embolism arterial",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that embolism arterial is not listed as an adverse effect of arsenic."
+    },
+    {
+      "drug": "etravirine",
+      "side_effect": "erythrasma",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that erythrasma is not listed as an adverse effect, adverse reaction, or side effect of etravirine."
+    },
+    {
+      "drug": "amiloride",
+      "side_effect": "feeling abnormal",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"feeling abnormal\" as one of the adverse effects of amiloride, directly answering the question affirmatively."
+    },
+    {
+      "drug": "gentamicin",
+      "side_effect": "tinnitus",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"tinnitus\" as one of the adverse effects or reactions associated with gentamicin."
+    },
+    {
+      "drug": "doxapram",
+      "side_effect": "arrhythmia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list both \"arrhythmia,\" \"ventricular fibrillation,\" and \"ventricular tachycardia\" as adverse effects of doxapram, which fall under the broader category of arrhythmia."
+    },
+    {
+      "drug": "retinoic",
+      "side_effect": "pulmonary embolism",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that pulmonary embolism is not listed as an adverse effect of retinoic."
+    },
+    {
+      "drug": "diazoxide",
+      "side_effect": "haemoglobin",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG results list \"haemoglobin decreased\" as an adverse reaction to diazoxide, which directly answers the question."
+    },
+    {
+      "drug": "retinoic",
+      "side_effect": "blood cholesterol increased",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"blood cholesterol increased\" as one of the adverse reactions caused by retinoic."
+    },
+    {
+      "drug": "streptozotocin",
+      "side_effect": "aggression",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"aggression\" as one of the side effects or adverse reactions caused by streptozotocin."
+    },
+    {
+      "drug": "amiloride",
+      "side_effect": "graft thrombosis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that graft thrombosis is not listed as an adverse effect of amiloride."
+    },
+    {
+      "drug": "sufentanil",
+      "side_effect": "haematotoxicity",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that haematotoxicity is not listed as an adverse effect of sufentanil."
+    },
+    {
+      "drug": "atropine",
+      "side_effect": "ocular icterus",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that ocular icterus is not listed as an adverse effect of atropine."
+    },
+    {
+      "drug": "acitretin",
+      "side_effect": "respiratory paralysis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that respiratory paralysis is not listed as an adverse effect of acitretin."
+    },
+    {
+      "drug": "8-mop",
+      "side_effect": "hypopnoea",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that hypopnoea is not listed as an adverse effect of the drug 8-mop."
+    },
+    {
+      "drug": "saxagliptin",
+      "side_effect": "thrombocytopenia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"thrombocytopenia\" as one of the adverse reactions associated with saxagliptin."
+    },
+    {
+      "drug": "amiloride",
+      "side_effect": "penile oedema",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that penile oedema is not listed as an adverse effect of amiloride."
+    },
+    {
+      "drug": "diazoxide",
+      "side_effect": "hepatic atrophy",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that hepatic atrophy is not listed as an adverse effect of diazoxide."
+    },
+    {
+      "drug": "losartan",
+      "side_effect": "arrhythmia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "YES\n\nReasoning: The RAG Results list \"arrhythmia\" as one of the adverse reactions associated with losartan."
+    },
+    {
+      "drug": "orphenadrine",
+      "side_effect": "congenital genital malformation",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that congenital genital malformation is not listed as an adverse effect of orphenadrine."
+    },
+    {
+      "drug": "doxapram",
+      "side_effect": "hypochondriasis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9,
+      "prompt": "N/A",
+      "full_response": "NO\n\nReasoning: The RAG Results clearly state that hypochondriasis is not listed as an adverse effect of doxapram."
+    }
+  ]
+}

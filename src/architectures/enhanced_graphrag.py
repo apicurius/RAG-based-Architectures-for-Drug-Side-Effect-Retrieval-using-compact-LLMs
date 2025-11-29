@@ -37,9 +37,15 @@ class EnhancedGraphRAG:
 
         # Initialize Neo4j connection
         try:
+            # Use bolt:// protocol which works, instead of neo4j+s:// which fails
+            neo4j_host = self.config['neo4j_uri'].replace('neo4j+s://', '').replace('neo4j://', '')
+            bolt_uri = f'bolt://{neo4j_host}:7687'
+
             self.driver = GraphDatabase.driver(
-                self.config['neo4j_uri'],
-                auth=(self.config['neo4j_username'], self.config['neo4j_password'])
+                bolt_uri,
+                auth=(self.config['neo4j_username'], self.config['neo4j_password']),
+                encrypted=True,
+                trust='TRUST_ALL_CERTIFICATES'
             )
             # Test connection
             with self.driver.session() as session:

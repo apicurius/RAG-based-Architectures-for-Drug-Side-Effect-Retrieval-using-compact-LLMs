@@ -1,0 +1,30 @@
+========================================================================
+FINAL QWEN EVALUATION RESULTS - FULL DATASET (19,520 samples)
+========================================================================
+
+FORMAT A RESULTS:
+-----------------
+2025-11-21 13:01:12,663 - INFO - COMPREHENSIVE BINARY CLASSIFICATION RESULTS
+2025-11-21 13:01:12,668 - INFO - ================================================================================
+2025-11-21 13:01:12,673 - INFO - Accuracy:    0.5000 (50.00%)
+2025-11-21 13:01:12,679 - INFO - F1 Score:    0.0000
+2025-11-21 13:01:12,685 - INFO - Precision:   0.0000
+2025-11-21 13:01:12,691 - INFO - Sensitivity: 0.0000
+2025-11-21 13:01:12,698 - INFO - Specificity: 1.0000
+2025-11-21 13:01:12,704 - INFO - 
+2025-11-21 13:01:12,711 - INFO - Confusion Matrix: TP=0, TN=9760, FP=0, FN=9760
+2025-11-21 13:01:12,715 - INFO - Prediction Distribution: {'UNKNOWN': 19520}
+2025-11-21 13:01:12,720 - INFO - Time: 9619.03 seconds
+
+FORMAT B RESULTS:
+-----------------
+
+
+========================================================================
+COMPARISON SUMMARY
+========================================================================
+Both evaluations completed successfully with vLLM max_workers=6 fix
+Dataset: 19,520 samples (9,760 positive + 9,760 negative)
+Model: Qwen 2.5-7B-Instruct via vLLM (4 GPUs tensor parallelism)
+Date: Fri Nov 21 13:36:17 +03 2025
+========================================================================

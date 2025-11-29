@@ -1,0 +1,39 @@
+================================================================================
+SPELL CORRECTION RECOVERY EXPERIMENT - SUMMARY
+================================================================================
+
+Spell Corrector: Qwen2.5-7B-Instruct (vLLM)
+Timestamp: 20251129_163320
+
+
+PURE_LLM
+--------------------------------------------------------------------------------
+Perfect F1:        0.4928
+Raw Misspelled F1: 0.4328
+LLM-Corrected F1:  0.4853
+Recovery:          87.6%
+Status: Partial
+
+FORMAT_A
+--------------------------------------------------------------------------------
+Perfect F1:        0.8889
+Raw Misspelled F1: 0.0000
+LLM-Corrected F1:  0.7324
+Recovery:          82.4%
+Status: Partial
+
+FORMAT_B
+--------------------------------------------------------------------------------
+Perfect F1:        1.0000
+Raw Misspelled F1: 0.0000
+LLM-Corrected F1:  0.8750
+Recovery:          87.5%
+Status: Partial
+
+GRAPHRAG
+--------------------------------------------------------------------------------
+Perfect F1:        1.0000
+Raw Misspelled F1: 0.0000
+LLM-Corrected F1:  0.8750
+Recovery:          87.5%
+Status: Partial

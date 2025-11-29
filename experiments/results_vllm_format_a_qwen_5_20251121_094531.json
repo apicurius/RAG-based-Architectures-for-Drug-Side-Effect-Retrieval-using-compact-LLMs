@@ -1,0 +1,55 @@
+{
+  "configuration": {
+    "architecture": "format_a_qwen",
+    "test_size": 5,
+    "gpu_config": "8x RTX A4000 with tensor parallelism"
+  },
+  "metrics": {
+    "accuracy": 0.75,
+    "accuracy_percent": 75.0,
+    "f1_score": 0.6666666666666666,
+    "precision": 1.0,
+    "sensitivity": 0.5,
+    "specificity": 1.0,
+    "tp": 1,
+    "tn": 2,
+    "fp": 0,
+    "fn": 1,
+    "prediction_distribution": {
+      "NO": 3,
+      "YES": 1
+    },
+    "elapsed_time": 50.85506081581116,
+    "throughput": 0.07865490544760836
+  },
+  "detailed_results": [
+    {
+      "drug": "doxapram",
+      "side_effect": "arrhythmia",
+      "true_label": 1,
+      "predicted": "YES",
+      "confidence": 0.9
+    },
+    {
+      "drug": "doxapram",
+      "side_effect": "hypochondriasis",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9
+    },
+    {
+      "drug": "lacosamide",
+      "side_effect": "type iv hypersensitivity reaction",
+      "true_label": 1,
+      "predicted": "NO",
+      "confidence": 0.9
+    },
+    {
+      "drug": "lacosamide",
+      "side_effect": "automatism",
+      "true_label": 0,
+      "predicted": "NO",
+      "confidence": 0.9
+    }
+  ]
+}

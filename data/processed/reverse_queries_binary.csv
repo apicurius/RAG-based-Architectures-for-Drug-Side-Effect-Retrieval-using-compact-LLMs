@@ -1,0 +1,1201 @@
+side_effect,query,drug,label
+dizziness,Which drugs cause dizziness?,octreotide,YES
+dizziness,Which drugs cause dizziness?,minoxidil,NO
+dizziness,What medications lead to dizziness?,methocarbamol,YES
+dizziness,What medications lead to dizziness?,eptifibatide,NO
+dizziness,List drugs associated with dizziness,vardenafil,YES
+dizziness,List drugs associated with dizziness,gemcitabine,NO
+nausea,Which drugs cause nausea?,doripenem,YES
+nausea,Which drugs cause nausea?,tafluprost,NO
+nausea,What medications lead to nausea?,vigabatrin,YES
+nausea,What medications lead to nausea?,lantus,NO
+nausea,List drugs associated with nausea,penciclovir,YES
+nausea,List drugs associated with nausea,finasteride,NO
+headache,Which drugs cause headache?,fe(iii,YES
+headache,Which drugs cause headache?,mecamylamine,NO
+headache,What medications lead to headache?,ephedrine,YES
+headache,What medications lead to headache?,molindone,NO
+headache,List drugs associated with headache,naltrexone,YES
+headache,List drugs associated with headache,cefotetan,NO
+rash,Which drugs cause rash?,ceftizoxime,YES
+rash,Which drugs cause rash?,carteolol,NO
+rash,What medications lead to rash?,x,YES
+rash,What medications lead to rash?,nepafenac,NO
+rash,List drugs associated with rash,temsirolimus,YES
+rash,List drugs associated with rash,conivaptan,NO
+vomiting,Which drugs cause vomiting?,cefdinir,YES
+vomiting,Which drugs cause vomiting?,fluoxymesterone,NO
+vomiting,What medications lead to vomiting?,epinephrine,YES
+vomiting,What medications lead to vomiting?,doxapram,NO
+vomiting,List drugs associated with vomiting,methylergometrine,YES
+vomiting,List drugs associated with vomiting,methyltestosterone,NO
+asthenia,Which drugs cause asthenia?,rosiglitazone,YES
+asthenia,Which drugs cause asthenia?,roxithromycin,NO
+asthenia,What medications lead to asthenia?,teniposide,YES
+asthenia,What medications lead to asthenia?,hydralazine,NO
+asthenia,List drugs associated with asthenia,misoprostol,YES
+asthenia,List drugs associated with asthenia,thioridazine,NO
+diarrhoea,Which drugs cause diarrhoea?,conivaptan,YES
+diarrhoea,Which drugs cause diarrhoea?,phenylephrine,NO
+diarrhoea,What medications lead to diarrhoea?,diatrizoate,YES
+diarrhoea,What medications lead to diarrhoea?,tetracaine,NO
+diarrhoea,List drugs associated with diarrhoea,mycophenolate,YES
+diarrhoea,List drugs associated with diarrhoea,glutamine,NO
+pruritus,Which drugs cause pruritus?,pindolol,YES
+pruritus,Which drugs cause pruritus?,org,NO
+pruritus,What medications lead to pruritus?,glutamine,YES
+pruritus,What medications lead to pruritus?,tetracycline,NO
+pruritus,List drugs associated with pruritus,paricalcitol,YES
+pruritus,List drugs associated with pruritus,entecavir,NO
+hypersensitivity,Which drugs cause hypersensitivity?,oxycodone,YES
+hypersensitivity,Which drugs cause hypersensitivity?,arsenic,NO
+hypersensitivity,What medications lead to hypersensitivity?,methyl,YES
+hypersensitivity,What medications lead to hypersensitivity?,gemcitabine,NO
+hypersensitivity,List drugs associated with hypersensitivity,miconazole,YES
+hypersensitivity,List drugs associated with hypersensitivity,dfmo,NO
+abdominal pain,Which drugs cause abdominal pain?,cefprozil,YES
+abdominal pain,Which drugs cause abdominal pain?,rizatriptan,NO
+abdominal pain,What medications lead to abdominal pain?,nalmefene,YES
+abdominal pain,What medications lead to abdominal pain?,perphenazine,NO
+abdominal pain,List drugs associated with abdominal pain,gadoteridol,YES
+abdominal pain,List drugs associated with abdominal pain,disopyramide,NO
+urticaria,Which drugs cause urticaria?,zoledronic,YES
+urticaria,Which drugs cause urticaria?,nilutamide,NO
+urticaria,What medications lead to urticaria?,metrodin,YES
+urticaria,What medications lead to urticaria?,thymidine,NO
+urticaria,List drugs associated with urticaria,modafinil,YES
+urticaria,List drugs associated with urticaria,amobarbital,NO
+body temperature increased,Which drugs cause body temperature increased?,cinacalcet,YES
+body temperature increased,Which drugs cause body temperature increased?,lormetazepam,NO
+body temperature increased,What medications lead to body temperature increased?,metoprolol,YES
+body temperature increased,What medications lead to body temperature increased?,nafarelin,NO
+body temperature increased,List drugs associated with body temperature increased,sulindac,YES
+body temperature increased,List drugs associated with body temperature increased,estriol,NO
+dermatitis,Which drugs cause dermatitis?,lapatinib,YES
+dermatitis,Which drugs cause dermatitis?,poly(styrene,NO
+dermatitis,What medications lead to dermatitis?,teniposide,YES
+dermatitis,What medications lead to dermatitis?,conivaptan,NO
+dermatitis,List drugs associated with dermatitis,vallergan,YES
+dermatitis,List drugs associated with dermatitis,oxprenolol,NO
+pain,Which drugs cause pain?,valdecoxib,YES
+pain,Which drugs cause pain?,rocuronium,NO
+pain,What medications lead to pain?,naratriptan,YES
+pain,What medications lead to pain?,fesoterodine,NO
+pain,List drugs associated with pain,amsacrine,YES
+pain,List drugs associated with pain,tetrahydrobiopterin,NO
+gastrointestinal disorder,Which drugs cause gastrointestinal disorder?,dimercaptosuccinic,YES
+gastrointestinal disorder,Which drugs cause gastrointestinal disorder?,trimethadione,NO
+gastrointestinal disorder,What medications lead to gastrointestinal disorder?,estradiol,YES
+gastrointestinal disorder,What medications lead to gastrointestinal disorder?,terbutaline,NO
+gastrointestinal disorder,List drugs associated with gastrointestinal disorder,dabigatran,YES
+gastrointestinal disorder,List drugs associated with gastrointestinal disorder,beclomethasone,NO
+fatigue,Which drugs cause fatigue?,tiaprofenic,YES
+fatigue,Which drugs cause fatigue?,bpti,NO
+fatigue,What medications lead to fatigue?,diltiazem,YES
+fatigue,What medications lead to fatigue?,2-hydroxysuccinaldehyde,NO
+fatigue,List drugs associated with fatigue,sodium,YES
+fatigue,List drugs associated with fatigue,dexmedetomidine,NO
+dyspepsia,Which drugs cause dyspepsia?,mirabegron,YES
+dyspepsia,Which drugs cause dyspepsia?,lodoxamide,NO
+dyspepsia,What medications lead to dyspepsia?,ropinirole,YES
+dyspepsia,What medications lead to dyspepsia?,amoxicillin,NO
+dyspepsia,List drugs associated with dyspepsia,diphenhydramine,YES
+dyspepsia,List drugs associated with dyspepsia,pimecrolimus,NO
+constipation,Which drugs cause constipation?,tiaprofenic,YES
+constipation,Which drugs cause constipation?,nimodipine,NO
+constipation,What medications lead to constipation?,ipratropium,YES
+constipation,What medications lead to constipation?,testosterone,NO
+constipation,List drugs associated with constipation,ofloxacin,YES
+constipation,List drugs associated with constipation,glibenclamide,NO
+dyspnoea,Which drugs cause dyspnoea?,azithromycin,YES
+dyspnoea,Which drugs cause dyspnoea?,choline,NO
+dyspnoea,What medications lead to dyspnoea?,eaca,YES
+dyspnoea,What medications lead to dyspnoea?,orlistat,NO
+dyspnoea,List drugs associated with dyspnoea,atazanavir,YES
+dyspnoea,List drugs associated with dyspnoea,phentermine,NO
+hypotension,Which drugs cause hypotension?,ticagrelor,YES
+hypotension,Which drugs cause hypotension?,saxagliptin,NO
+hypotension,What medications lead to hypotension?,itraconazole,YES
+hypotension,What medications lead to hypotension?,capreomycin,NO
+hypotension,List drugs associated with hypotension,pramipexole,YES
+hypotension,List drugs associated with hypotension,acetohydroxamic,NO
+insomnia,Which drugs cause insomnia?,lenalidomide,YES
+insomnia,Which drugs cause insomnia?,lithium,NO
+insomnia,What medications lead to insomnia?,moxifloxacin,YES
+insomnia,What medications lead to insomnia?,warfarin,NO
+insomnia,List drugs associated with insomnia,abacavir,YES
+insomnia,List drugs associated with insomnia,nateglinide,NO
+anaphylactic shock,Which drugs cause anaphylactic shock?,carvedilol,YES
+anaphylactic shock,Which drugs cause anaphylactic shock?,fenofibrate,NO
+anaphylactic shock,What medications lead to anaphylactic shock?,trimethoprim,YES
+anaphylactic shock,What medications lead to anaphylactic shock?,emtricitabine,NO
+anaphylactic shock,List drugs associated with anaphylactic shock,tobramycin,YES
+anaphylactic shock,List drugs associated with anaphylactic shock,amobarbital,NO
+paraesthesia,Which drugs cause paraesthesia?,vardenafil,YES
+paraesthesia,Which drugs cause paraesthesia?,penicillin,NO
+paraesthesia,What medications lead to paraesthesia?,triazolam,YES
+paraesthesia,What medications lead to paraesthesia?,quinidine,NO
+paraesthesia,List drugs associated with paraesthesia,mometasone,YES
+paraesthesia,List drugs associated with paraesthesia,zanamivir,NO
+somnolence,Which drugs cause somnolence?,olopatadine,YES
+somnolence,Which drugs cause somnolence?,lapatinib,NO
+somnolence,What medications lead to somnolence?,technetium-99m,YES
+somnolence,What medications lead to somnolence?,poly(styrene,NO
+somnolence,List drugs associated with somnolence,oxymorphone,YES
+somnolence,List drugs associated with somnolence,amsacrine,NO
+nervous system disorder,Which drugs cause nervous system disorder?,parecoxib,YES
+nervous system disorder,Which drugs cause nervous system disorder?,ganciclovir,NO
+nervous system disorder,What medications lead to nervous system disorder?,photofrin,YES
+nervous system disorder,What medications lead to nervous system disorder?,hydralazine,NO
+nervous system disorder,List drugs associated with nervous system disorder,letrozole,YES
+nervous system disorder,List drugs associated with nervous system disorder,nefazodone,NO
+thrombocytopenia,Which drugs cause thrombocytopenia?,amlodipine,YES
+thrombocytopenia,Which drugs cause thrombocytopenia?,abarelix,NO
+thrombocytopenia,What medications lead to thrombocytopenia?,carbenicillin,YES
+thrombocytopenia,What medications lead to thrombocytopenia?,alfentanil,NO
+thrombocytopenia,List drugs associated with thrombocytopenia,ixabepilone,YES
+thrombocytopenia,List drugs associated with thrombocytopenia,fexofenadine,NO
+tachycardia,Which drugs cause tachycardia?,tr-700,YES
+tachycardia,Which drugs cause tachycardia?,cefadroxil,NO
+tachycardia,What medications lead to tachycardia?,a77,YES
+tachycardia,What medications lead to tachycardia?,oxytetracycline,NO
+tachycardia,List drugs associated with tachycardia,quinaprilat,YES
+tachycardia,List drugs associated with tachycardia,thiazide,NO
+arthralgia,Which drugs cause arthralgia?,vildagliptin,YES
+arthralgia,Which drugs cause arthralgia?,triamcinolone,NO
+arthralgia,What medications lead to arthralgia?,valganciclovir,YES
+arthralgia,What medications lead to arthralgia?,ceftriaxone,NO
+arthralgia,List drugs associated with arthralgia,everolimus,YES
+arthralgia,List drugs associated with arthralgia,chloramphenicol,NO
+infection,Which drugs cause infection?,letrozole,YES
+infection,Which drugs cause infection?,acetaminophen,NO
+infection,What medications lead to infection?,nitrogen,YES
+infection,What medications lead to infection?,ivermectin,NO
+infection,List drugs associated with infection,methyl,YES
+infection,List drugs associated with infection,lacosamide,NO
+musculoskeletal discomfort,Which drugs cause musculoskeletal discomfort?,bendamustine,YES
+musculoskeletal discomfort,Which drugs cause musculoskeletal discomfort?,methyl,NO
+musculoskeletal discomfort,What medications lead to musculoskeletal discomfort?,clomiphene,YES
+musculoskeletal discomfort,What medications lead to musculoskeletal discomfort?,fenoprofen,NO
+musculoskeletal discomfort,List drugs associated with musculoskeletal discomfort,alendronate,YES
+musculoskeletal discomfort,List drugs associated with musculoskeletal discomfort,hydroxyurea,NO
+chest pain,Which drugs cause chest pain?,gadobenate,YES
+chest pain,Which drugs cause chest pain?,dacarbazine,NO
+chest pain,What medications lead to chest pain?,travoprost,YES
+chest pain,What medications lead to chest pain?,tramazoline,NO
+chest pain,List drugs associated with chest pain,clarithromycin,YES
+chest pain,List drugs associated with chest pain,ceftazidime,NO
+cough,Which drugs cause cough?,bortezomib,YES
+cough,Which drugs cause cough?,nitroprusside,NO
+cough,What medications lead to cough?,hydromorphone,YES
+cough,What medications lead to cough?,miglustat,NO
+cough,List drugs associated with cough,desonide,YES
+cough,List drugs associated with cough,ketamine,NO
+oedema,Which drugs cause oedema?,diatrizoate,YES
+oedema,Which drugs cause oedema?,abarelix,NO
+oedema,What medications lead to oedema?,bosentan,YES
+oedema,What medications lead to oedema?,efavirenz,NO
+oedema,List drugs associated with oedema,nimodipine,YES
+oedema,List drugs associated with oedema,ioversol,NO
+myalgia,Which drugs cause myalgia?,temsirolimus,YES
+myalgia,Which drugs cause myalgia?,penciclovir,NO
+myalgia,What medications lead to myalgia?,cas,YES
+myalgia,What medications lead to myalgia?,dalbavancin,NO
+myalgia,List drugs associated with myalgia,voriconazole,YES
+myalgia,List drugs associated with myalgia,bromocriptine,NO
+hypertension,Which drugs cause hypertension?,mirtazapine,YES
+hypertension,Which drugs cause hypertension?,iloprost,NO
+hypertension,What medications lead to hypertension?,lomefloxacin,YES
+hypertension,What medications lead to hypertension?,benzathine,NO
+hypertension,List drugs associated with hypertension,atazanavir,YES
+hypertension,List drugs associated with hypertension,scopolamine,NO
+decreased appetite,Which drugs cause decreased appetite?,digoxin,YES
+decreased appetite,Which drugs cause decreased appetite?,nitroprusside,NO
+decreased appetite,What medications lead to decreased appetite?,pantoprazole,YES
+decreased appetite,What medications lead to decreased appetite?,diethylpropion,NO
+decreased appetite,List drugs associated with decreased appetite,amsacrine,YES
+decreased appetite,List drugs associated with decreased appetite,doxapram,NO
+dry mouth,Which drugs cause dry mouth?,trovafloxacin,YES
+dry mouth,Which drugs cause dry mouth?,sevelamer,NO
+dry mouth,What medications lead to dry mouth?,fexofenadine,YES
+dry mouth,What medications lead to dry mouth?,fludarabine,NO
+dry mouth,List drugs associated with dry mouth,conivaptan,YES
+dry mouth,List drugs associated with dry mouth,auranofin,NO
+anxiety,Which drugs cause anxiety?,risedronate,YES
+anxiety,Which drugs cause anxiety?,nalidixic,NO
+anxiety,What medications lead to anxiety?,reserpine,YES
+anxiety,What medications lead to anxiety?,bromfenac,NO
+anxiety,List drugs associated with anxiety,mdv3100,YES
+anxiety,List drugs associated with anxiety,thiabendazole,NO
+feeling abnormal,Which drugs cause feeling abnormal?,oseltamivir,YES
+feeling abnormal,Which drugs cause feeling abnormal?,6-thioguanine,NO
+feeling abnormal,What medications lead to feeling abnormal?,sertraline,YES
+feeling abnormal,What medications lead to feeling abnormal?,silver,NO
+feeling abnormal,List drugs associated with feeling abnormal,alpha-methyl-p-tyrosine,YES
+feeling abnormal,List drugs associated with feeling abnormal,pge2,NO
+confusional state,Which drugs cause confusional state?,mycophenolic,YES
+confusional state,Which drugs cause confusional state?,clodronate,NO
+confusional state,What medications lead to confusional state?,pergolide,YES
+confusional state,What medications lead to confusional state?,nevirapine,NO
+confusional state,List drugs associated with confusional state,amoxicillin,YES
+confusional state,List drugs associated with confusional state,cefuroxime,NO
+angioedema,Which drugs cause angioedema?,clonidine,YES
+angioedema,Which drugs cause angioedema?,nizatidine,NO
+angioedema,What medications lead to angioedema?,dapagliflozin,YES
+angioedema,What medications lead to angioedema?,nizatidine,NO
+angioedema,List drugs associated with angioedema,cyclizine,YES
+angioedema,List drugs associated with angioedema,oxymetholone,NO
+convulsion,Which drugs cause convulsion?,abacavir,YES
+convulsion,Which drugs cause convulsion?,capsaicin,NO
+convulsion,What medications lead to convulsion?,thiabendazole,YES
+convulsion,What medications lead to convulsion?,glutamine,NO
+convulsion,List drugs associated with convulsion,vinflunine,YES
+convulsion,List drugs associated with convulsion,bendrofluazide,NO
+agitation,Which drugs cause agitation?,lithium,YES
+agitation,Which drugs cause agitation?,fluvastatin,NO
+agitation,What medications lead to agitation?,tegaserod,YES
+agitation,What medications lead to agitation?,diltiazem,NO
+agitation,List drugs associated with agitation,fluvoxamine,YES
+agitation,List drugs associated with agitation,5-aza-2'-deoxycytidine,NO
+anaemia,Which drugs cause anaemia?,delamanid,YES
+anaemia,Which drugs cause anaemia?,fluorometholone,NO
+anaemia,What medications lead to anaemia?,cgp,YES
+anaemia,What medications lead to anaemia?,halcinonide,NO
+anaemia,List drugs associated with anaemia,raltegravir,YES
+anaemia,List drugs associated with anaemia,iodipamide,NO
+leukopenia,Which drugs cause leukopenia?,bendamustine,YES
+leukopenia,Which drugs cause leukopenia?,naratriptan,NO
+leukopenia,What medications lead to leukopenia?,prasugrel,YES
+leukopenia,What medications lead to leukopenia?,bromazepam,NO
+leukopenia,List drugs associated with leukopenia,mdv3100,YES
+leukopenia,List drugs associated with leukopenia,bendrofluazide,NO
+back pain,Which drugs cause back pain?,photofrin,YES
+back pain,Which drugs cause back pain?,lithium,NO
+back pain,What medications lead to back pain?,vincristine,YES
+back pain,What medications lead to back pain?,lincomycin,NO
+back pain,List drugs associated with back pain,fenoldopam,YES
+back pain,List drugs associated with back pain,alfentanil,NO
+palpitations,Which drugs cause palpitations?,n-methylscopolamine,YES
+palpitations,Which drugs cause palpitations?,rotigotine,NO
+palpitations,What medications lead to palpitations?,ephedrine,YES
+palpitations,What medications lead to palpitations?,hydrocodone,NO
+palpitations,List drugs associated with palpitations,lyxumia,YES
+palpitations,List drugs associated with palpitations,lormetazepam,NO
+malaise,Which drugs cause malaise?,allopurinol,YES
+malaise,Which drugs cause malaise?,oxytetracycline,NO
+malaise,What medications lead to malaise?,irinotecan,YES
+malaise,What medications lead to malaise?,rasburicase,NO
+malaise,List drugs associated with malaise,cabergoline,YES
+malaise,List drugs associated with malaise,hydroxychloroquine,NO
+erythema,Which drugs cause erythema?,nilotinib,YES
+erythema,Which drugs cause erythema?,eptifibatide,NO
+erythema,What medications lead to erythema?,apraclonidine,YES
+erythema,What medications lead to erythema?,poly(styrene,NO
+erythema,List drugs associated with erythema,diazepam,YES
+erythema,List drugs associated with erythema,delta,NO
+syncope,Which drugs cause syncope?,amoxapine,YES
+syncope,Which drugs cause syncope?,trimethadione,NO
+syncope,What medications lead to syncope?,acebutolol,YES
+syncope,What medications lead to syncope?,edta,NO
+syncope,List drugs associated with syncope,cetirizine,YES
+syncope,List drugs associated with syncope,tipranavir,NO
+vertigo,Which drugs cause vertigo?,telithromycin,YES
+vertigo,Which drugs cause vertigo?,auranofin,NO
+vertigo,What medications lead to vertigo?,cas,YES
+vertigo,What medications lead to vertigo?,tropisetron,NO
+vertigo,List drugs associated with vertigo,zoledronic,YES
+vertigo,List drugs associated with vertigo,mometasone,NO
+tremor,Which drugs cause tremor?,metformin,YES
+tremor,Which drugs cause tremor?,flurazepam,NO
+tremor,What medications lead to tremor?,methadone,YES
+tremor,What medications lead to tremor?,fenofibrate,NO
+tremor,List drugs associated with tremor,tapentadol,YES
+tremor,List drugs associated with tremor,oxacillin,NO
+shock,Which drugs cause shock?,ziprasidone,YES
+shock,Which drugs cause shock?,rasburicase,NO
+shock,What medications lead to shock?,rocuronium,YES
+shock,What medications lead to shock?,capsaicin,NO
+shock,List drugs associated with shock,ropinirole,YES
+shock,List drugs associated with shock,fosamprenavir,NO
+malnutrition,Which drugs cause malnutrition?,lasofoxifene,YES
+malnutrition,Which drugs cause malnutrition?,isoproterenol,NO
+malnutrition,What medications lead to malnutrition?,iloperidone,YES
+malnutrition,What medications lead to malnutrition?,cimetidine,NO
+malnutrition,List drugs associated with malnutrition,histamine,YES
+malnutrition,List drugs associated with malnutrition,mefenamic,NO
+vision blurred,Which drugs cause vision blurred?,tiaprofenic,YES
+vision blurred,Which drugs cause vision blurred?,pralatrexate,NO
+vision blurred,What medications lead to vision blurred?,clozapine,YES
+vision blurred,What medications lead to vision blurred?,teniposide,NO
+vision blurred,List drugs associated with vision blurred,quinidine,YES
+vision blurred,List drugs associated with vision blurred,ephedrine,NO
+hyperhidrosis,Which drugs cause hyperhidrosis?,cyclobenzaprine,YES
+hyperhidrosis,Which drugs cause hyperhidrosis?,mitomycin,NO
+hyperhidrosis,What medications lead to hyperhidrosis?,adenosine,YES
+hyperhidrosis,What medications lead to hyperhidrosis?,metolazone,NO
+hyperhidrosis,List drugs associated with hyperhidrosis,nitroprusside,YES
+hyperhidrosis,List drugs associated with hyperhidrosis,roxithromycin,NO
+dysgeusia,Which drugs cause dysgeusia?,salmon,YES
+dysgeusia,Which drugs cause dysgeusia?,ixabepilone,NO
+dysgeusia,What medications lead to dysgeusia?,aprepitant,YES
+dysgeusia,What medications lead to dysgeusia?,fexofenadine,NO
+dysgeusia,List drugs associated with dysgeusia,diclofenac,YES
+dysgeusia,List drugs associated with dysgeusia,propantheline,NO
+flatulence,Which drugs cause flatulence?,fe(iii,YES
+flatulence,Which drugs cause flatulence?,methysergide,NO
+flatulence,What medications lead to flatulence?,zonisamide,YES
+flatulence,What medications lead to flatulence?,cinacalcet,NO
+flatulence,List drugs associated with flatulence,deprenyl,YES
+flatulence,List drugs associated with flatulence,conivaptan,NO
+mental disorder,Which drugs cause mental disorder?,varenicline,YES
+mental disorder,Which drugs cause mental disorder?,meclofenamate,NO
+mental disorder,What medications lead to mental disorder?,scopolamine,YES
+mental disorder,What medications lead to mental disorder?,alx,NO
+mental disorder,List drugs associated with mental disorder,glat,YES
+mental disorder,List drugs associated with mental disorder,nortriptyline,NO
+muscle spasms,Which drugs cause muscle spasms?,fosphenytoin,YES
+muscle spasms,Which drugs cause muscle spasms?,dolasetron,NO
+muscle spasms,What medications lead to muscle spasms?,etoricoxib,YES
+muscle spasms,What medications lead to muscle spasms?,midazolam,NO
+muscle spasms,List drugs associated with muscle spasms,treprostinil,YES
+muscle spasms,List drugs associated with muscle spasms,diazoxide,NO
+chills,Which drugs cause chills?,oxcarbazepine,YES
+chills,Which drugs cause chills?,raltitrexed,NO
+chills,What medications lead to chills?,dasatinib,YES
+chills,What medications lead to chills?,tiaprofenic,NO
+chills,List drugs associated with chills,v,YES
+chills,List drugs associated with chills,hydroxychloroquine,NO
+alopecia,Which drugs cause alopecia?,spironolactone,YES
+alopecia,Which drugs cause alopecia?,nicorandil,NO
+alopecia,What medications lead to alopecia?,gefitinib,YES
+alopecia,What medications lead to alopecia?,orphenadrine,NO
+alopecia,List drugs associated with alopecia,vemurafenib,YES
+alopecia,List drugs associated with alopecia,tolmetin,NO
+skin disorder,Which drugs cause skin disorder?,ranolazine,YES
+skin disorder,Which drugs cause skin disorder?,aspirin,NO
+skin disorder,What medications lead to skin disorder?,ticagrelor,YES
+skin disorder,What medications lead to skin disorder?,lodoxamide,NO
+skin disorder,List drugs associated with skin disorder,tesamorelin,YES
+skin disorder,List drugs associated with skin disorder,labetalol,NO
+mediastinal disorder,Which drugs cause mediastinal disorder?,hydroxybutyrate,YES
+mediastinal disorder,Which drugs cause mediastinal disorder?,frovatriptan,NO
+mediastinal disorder,What medications lead to mediastinal disorder?,sevoflurane,YES
+mediastinal disorder,What medications lead to mediastinal disorder?,furosemide,NO
+mediastinal disorder,List drugs associated with mediastinal disorder,etoposide,YES
+mediastinal disorder,List drugs associated with mediastinal disorder,sibutramine,NO
+angiopathy,Which drugs cause angiopathy?,avanafil,YES
+angiopathy,Which drugs cause angiopathy?,cefadroxil,NO
+angiopathy,What medications lead to angiopathy?,sorafenib,YES
+angiopathy,What medications lead to angiopathy?,romidepsin,NO
+angiopathy,List drugs associated with angiopathy,lanreotide,YES
+angiopathy,List drugs associated with angiopathy,carbachol,NO
+erythema multiforme,Which drugs cause erythema multiforme?,quetiapine,YES
+erythema multiforme,Which drugs cause erythema multiforme?,lormetazepam,NO
+erythema multiforme,What medications lead to erythema multiforme?,entacapone,YES
+erythema multiforme,What medications lead to erythema multiforme?,aspirin,NO
+erythema multiforme,List drugs associated with erythema multiforme,triphasil,YES
+erythema multiforme,List drugs associated with erythema multiforme,mitotane,NO
+immune system disorder,Which drugs cause immune system disorder?,riluzole,YES
+immune system disorder,Which drugs cause immune system disorder?,prochlorperazine,NO
+immune system disorder,What medications lead to immune system disorder?,estradiol,YES
+immune system disorder,What medications lead to immune system disorder?,pge1,NO
+immune system disorder,List drugs associated with immune system disorder,nitroglycerin,YES
+immune system disorder,List drugs associated with immune system disorder,tropicamide,NO
+nervousness,Which drugs cause nervousness?,meropenem,YES
+nervousness,Which drugs cause nervousness?,clindamycin,NO
+nervousness,What medications lead to nervousness?,efavirenz,YES
+nervousness,What medications lead to nervousness?,nalidixic,NO
+nervousness,List drugs associated with nervousness,flurbiprofen,YES
+nervousness,List drugs associated with nervousness,aspirin,NO
+flushing,Which drugs cause flushing?,guanidinium,YES
+flushing,Which drugs cause flushing?,silodosin,NO
+flushing,What medications lead to flushing?,eplerenone,YES
+flushing,What medications lead to flushing?,molindone,NO
+flushing,List drugs associated with flushing,bosentan,YES
+flushing,List drugs associated with flushing,hydroxocobalamin,NO
+gastrointestinal pain,Which drugs cause gastrointestinal pain?,carbamazepine,YES
+gastrointestinal pain,Which drugs cause gastrointestinal pain?,roxithromycin,NO
+gastrointestinal pain,What medications lead to gastrointestinal pain?,degarelix,YES
+gastrointestinal pain,What medications lead to gastrointestinal pain?,nandrolone,NO
+gastrointestinal pain,List drugs associated with gastrointestinal pain,tpgs,YES
+gastrointestinal pain,List drugs associated with gastrointestinal pain,ge-132,NO
+oedema peripheral,Which drugs cause oedema peripheral?,bimatoprost,YES
+oedema peripheral,Which drugs cause oedema peripheral?,propafenone,NO
+oedema peripheral,What medications lead to oedema peripheral?,etoricoxib,YES
+oedema peripheral,What medications lead to oedema peripheral?,tobramycin,NO
+oedema peripheral,List drugs associated with oedema peripheral,sodium,YES
+oedema peripheral,List drugs associated with oedema peripheral,naloxone,NO
+cardiac disorder,Which drugs cause cardiac disorder?,mycophenolic,YES
+cardiac disorder,Which drugs cause cardiac disorder?,ceftizoxime,NO
+cardiac disorder,What medications lead to cardiac disorder?,desmopressin,YES
+cardiac disorder,What medications lead to cardiac disorder?,alosetron,NO
+cardiac disorder,List drugs associated with cardiac disorder,indapamide,YES
+cardiac disorder,List drugs associated with cardiac disorder,succinylcholine,NO
+eye disorder,Which drugs cause eye disorder?,etoposide,YES
+eye disorder,Which drugs cause eye disorder?,chlorpheniramine,NO
+eye disorder,What medications lead to eye disorder?,methylene,YES
+eye disorder,What medications lead to eye disorder?,actinomycin,NO
+eye disorder,List drugs associated with eye disorder,ferumoxytol,YES
+eye disorder,List drugs associated with eye disorder,mepivacaine,NO
+arrhythmia,Which drugs cause arrhythmia?,iohexol,YES
+arrhythmia,Which drugs cause arrhythmia?,bendamustine,NO
+arrhythmia,What medications lead to arrhythmia?,flurbiprofen,YES
+arrhythmia,What medications lead to arrhythmia?,cantril,NO
+arrhythmia,List drugs associated with arrhythmia,niacin,YES
+arrhythmia,List drugs associated with arrhythmia,gemfibrozil,NO
+discomfort,Which drugs cause discomfort?,k779,YES
+discomfort,Which drugs cause discomfort?,cephalexin,NO
+discomfort,What medications lead to discomfort?,fusidic,YES
+discomfort,What medications lead to discomfort?,esmolol,NO
+discomfort,List drugs associated with discomfort,lomitapide,YES
+discomfort,List drugs associated with discomfort,amoxicillin,NO
+connective tissue disorder,Which drugs cause connective tissue disorder?,5-asa,YES
+connective tissue disorder,Which drugs cause connective tissue disorder?,cyclobenzaprine,NO
+connective tissue disorder,What medications lead to connective tissue disorder?,ixabepilone,YES
+connective tissue disorder,What medications lead to connective tissue disorder?,colchicine,NO
+connective tissue disorder,List drugs associated with connective tissue disorder,fluticasone/salmeterol,YES
+connective tissue disorder,List drugs associated with connective tissue disorder,finasteride,NO
+tinnitus,Which drugs cause tinnitus?,udca,YES
+tinnitus,Which drugs cause tinnitus?,fluticasone,NO
+tinnitus,What medications lead to tinnitus?,benazepril,YES
+tinnitus,What medications lead to tinnitus?,naloxone,NO
+tinnitus,List drugs associated with tinnitus,eletriptan,YES
+tinnitus,List drugs associated with tinnitus,vildagliptin,NO
+haemorrhage,Which drugs cause haemorrhage?,retinoic,YES
+haemorrhage,Which drugs cause haemorrhage?,sitagliptin,NO
+haemorrhage,What medications lead to haemorrhage?,busulfan,YES
+haemorrhage,What medications lead to haemorrhage?,minocycline,NO
+haemorrhage,List drugs associated with haemorrhage,nitric,YES
+haemorrhage,List drugs associated with haemorrhage,trimethoprim,NO
+pharyngitis,Which drugs cause pharyngitis?,l-dmp,YES
+pharyngitis,Which drugs cause pharyngitis?,lovastatin,NO
+pharyngitis,What medications lead to pharyngitis?,deprenyl,YES
+pharyngitis,What medications lead to pharyngitis?,hydroflumethiazide,NO
+pharyngitis,List drugs associated with pharyngitis,azelastine,YES
+pharyngitis,List drugs associated with pharyngitis,metformin,NO
+rhinitis,Which drugs cause rhinitis?,deferasirox,YES
+rhinitis,Which drugs cause rhinitis?,pyridostigmine,NO
+rhinitis,What medications lead to rhinitis?,conjugated,YES
+rhinitis,What medications lead to rhinitis?,palonosetron,NO
+rhinitis,List drugs associated with rhinitis,gemfibrozil,YES
+rhinitis,List drugs associated with rhinitis,gadobutrol,NO
+urinary tract disorder,Which drugs cause urinary tract disorder?,naproxen,YES
+urinary tract disorder,Which drugs cause urinary tract disorder?,streptomycin,NO
+urinary tract disorder,What medications lead to urinary tract disorder?,orlistat,YES
+urinary tract disorder,What medications lead to urinary tract disorder?,adenosine,NO
+urinary tract disorder,List drugs associated with urinary tract disorder,duloxetine,YES
+urinary tract disorder,List drugs associated with urinary tract disorder,ciclopirox,NO
+stomatitis,Which drugs cause stomatitis?,arsenic,YES
+stomatitis,Which drugs cause stomatitis?,dfmo,NO
+stomatitis,What medications lead to stomatitis?,trospium,YES
+stomatitis,What medications lead to stomatitis?,primidone,NO
+stomatitis,List drugs associated with stomatitis,acitretin,YES
+stomatitis,List drugs associated with stomatitis,exemestane,NO
+bradycardia,Which drugs cause bradycardia?,glycerol,YES
+bradycardia,Which drugs cause bradycardia?,sitagliptin,NO
+bradycardia,What medications lead to bradycardia?,prednisone,YES
+bradycardia,What medications lead to bradycardia?,tinidazole,NO
+bradycardia,List drugs associated with bradycardia,irbesartan,YES
+bradycardia,List drugs associated with bradycardia,chlorambucil,NO
+hepatitis,Which drugs cause hepatitis?,pentamidine,YES
+hepatitis,Which drugs cause hepatitis?,tranexamic,NO
+hepatitis,What medications lead to hepatitis?,labetalol,YES
+hepatitis,What medications lead to hepatitis?,metoclopramide,NO
+hepatitis,List drugs associated with hepatitis,bortezomib,YES
+hepatitis,List drugs associated with hepatitis,argatroban,NO
+sinusitis,Which drugs cause sinusitis?,famp,YES
+sinusitis,Which drugs cause sinusitis?,"1,25(oh)2d3",NO
+sinusitis,What medications lead to sinusitis?,imatinib,YES
+sinusitis,What medications lead to sinusitis?,tiaprofenic,NO
+sinusitis,List drugs associated with sinusitis,metronidazole,YES
+sinusitis,List drugs associated with sinusitis,fosfomycin,NO
+epistaxis,Which drugs cause epistaxis?,desmopressin,YES
+epistaxis,Which drugs cause epistaxis?,iron,NO
+epistaxis,What medications lead to epistaxis?,salbutamol,YES
+epistaxis,What medications lead to epistaxis?,ioxilan,NO
+epistaxis,List drugs associated with epistaxis,acamprosate,YES
+epistaxis,List drugs associated with epistaxis,atracurium,NO
+loss of consciousness,Which drugs cause loss of consciousness?,capecitabine,YES
+loss of consciousness,Which drugs cause loss of consciousness?,roflumilast,NO
+loss of consciousness,What medications lead to loss of consciousness?,loperamide,YES
+loss of consciousness,What medications lead to loss of consciousness?,oxprenolol,NO
+loss of consciousness,List drugs associated with loss of consciousness,fosinopril,YES
+loss of consciousness,List drugs associated with loss of consciousness,vacv,NO
+hallucination,Which drugs cause hallucination?,carbamazepine,YES
+hallucination,Which drugs cause hallucination?,etoposide,NO
+hallucination,What medications lead to hallucination?,procaine,YES
+hallucination,What medications lead to hallucination?,ioxilan,NO
+hallucination,List drugs associated with hallucination,chloroquine,YES
+hallucination,List drugs associated with hallucination,fenoprofen,NO
+urinary tract infection,Which drugs cause urinary tract infection?,tadalafil,YES
+urinary tract infection,Which drugs cause urinary tract infection?,metaproterenol,NO
+urinary tract infection,What medications lead to urinary tract infection?,dabigatran,YES
+urinary tract infection,What medications lead to urinary tract infection?,gold,NO
+urinary tract infection,List drugs associated with urinary tract infection,clomipramine,YES
+urinary tract infection,List drugs associated with urinary tract infection,tipranavir,NO
+renal failure,Which drugs cause renal failure?,irinotecan,YES
+renal failure,Which drugs cause renal failure?,rasagiline,NO
+renal failure,What medications lead to renal failure?,lamotrigine,YES
+renal failure,What medications lead to renal failure?,argatroban,NO
+renal failure,List drugs associated with renal failure,erlotinib,YES
+renal failure,List drugs associated with renal failure,oxymetholone,NO
+neuropathy peripheral,Which drugs cause neuropathy peripheral?,lisinopril,YES
+neuropathy peripheral,Which drugs cause neuropathy peripheral?,doripenem,NO
+neuropathy peripheral,What medications lead to neuropathy peripheral?,thalidomide,YES
+neuropathy peripheral,What medications lead to neuropathy peripheral?,nitric,NO
+neuropathy peripheral,List drugs associated with neuropathy peripheral,rosuvastatin,YES
+neuropathy peripheral,List drugs associated with neuropathy peripheral,tetrabenazine,NO
+pneumonia,Which drugs cause pneumonia?,tizanidine,YES
+pneumonia,Which drugs cause pneumonia?,methazolamide,NO
+pneumonia,What medications lead to pneumonia?,rapamycin,YES
+pneumonia,What medications lead to pneumonia?,tibolone,NO
+pneumonia,List drugs associated with pneumonia,vinflunine,YES
+pneumonia,List drugs associated with pneumonia,bisacodyl,NO
+agranulocytosis,Which drugs cause agranulocytosis?,vinorelbine,YES
+agranulocytosis,Which drugs cause agranulocytosis?,darifenacin,NO
+agranulocytosis,What medications lead to agranulocytosis?,ntbc,YES
+agranulocytosis,What medications lead to agranulocytosis?,pegaptanib,NO
+agranulocytosis,List drugs associated with agranulocytosis,zidovudine/lamivudine,YES
+agranulocytosis,List drugs associated with agranulocytosis,buspirone,NO
+haematuria,Which drugs cause haematuria?,ifosfamide,YES
+haematuria,Which drugs cause haematuria?,salmeterol,NO
+haematuria,What medications lead to haematuria?,nifedipine,YES
+haematuria,What medications lead to haematuria?,toremifene,NO
+haematuria,List drugs associated with haematuria,5-azacytidine,YES
+haematuria,List drugs associated with haematuria,ranitidine,NO
+hepatobiliary disease,Which drugs cause hepatobiliary disease?,bisoprolol,YES
+hepatobiliary disease,Which drugs cause hepatobiliary disease?,epitopic,NO
+hepatobiliary disease,What medications lead to hepatobiliary disease?,acetaminophen,YES
+hepatobiliary disease,What medications lead to hepatobiliary disease?,pge2,NO
+hepatobiliary disease,List drugs associated with hepatobiliary disease,cisplatin,YES
+hepatobiliary disease,List drugs associated with hepatobiliary disease,aztreonam,NO
+hyperglycaemia,Which drugs cause hyperglycaemia?,bendamustine,YES
+hyperglycaemia,Which drugs cause hyperglycaemia?,ezetimibe,NO
+hyperglycaemia,What medications lead to hyperglycaemia?,varenicline,YES
+hyperglycaemia,What medications lead to hyperglycaemia?,nitazoxanide,NO
+hyperglycaemia,List drugs associated with hyperglycaemia,darunavir,YES
+hyperglycaemia,List drugs associated with hyperglycaemia,agomelatine,NO
+conjunctivitis,Which drugs cause conjunctivitis?,acebutolol,YES
+conjunctivitis,Which drugs cause conjunctivitis?,histamine,NO
+conjunctivitis,What medications lead to conjunctivitis?,salmon,YES
+conjunctivitis,What medications lead to conjunctivitis?,nystatin,NO
+conjunctivitis,List drugs associated with conjunctivitis,lansoprazole,YES
+conjunctivitis,List drugs associated with conjunctivitis,naratriptan,NO
+hypoaesthesia,Which drugs cause hypoaesthesia?,hydroxybutyrate,YES
+hypoaesthesia,Which drugs cause hypoaesthesia?,quinidine,NO
+hypoaesthesia,What medications lead to hypoaesthesia?,megestrol,YES
+hypoaesthesia,What medications lead to hypoaesthesia?,silodosin,NO
+hypoaesthesia,List drugs associated with hypoaesthesia,rofecoxib,YES
+hypoaesthesia,List drugs associated with hypoaesthesia,atenolol,NO
+myocardial infarction,Which drugs cause myocardial infarction?,imatinib,YES
+myocardial infarction,Which drugs cause myocardial infarction?,rimonabant,NO
+myocardial infarction,What medications lead to myocardial infarction?,ixabepilone,YES
+myocardial infarction,What medications lead to myocardial infarction?,tolvaptan,NO
+myocardial infarction,List drugs associated with myocardial infarction,pantoprazole,YES
+myocardial infarction,List drugs associated with myocardial infarction,clarithromycin,NO
+upper respiratory tract infection,Which drugs cause upper respiratory tract infection?,delavirdine,YES
+upper respiratory tract infection,Which drugs cause upper respiratory tract infection?,edta,NO
+upper respiratory tract infection,What medications lead to upper respiratory tract infection?,tramadol,YES
+upper respiratory tract infection,What medications lead to upper respiratory tract infection?,carboplatin,NO
+upper respiratory tract infection,List drugs associated with upper respiratory tract infection,ganciclovir,YES
+upper respiratory tract infection,List drugs associated with upper respiratory tract infection,cisplatin,NO
+jaundice,Which drugs cause jaundice?,amitriptyline,YES
+jaundice,Which drugs cause jaundice?,hydroxyurea,NO
+jaundice,What medications lead to jaundice?,promethazine,YES
+jaundice,What medications lead to jaundice?,salmon,NO
+jaundice,List drugs associated with jaundice,methyldopa,YES
+jaundice,List drugs associated with jaundice,penicillin,NO
+weight increased,Which drugs cause weight increased?,naltrexone,YES
+weight increased,Which drugs cause weight increased?,tropisetron,NO
+weight increased,What medications lead to weight increased?,su5416,YES
+weight increased,What medications lead to weight increased?,clobetasol,NO
+weight increased,List drugs associated with weight increased,nuvaring,YES
+weight increased,List drugs associated with weight increased,terlipressin,NO
+stevens-johnson syndrome,Which drugs cause stevens-johnson syndrome?,sulfadiazine,YES
+stevens-johnson syndrome,Which drugs cause stevens-johnson syndrome?,lithium,NO
+stevens-johnson syndrome,What medications lead to stevens-johnson syndrome?,ramipril,YES
+stevens-johnson syndrome,What medications lead to stevens-johnson syndrome?,edta,NO
+stevens-johnson syndrome,List drugs associated with stevens-johnson syndrome,zidovudine,YES
+stevens-johnson syndrome,List drugs associated with stevens-johnson syndrome,megestrol,NO
+neutropenia,Which drugs cause neutropenia?,axitinib,YES
+neutropenia,Which drugs cause neutropenia?,protriptyline,NO
+neutropenia,What medications lead to neutropenia?,paliperidone,YES
+neutropenia,What medications lead to neutropenia?,bpti,NO
+neutropenia,List drugs associated with neutropenia,bendamustine,YES
+neutropenia,List drugs associated with neutropenia,chloroprocaine,NO
+depression,Which drugs cause depression?,anthracycline,YES
+depression,Which drugs cause depression?,sulfamethoxazole,NO
+depression,What medications lead to depression?,zaleplon,YES
+depression,What medications lead to depression?,triamcinolone,NO
+depression,List drugs associated with depression,bisoprolol,YES
+depression,List drugs associated with depression,cyclophosphamide,NO
+pancreatitis,Which drugs cause pancreatitis?,amphotericin,YES
+pancreatitis,Which drugs cause pancreatitis?,8-mop,NO
+pancreatitis,What medications lead to pancreatitis?,glutamine,YES
+pancreatitis,What medications lead to pancreatitis?,azelastine,NO
+pancreatitis,List drugs associated with pancreatitis,ketoprofen,YES
+pancreatitis,List drugs associated with pancreatitis,epinephrine,NO
+weight decreased,Which drugs cause weight decreased?,apas,YES
+weight decreased,Which drugs cause weight decreased?,esmolol,NO
+weight decreased,What medications lead to weight decreased?,paliperidone,YES
+weight decreased,What medications lead to weight decreased?,quinidine,NO
+weight decreased,List drugs associated with weight decreased,amisulpride,YES
+weight decreased,List drugs associated with weight decreased,sulindac,NO
+pollakiuria,Which drugs cause pollakiuria?,doxepin,YES
+pollakiuria,Which drugs cause pollakiuria?,terbinafine,NO
+pollakiuria,What medications lead to pollakiuria?,amitriptyline,YES
+pollakiuria,What medications lead to pollakiuria?,hydroxychloroquine,NO
+pollakiuria,List drugs associated with pollakiuria,temozolomide,YES
+pollakiuria,List drugs associated with pollakiuria,clofarabine,NO
+pancytopenia,Which drugs cause pancytopenia?,ge-132,YES
+pancytopenia,Which drugs cause pancytopenia?,cinoxacin,NO
+pancytopenia,What medications lead to pancytopenia?,ge-132,YES
+pancytopenia,What medications lead to pancytopenia?,prednisolone,NO
+pancytopenia,List drugs associated with pancytopenia,thiotepa,YES
+pancytopenia,List drugs associated with pancytopenia,clozapine,NO
+visual impairment,Which drugs cause visual impairment?,pegaptanib,YES
+visual impairment,Which drugs cause visual impairment?,halcinonide,NO
+visual impairment,What medications lead to visual impairment?,temazepam,YES
+visual impairment,What medications lead to visual impairment?,dicyclomine,NO
+visual impairment,List drugs associated with visual impairment,labetalol,YES
+visual impairment,List drugs associated with visual impairment,org,NO
+anorexia,Which drugs cause anorexia?,halofantrine,YES
+anorexia,Which drugs cause anorexia?,carboprost,NO
+anorexia,What medications lead to anorexia?,imatinib,YES
+anorexia,What medications lead to anorexia?,lorazepam,NO
+anorexia,List drugs associated with anorexia,azithromycin,YES
+anorexia,List drugs associated with anorexia,methyl,NO
+dysuria,Which drugs cause dysuria?,sulindac,YES
+dysuria,Which drugs cause dysuria?,thymidine,NO
+dysuria,What medications lead to dysuria?,diethylpropion,YES
+dysuria,What medications lead to dysuria?,lidocaine,NO
+dysuria,List drugs associated with dysuria,doxazosin,YES
+dysuria,List drugs associated with dysuria,thiothixene,NO
+bronchitis,Which drugs cause bronchitis?,fluvoxamine,YES
+bronchitis,Which drugs cause bronchitis?,dexmedetomidine,NO
+bronchitis,What medications lead to bronchitis?,fentanyl,YES
+bronchitis,What medications lead to bronchitis?,mivacurium,NO
+bronchitis,List drugs associated with bronchitis,insulin,YES
+bronchitis,List drugs associated with bronchitis,dfmo,NO
+eosinophilia,Which drugs cause eosinophilia?,demeclocycline,YES
+eosinophilia,Which drugs cause eosinophilia?,thyroxine,NO
+eosinophilia,What medications lead to eosinophilia?,leuprorelin,YES
+eosinophilia,What medications lead to eosinophilia?,milnacipran,NO
+eosinophilia,List drugs associated with eosinophilia,pergolide,YES
+eosinophilia,List drugs associated with eosinophilia,atovaquone,NO
+angina pectoris,Which drugs cause angina pectoris?,trandolapril,YES
+angina pectoris,Which drugs cause angina pectoris?,oxaprozin,NO
+angina pectoris,What medications lead to angina pectoris?,pentostatin,YES
+angina pectoris,What medications lead to angina pectoris?,histamine,NO
+angina pectoris,List drugs associated with angina pectoris,pilocarpine,YES
+angina pectoris,List drugs associated with angina pectoris,minocycline,NO
+erectile dysfunction,Which drugs cause erectile dysfunction?,maprotiline,YES
+erectile dysfunction,Which drugs cause erectile dysfunction?,amphotericin,NO
+erectile dysfunction,What medications lead to erectile dysfunction?,kaluril,YES
+erectile dysfunction,What medications lead to erectile dysfunction?,fenoldopam,NO
+erectile dysfunction,List drugs associated with erectile dysfunction,paroxetine,YES
+erectile dysfunction,List drugs associated with erectile dysfunction,sodium,NO
+bronchospasm,Which drugs cause bronchospasm?,alfentanil,YES
+bronchospasm,Which drugs cause bronchospasm?,epitopic,NO
+bronchospasm,What medications lead to bronchospasm?,histamine,YES
+bronchospasm,What medications lead to bronchospasm?,diphenhydramine,NO
+bronchospasm,List drugs associated with bronchospasm,cevimeline,YES
+bronchospasm,List drugs associated with bronchospasm,kanamycin,NO
+unspecified disorder of skin and subcutaneous tissue,Which drugs cause unspecified disorder of skin and subcutaneous tissue?,ibuprofen,YES
+unspecified disorder of skin and subcutaneous tissue,Which drugs cause unspecified disorder of skin and subcutaneous tissue?,lithium,NO
+unspecified disorder of skin and subcutaneous tissue,What medications lead to unspecified disorder of skin and subcutaneous tissue?,vilazodone,YES
+unspecified disorder of skin and subcutaneous tissue,What medications lead to unspecified disorder of skin and subcutaneous tissue?,desflurane,NO
+unspecified disorder of skin and subcutaneous tissue,List drugs associated with unspecified disorder of skin and subcutaneous tissue,vinflunine,YES
+unspecified disorder of skin and subcutaneous tissue,List drugs associated with unspecified disorder of skin and subcutaneous tissue,n-methylscopolamine,NO
+aspartate aminotransferase increased,Which drugs cause aspartate aminotransferase increased?,topiramate,YES
+aspartate aminotransferase increased,Which drugs cause aspartate aminotransferase increased?,ustekinumab,NO
+aspartate aminotransferase increased,What medications lead to aspartate aminotransferase increased?,moxifloxacin,YES
+aspartate aminotransferase increased,What medications lead to aspartate aminotransferase increased?,glycerol,NO
+aspartate aminotransferase increased,List drugs associated with aspartate aminotransferase increased,modafinil,YES
+aspartate aminotransferase increased,List drugs associated with aspartate aminotransferase increased,fesoterodine,NO
+influenza,Which drugs cause influenza?,rescinnamine,YES
+influenza,Which drugs cause influenza?,colestipol,NO
+influenza,What medications lead to influenza?,rifapentine,YES
+influenza,What medications lead to influenza?,isosorbide-5-mononitrate,NO
+influenza,List drugs associated with influenza,naltrexone,YES
+influenza,List drugs associated with influenza,fotemustine,NO
+alanine aminotransferase increased,Which drugs cause alanine aminotransferase increased?,dolasetron,YES
+alanine aminotransferase increased,Which drugs cause alanine aminotransferase increased?,leucovorin,NO
+alanine aminotransferase increased,What medications lead to alanine aminotransferase increased?,topiramate,YES
+alanine aminotransferase increased,What medications lead to alanine aminotransferase increased?,alfentanil,NO
+alanine aminotransferase increased,List drugs associated with alanine aminotransferase increased,cefaclor,YES
+alanine aminotransferase increased,List drugs associated with alanine aminotransferase increased,alendronate,NO
+photosensitivity reaction,Which drugs cause photosensitivity reaction?,5-fu,YES
+photosensitivity reaction,Which drugs cause photosensitivity reaction?,clomiphene,NO
+photosensitivity reaction,What medications lead to photosensitivity reaction?,paroxetine,YES
+photosensitivity reaction,What medications lead to photosensitivity reaction?,lithium,NO
+photosensitivity reaction,List drugs associated with photosensitivity reaction,estradiol,YES
+photosensitivity reaction,List drugs associated with photosensitivity reaction,diazoxide,NO
+abdominal distension,Which drugs cause abdominal distension?,cetirizine,YES
+abdominal distension,Which drugs cause abdominal distension?,leucovorin,NO
+abdominal distension,What medications lead to abdominal distension?,flurbiprofen,YES
+abdominal distension,What medications lead to abdominal distension?,gadobutrol,NO
+abdominal distension,List drugs associated with abdominal distension,furosemide,YES
+abdominal distension,List drugs associated with abdominal distension,pentostatin,NO
+nasopharyngitis,Which drugs cause nasopharyngitis?,nicotine,YES
+nasopharyngitis,Which drugs cause nasopharyngitis?,toremifene,NO
+nasopharyngitis,What medications lead to nasopharyngitis?,progesterone,YES
+nasopharyngitis,What medications lead to nasopharyngitis?,desflurane,NO
+nasopharyngitis,List drugs associated with nasopharyngitis,lenalidomide,YES
+nasopharyngitis,List drugs associated with nasopharyngitis,chloroquine,NO
+toxic epidermal necrolysis,Which drugs cause toxic epidermal necrolysis?,foscarnet,YES
+toxic epidermal necrolysis,Which drugs cause toxic epidermal necrolysis?,indinavir,NO
+toxic epidermal necrolysis,What medications lead to toxic epidermal necrolysis?,cephem,YES
+toxic epidermal necrolysis,What medications lead to toxic epidermal necrolysis?,roxithromycin,NO
+toxic epidermal necrolysis,List drugs associated with toxic epidermal necrolysis,mephenytoin,YES
+toxic epidermal necrolysis,List drugs associated with toxic epidermal necrolysis,guanfacine,NO
+asthma,Which drugs cause asthma?,sparfloxacin,YES
+asthma,Which drugs cause asthma?,budesonide,NO
+asthma,What medications lead to asthma?,tizanidine,YES
+asthma,What medications lead to asthma?,dfmo,NO
+asthma,List drugs associated with asthma,tramadol,YES
+asthma,List drugs associated with asthma,alprazolam,NO
+dysphagia,Which drugs cause dysphagia?,doxycycline,YES
+dysphagia,Which drugs cause dysphagia?,diethylpropion,NO
+dysphagia,What medications lead to dysphagia?,anastrozole,YES
+dysphagia,What medications lead to dysphagia?,alfentanil,NO
+dysphagia,List drugs associated with dysphagia,bromocriptine,YES
+dysphagia,List drugs associated with dysphagia,carbenicillin,NO
+hypokalaemia,Which drugs cause hypokalaemia?,fe(iii,YES
+hypokalaemia,Which drugs cause hypokalaemia?,k779,NO
+hypokalaemia,What medications lead to hypokalaemia?,linezolid,YES
+hypokalaemia,What medications lead to hypokalaemia?,nedocromil,NO
+hypokalaemia,List drugs associated with hypokalaemia,paclitaxel,YES
+hypokalaemia,List drugs associated with hypokalaemia,ustekinumab,NO
+dry skin,Which drugs cause dry skin?,cabozantinib,YES
+dry skin,Which drugs cause dry skin?,pegaptanib,NO
+dry skin,What medications lead to dry skin?,prednisolone,YES
+dry skin,What medications lead to dry skin?,nalidixic,NO
+dry skin,List drugs associated with dry skin,quetiapine,YES
+dry skin,List drugs associated with dry skin,argatroban,NO
+muscular weakness,Which drugs cause muscular weakness?,buspirone,YES
+muscular weakness,Which drugs cause muscular weakness?,gadofosveset,NO
+muscular weakness,What medications lead to muscular weakness?,naproxen,YES
+muscular weakness,What medications lead to muscular weakness?,ofatumumab,NO
+muscular weakness,List drugs associated with muscular weakness,vinflunine,YES
+muscular weakness,List drugs associated with muscular weakness,esmolol,NO
+gastritis,Which drugs cause gastritis?,k779,YES
+gastritis,Which drugs cause gastritis?,atomoxetine,NO
+gastritis,What medications lead to gastritis?,zopiclone,YES
+gastritis,What medications lead to gastritis?,trimethoprim-sulfamethoxazole,NO
+gastritis,List drugs associated with gastritis,ambrisentan,YES
+gastritis,List drugs associated with gastritis,ioversol,NO
+breast disorder,Which drugs cause breast disorder?,iloperidone,YES
+breast disorder,Which drugs cause breast disorder?,phentermine,NO
+breast disorder,What medications lead to breast disorder?,implanon,YES
+breast disorder,What medications lead to breast disorder?,nesiritide,NO
+breast disorder,List drugs associated with breast disorder,rotigotine,YES
+breast disorder,List drugs associated with breast disorder,glycine,NO
+anaphylactoid reaction,Which drugs cause anaphylactoid reaction?,heparin,YES
+anaphylactoid reaction,Which drugs cause anaphylactoid reaction?,irbesartan,NO
+anaphylactoid reaction,What medications lead to anaphylactoid reaction?,fentanyl,YES
+anaphylactoid reaction,What medications lead to anaphylactoid reaction?,bezafibrate,NO
+anaphylactoid reaction,List drugs associated with anaphylactoid reaction,monamine,YES
+anaphylactoid reaction,List drugs associated with anaphylactoid reaction,unoprostone,NO
+orthostatic hypotension,Which drugs cause orthostatic hypotension?,codeine,YES
+orthostatic hypotension,Which drugs cause orthostatic hypotension?,acetazolamide,NO
+orthostatic hypotension,What medications lead to orthostatic hypotension?,dapagliflozin,YES
+orthostatic hypotension,What medications lead to orthostatic hypotension?,deferoxamine,NO
+orthostatic hypotension,List drugs associated with orthostatic hypotension,phenelzine,YES
+orthostatic hypotension,List drugs associated with orthostatic hypotension,oxaliplatin,NO
+abdominal discomfort,Which drugs cause abdominal discomfort?,novolog,YES
+abdominal discomfort,Which drugs cause abdominal discomfort?,desogestrel,NO
+abdominal discomfort,What medications lead to abdominal discomfort?,adenosine,YES
+abdominal discomfort,What medications lead to abdominal discomfort?,lmwh,NO
+abdominal discomfort,List drugs associated with abdominal discomfort,ipratropium,YES
+abdominal discomfort,List drugs associated with abdominal discomfort,miglustat,NO
+ill-defined disorder,Which drugs cause ill-defined disorder?,acetohydroxamic,YES
+ill-defined disorder,Which drugs cause ill-defined disorder?,neostigmine,NO
+ill-defined disorder,What medications lead to ill-defined disorder?,raltitrexed,YES
+ill-defined disorder,What medications lead to ill-defined disorder?,gefitinib,NO
+ill-defined disorder,List drugs associated with ill-defined disorder,progesterone,YES
+ill-defined disorder,List drugs associated with ill-defined disorder,fotemustine,NO
+tension,Which drugs cause tension?,buspirone,YES
+tension,Which drugs cause tension?,dexmedetomidine,NO
+tension,What medications lead to tension?,phenytoin,YES
+tension,What medications lead to tension?,glycine,NO
+tension,List drugs associated with tension,ketoprofen,YES
+tension,List drugs associated with tension,flucloxacillin,NO
+dehydration,Which drugs cause dehydration?,frovatriptan,YES
+dehydration,Which drugs cause dehydration?,vitrum,NO
+dehydration,What medications lead to dehydration?,ertapenem,YES
+dehydration,What medications lead to dehydration?,procainamide,NO
+dehydration,List drugs associated with dehydration,udca,YES
+dehydration,List drugs associated with dehydration,nimodipine,NO
+urinary retention,Which drugs cause urinary retention?,ephedrine,YES
+urinary retention,Which drugs cause urinary retention?,propoxyphene,NO
+urinary retention,What medications lead to urinary retention?,lomefloxacin,YES
+urinary retention,What medications lead to urinary retention?,hydroxyurea,NO
+urinary retention,List drugs associated with urinary retention,revasc,YES
+urinary retention,List drugs associated with urinary retention,fosinopril,NO
+cardiac arrest,Which drugs cause cardiac arrest?,lamotrigine,YES
+cardiac arrest,Which drugs cause cardiac arrest?,5-azacytidine,NO
+cardiac arrest,What medications lead to cardiac arrest?,chlorpromazine,YES
+cardiac arrest,What medications lead to cardiac arrest?,erlotinib,NO
+cardiac arrest,List drugs associated with cardiac arrest,irinotecan,YES
+cardiac arrest,List drugs associated with cardiac arrest,bendamustine,NO
+face oedema,Which drugs cause face oedema?,forteo,YES
+face oedema,Which drugs cause face oedema?,entecavir,NO
+face oedema,What medications lead to face oedema?,ropinirole,YES
+face oedema,What medications lead to face oedema?,galantamine,NO
+face oedema,List drugs associated with face oedema,cabozantinib,YES
+face oedema,List drugs associated with face oedema,dacarbazine,NO
+ataxia,Which drugs cause ataxia?,clobazam,YES
+ataxia,Which drugs cause ataxia?,fondaparinux,NO
+ataxia,What medications lead to ataxia?,perphenazine,YES
+ataxia,What medications lead to ataxia?,dicloxacillin,NO
+ataxia,List drugs associated with ataxia,eprosartan,YES
+ataxia,List drugs associated with ataxia,podophyllotoxin,NO
+pain in extremity,Which drugs cause pain in extremity?,bosentan,YES
+pain in extremity,Which drugs cause pain in extremity?,milnacipran,NO
+pain in extremity,What medications lead to pain in extremity?,glycopyrrolate,YES
+pain in extremity,What medications lead to pain in extremity?,rotigotine,NO
+pain in extremity,List drugs associated with pain in extremity,naltrexone,YES
+pain in extremity,List drugs associated with pain in extremity,delavirdine,NO
+liver function test abnormal,Which drugs cause liver function test abnormal?,milrinone,YES
+liver function test abnormal,Which drugs cause liver function test abnormal?,molindone,NO
+liver function test abnormal,What medications lead to liver function test abnormal?,desipramine,YES
+liver function test abnormal,What medications lead to liver function test abnormal?,tetracycline,NO
+liver function test abnormal,List drugs associated with liver function test abnormal,carbimazole,YES
+liver function test abnormal,List drugs associated with liver function test abnormal,paliperidone,NO
+hypoglycaemia,Which drugs cause hypoglycaemia?,venlafaxine,YES
+hypoglycaemia,Which drugs cause hypoglycaemia?,fluconazole,NO
+hypoglycaemia,What medications lead to hypoglycaemia?,doxorubicin,YES
+hypoglycaemia,What medications lead to hypoglycaemia?,betaine,NO
+hypoglycaemia,List drugs associated with hypoglycaemia,fluocinolone,YES
+hypoglycaemia,List drugs associated with hypoglycaemia,iopromide,NO
+migraine,Which drugs cause migraine?,moclobemide,YES
+migraine,Which drugs cause migraine?,nitroglycerin,NO
+migraine,What medications lead to migraine?,carvedilol,YES
+migraine,What medications lead to migraine?,vancocine,NO
+migraine,List drugs associated with migraine,fluvoxamine,YES
+migraine,List drugs associated with migraine,carbinoxamine,NO
+mood swings,Which drugs cause mood swings?,tolcapone,YES
+mood swings,Which drugs cause mood swings?,salmeterol,NO
+mood swings,What medications lead to mood swings?,bupropion,YES
+mood swings,What medications lead to mood swings?,roxithromycin,NO
+mood swings,List drugs associated with mood swings,doxorubicin,YES
+mood swings,List drugs associated with mood swings,clarithromycin,NO
+arthritis,Which drugs cause arthritis?,perindoprilat,YES
+arthritis,Which drugs cause arthritis?,ioversol,NO
+arthritis,What medications lead to arthritis?,ramipril,YES
+arthritis,What medications lead to arthritis?,felodipine,NO
+arthritis,List drugs associated with arthritis,hydroxybutyrate,YES
+arthritis,List drugs associated with arthritis,hexamethylmelamine,NO
+abdominal pain upper,Which drugs cause abdominal pain upper?,lercanidipine,YES
+abdominal pain upper,Which drugs cause abdominal pain upper?,triptorelin,NO
+abdominal pain upper,What medications lead to abdominal pain upper?,trospium,YES
+abdominal pain upper,What medications lead to abdominal pain upper?,paricalcitol,NO
+abdominal pain upper,List drugs associated with abdominal pain upper,ofatumumab,YES
+abdominal pain upper,List drugs associated with abdominal pain upper,rifampicin,NO
+psychotic disorder,Which drugs cause psychotic disorder?,hydralazine,YES
+psychotic disorder,Which drugs cause psychotic disorder?,degarelix,NO
+psychotic disorder,What medications lead to psychotic disorder?,chloroquine,YES
+psychotic disorder,What medications lead to psychotic disorder?,succinylcholine,NO
+psychotic disorder,List drugs associated with psychotic disorder,desipramine,YES
+psychotic disorder,List drugs associated with psychotic disorder,glibenclamide,NO
+irritability,Which drugs cause irritability?,bupropion,YES
+irritability,Which drugs cause irritability?,hydroflumethiazide,NO
+irritability,What medications lead to irritability?,vilazodone,YES
+irritability,What medications lead to irritability?,loteprednol,NO
+irritability,List drugs associated with irritability,scopolamine,YES
+irritability,List drugs associated with irritability,deferiprone,NO
+cerebrovascular accident,Which drugs cause cerebrovascular accident?,trazodone,YES
+cerebrovascular accident,Which drugs cause cerebrovascular accident?,deferiprone,NO
+cerebrovascular accident,What medications lead to cerebrovascular accident?,epinephrine,YES
+cerebrovascular accident,What medications lead to cerebrovascular accident?,trovafloxacin,NO
+cerebrovascular accident,List drugs associated with cerebrovascular accident,saquinavir,YES
+cerebrovascular accident,List drugs associated with cerebrovascular accident,5-fluorocytosine,NO
+hot flush,Which drugs cause hot flush?,nitroglycerin,YES
+hot flush,Which drugs cause hot flush?,amd3100,NO
+hot flush,What medications lead to hot flush?,naltrexone,YES
+hot flush,What medications lead to hot flush?,disopyramide,NO
+hot flush,List drugs associated with hot flush,estramustine,YES
+hot flush,List drugs associated with hot flush,tropicamide,NO
+hyponatraemia,Which drugs cause hyponatraemia?,aripiprazole,YES
+hyponatraemia,Which drugs cause hyponatraemia?,rizatriptan,NO
+hyponatraemia,What medications lead to hyponatraemia?,dabrafenib,YES
+hyponatraemia,What medications lead to hyponatraemia?,ritonavir,NO
+hyponatraemia,List drugs associated with hyponatraemia,cidofovir,YES
+hyponatraemia,List drugs associated with hyponatraemia,terconazole,NO
+lethargy,Which drugs cause lethargy?,bupropion,YES
+lethargy,Which drugs cause lethargy?,glycine,NO
+lethargy,What medications lead to lethargy?,trimethoprim,YES
+lethargy,What medications lead to lethargy?,diatrizoate,NO
+lethargy,List drugs associated with lethargy,domperidone,YES
+lethargy,List drugs associated with lethargy,nelfinavir,NO
+increased appetite,Which drugs cause increased appetite?,testosterone,YES
+increased appetite,Which drugs cause increased appetite?,leucovorin,NO
+increased appetite,What medications lead to increased appetite?,acitretin,YES
+increased appetite,What medications lead to increased appetite?,indomethacin,NO
+increased appetite,List drugs associated with increased appetite,lanreotide,YES
+increased appetite,List drugs associated with increased appetite,cefotaxime,NO
+cardiac failure,Which drugs cause cardiac failure?,celiprolol,YES
+cardiac failure,Which drugs cause cardiac failure?,oxazepam,NO
+cardiac failure,What medications lead to cardiac failure?,ketorolac,YES
+cardiac failure,What medications lead to cardiac failure?,doripenem,NO
+cardiac failure,List drugs associated with cardiac failure,cilostazol,YES
+cardiac failure,List drugs associated with cardiac failure,valrubicin,NO
+gastrointestinal haemorrhage,Which drugs cause gastrointestinal haemorrhage?,leuprorelin,YES
+gastrointestinal haemorrhage,Which drugs cause gastrointestinal haemorrhage?,perphenazine,NO
+gastrointestinal haemorrhage,What medications lead to gastrointestinal haemorrhage?,photofrin,YES
+gastrointestinal haemorrhage,What medications lead to gastrointestinal haemorrhage?,cefixime,NO
+gastrointestinal haemorrhage,List drugs associated with gastrointestinal haemorrhage,cabozantinib,YES
+gastrointestinal haemorrhage,List drugs associated with gastrointestinal haemorrhage,bazedoxifene,NO
+atrial fibrillation,Which drugs cause atrial fibrillation?,gabapentin,YES
+atrial fibrillation,Which drugs cause atrial fibrillation?,tamoxifen,NO
+atrial fibrillation,What medications lead to atrial fibrillation?,olanzapine,YES
+atrial fibrillation,What medications lead to atrial fibrillation?,prednisolone,NO
+atrial fibrillation,List drugs associated with atrial fibrillation,isosorbide-5-mononitrate,YES
+atrial fibrillation,List drugs associated with atrial fibrillation,perindopril,NO
+diplopia,Which drugs cause diplopia?,nadolol,YES
+diplopia,Which drugs cause diplopia?,zuclopenthixol,NO
+diplopia,What medications lead to diplopia?,perhexiline,YES
+diplopia,What medications lead to diplopia?,granisetron,NO
+diplopia,List drugs associated with diplopia,efavirenz,YES
+diplopia,List drugs associated with diplopia,mafenide,NO
+renal failure acute,Which drugs cause renal failure acute?,roflumilast,YES
+renal failure acute,Which drugs cause renal failure acute?,bupivacaine,NO
+renal failure acute,What medications lead to renal failure acute?,candesartan,YES
+renal failure acute,What medications lead to renal failure acute?,"1,25(oh)2d3",NO
+renal failure acute,List drugs associated with renal failure acute,leucovorin,YES
+renal failure acute,List drugs associated with renal failure acute,iopromide,NO
+haemolytic anaemia,Which drugs cause haemolytic anaemia?,penicillin,YES
+haemolytic anaemia,Which drugs cause haemolytic anaemia?,venlafaxine,NO
+haemolytic anaemia,What medications lead to haemolytic anaemia?,tolmetin,YES
+haemolytic anaemia,What medications lead to haemolytic anaemia?,eptifibatide,NO
+haemolytic anaemia,List drugs associated with haemolytic anaemia,allopurinol,YES
+haemolytic anaemia,List drugs associated with haemolytic anaemia,sodium,NO
+purpura,Which drugs cause purpura?,cilostazol,YES
+purpura,Which drugs cause purpura?,tegaserod,NO
+purpura,What medications lead to purpura?,pentoxifylline,YES
+purpura,What medications lead to purpura?,amprenavir,NO
+purpura,List drugs associated with purpura,aztreonam,YES
+purpura,List drugs associated with purpura,metipranolol,NO
+blood creatinine increased,Which drugs cause blood creatinine increased?,bosutinib,YES
+blood creatinine increased,Which drugs cause blood creatinine increased?,raloxifene,NO
+blood creatinine increased,What medications lead to blood creatinine increased?,bezafibrate,YES
+blood creatinine increased,What medications lead to blood creatinine increased?,degarelix,NO
+blood creatinine increased,List drugs associated with blood creatinine increased,hydroxybutyrate,YES
+blood creatinine increased,List drugs associated with blood creatinine increased,fluorescein,NO
+dermatitis exfoliative,Which drugs cause dermatitis exfoliative?,pantoprazole,YES
+dermatitis exfoliative,Which drugs cause dermatitis exfoliative?,copolymer,NO
+dermatitis exfoliative,What medications lead to dermatitis exfoliative?,eletriptan,YES
+dermatitis exfoliative,What medications lead to dermatitis exfoliative?,oxymetholone,NO
+dermatitis exfoliative,List drugs associated with dermatitis exfoliative,sulindac,YES
+dermatitis exfoliative,List drugs associated with dermatitis exfoliative,tetrabenazine,NO
+renal impairment,Which drugs cause renal impairment?,norethisterone,YES
+renal impairment,Which drugs cause renal impairment?,acitretin,NO
+renal impairment,What medications lead to renal impairment?,testosterone,YES
+renal impairment,What medications lead to renal impairment?,cantril,NO
+renal impairment,List drugs associated with renal impairment,itraconazole,YES
+renal impairment,List drugs associated with renal impairment,granisetron,NO
+swelling,Which drugs cause swelling?,diltiazem,YES
+swelling,Which drugs cause swelling?,guanfacine,NO
+swelling,What medications lead to swelling?,tesamorelin,YES
+swelling,What medications lead to swelling?,rapamycin,NO
+swelling,List drugs associated with swelling,tadalafil,YES
+swelling,List drugs associated with swelling,tolvaptan,NO
+nasal congestion,Which drugs cause nasal congestion?,perphenazine,YES
+nasal congestion,Which drugs cause nasal congestion?,neostigmine,NO
+nasal congestion,What medications lead to nasal congestion?,pentoxifylline,YES
+nasal congestion,What medications lead to nasal congestion?,arsenic,NO
+nasal congestion,List drugs associated with nasal congestion,baclofen,YES
+nasal congestion,List drugs associated with nasal congestion,levonorgestrel,NO
+libido decreased,Which drugs cause libido decreased?,doxazosin,YES
+libido decreased,Which drugs cause libido decreased?,rifabutin,NO
+libido decreased,What medications lead to libido decreased?,zonisamide,YES
+libido decreased,What medications lead to libido decreased?,nitric,NO
+libido decreased,List drugs associated with libido decreased,doxepin,YES
+libido decreased,List drugs associated with libido decreased,gadobutrol,NO
+cardiac failure congestive,Which drugs cause cardiac failure congestive?,imipramine,YES
+cardiac failure congestive,Which drugs cause cardiac failure congestive?,insulin,NO
+cardiac failure congestive,What medications lead to cardiac failure congestive?,fexofenadine,YES
+cardiac failure congestive,What medications lead to cardiac failure congestive?,n-carbamylglutamate,NO
+cardiac failure congestive,List drugs associated with cardiac failure congestive,glucose,YES
+cardiac failure congestive,List drugs associated with cardiac failure congestive,protirelin,NO
+thrombophlebitis,Which drugs cause thrombophlebitis?,pentostatin,YES
+thrombophlebitis,Which drugs cause thrombophlebitis?,ramipril,NO
+thrombophlebitis,What medications lead to thrombophlebitis?,acamprosate,YES
+thrombophlebitis,What medications lead to thrombophlebitis?,nuvocid,NO
+thrombophlebitis,List drugs associated with thrombophlebitis,aztreonam,YES
+thrombophlebitis,List drugs associated with thrombophlebitis,rifampicin,NO
+diabetes mellitus,Which drugs cause diabetes mellitus?,quetiapine,YES
+diabetes mellitus,Which drugs cause diabetes mellitus?,procarbazine,NO
+diabetes mellitus,What medications lead to diabetes mellitus?,cilostazol,YES
+diabetes mellitus,What medications lead to diabetes mellitus?,colestyramine,NO
+diabetes mellitus,List drugs associated with diabetes mellitus,medroxyprogesterone,YES
+diabetes mellitus,List drugs associated with diabetes mellitus,epinephrine,NO
+thirst,Which drugs cause thirst?,lansoprazole,YES
+thirst,Which drugs cause thirst?,atracurium,NO
+thirst,What medications lead to thirst?,aripiprazole,YES
+thirst,What medications lead to thirst?,fluoxymesterone,NO
+thirst,List drugs associated with thirst,cefditoren,YES
+thirst,List drugs associated with thirst,cyanocobalamin,NO
+hepatic failure,Which drugs cause hepatic failure?,erlotinib,YES
+hepatic failure,Which drugs cause hepatic failure?,cefditoren,NO
+hepatic failure,What medications lead to hepatic failure?,temozolomide,YES
+hepatic failure,What medications lead to hepatic failure?,colestyramine,NO
+hepatic failure,List drugs associated with hepatic failure,lamotrigine,YES
+hepatic failure,List drugs associated with hepatic failure,acenocoumarol,NO
+injection site reaction,Which drugs cause injection site reaction?,ciprofloxacin,YES
+injection site reaction,Which drugs cause injection site reaction?,thiothixene,NO
+injection site reaction,What medications lead to injection site reaction?,pregabalin,YES
+injection site reaction,What medications lead to injection site reaction?,rivaroxaban,NO
+injection site reaction,List drugs associated with injection site reaction,retinoic,YES
+injection site reaction,List drugs associated with injection site reaction,dicloxacillin,NO
+urethral disorder,Which drugs cause urethral disorder?,duloxetine,YES
+urethral disorder,Which drugs cause urethral disorder?,oxytetracycline,NO
+urethral disorder,What medications lead to urethral disorder?,pemetrexed,YES
+urethral disorder,What medications lead to urethral disorder?,pyridostigmine,NO
+urethral disorder,List drugs associated with urethral disorder,gefitinib,YES
+urethral disorder,List drugs associated with urethral disorder,rofecoxib,NO
+amnesia,Which drugs cause amnesia?,fluvastatin,YES
+amnesia,Which drugs cause amnesia?,alendronate,NO
+amnesia,What medications lead to amnesia?,atenolol,YES
+amnesia,What medications lead to amnesia?,tropisetron,NO
+amnesia,List drugs associated with amnesia,posaconazole,YES
+amnesia,List drugs associated with amnesia,rimantadine,NO
+eye pain,Which drugs cause eye pain?,vigabatrin,YES
+eye pain,Which drugs cause eye pain?,acamprosate,NO
+eye pain,What medications lead to eye pain?,cytarabine,YES
+eye pain,What medications lead to eye pain?,darifenacin,NO
+eye pain,List drugs associated with eye pain,valdecoxib,YES
+eye pain,List drugs associated with eye pain,nelarabine,NO
+gastroenteritis,Which drugs cause gastroenteritis?,sitaxsentan,YES
+gastroenteritis,Which drugs cause gastroenteritis?,glibenclamide,NO
+gastroenteritis,What medications lead to gastroenteritis?,ribavirin,YES
+gastroenteritis,What medications lead to gastroenteritis?,olopatadine,NO
+gastroenteritis,List drugs associated with gastroenteritis,su5416,YES
+gastroenteritis,List drugs associated with gastroenteritis,dolasetron,NO
+sepsis,Which drugs cause sepsis?,clozapine,YES
+sepsis,Which drugs cause sepsis?,bisoprolol,NO
+sepsis,What medications lead to sepsis?,fosphenytoin,YES
+sepsis,What medications lead to sepsis?,mannitol,NO
+sepsis,List drugs associated with sepsis,amphotericin,YES
+sepsis,List drugs associated with sepsis,tolterodine,NO
+haemoglobin,Which drugs cause haemoglobin?,goserelin,YES
+haemoglobin,Which drugs cause haemoglobin?,clemastine,NO
+haemoglobin,What medications lead to haemoglobin?,valdecoxib,YES
+haemoglobin,What medications lead to haemoglobin?,propranolol,NO
+haemoglobin,List drugs associated with haemoglobin,bortezomib,YES
+haemoglobin,List drugs associated with haemoglobin,pilocarpine,NO
+lymphadenopathy,Which drugs cause lymphadenopathy?,lamotrigine,YES
+lymphadenopathy,Which drugs cause lymphadenopathy?,cysteamine,NO
+lymphadenopathy,What medications lead to lymphadenopathy?,sodium,YES
+lymphadenopathy,What medications lead to lymphadenopathy?,6-thioguanine,NO
+lymphadenopathy,List drugs associated with lymphadenopathy,fosinoprilat,YES
+lymphadenopathy,List drugs associated with lymphadenopathy,ipratropium,NO
+eczema,Which drugs cause eczema?,lomefloxacin,YES
+eczema,Which drugs cause eczema?,zanamivir,NO
+eczema,What medications lead to eczema?,latanoprost,YES
+eczema,What medications lead to eczema?,probenecid,NO
+eczema,List drugs associated with eczema,nuvaring,YES
+eczema,List drugs associated with eczema,terconazole,NO
+polyuria,Which drugs cause polyuria?,zolpidem,YES
+polyuria,Which drugs cause polyuria?,novolog,NO
+polyuria,What medications lead to polyuria?,darunavir,YES
+polyuria,What medications lead to polyuria?,fluorometholone,NO
+polyuria,List drugs associated with polyuria,rabeprazole,YES
+polyuria,List drugs associated with polyuria,methsuximide,NO
+hepatic function abnormal,Which drugs cause hepatic function abnormal?,esomeprazole,YES
+hepatic function abnormal,Which drugs cause hepatic function abnormal?,mefloquine,NO
+hepatic function abnormal,What medications lead to hepatic function abnormal?,5-fluorocytosine,YES
+hepatic function abnormal,What medications lead to hepatic function abnormal?,terazosin,NO
+hepatic function abnormal,List drugs associated with hepatic function abnormal,goserelin,YES
+hepatic function abnormal,List drugs associated with hepatic function abnormal,nitric,NO
+phlebitis,Which drugs cause phlebitis?,bcnu,YES
+phlebitis,Which drugs cause phlebitis?,adenosine,NO
+phlebitis,What medications lead to phlebitis?,promethazine,YES
+phlebitis,What medications lead to phlebitis?,silver,NO
+phlebitis,List drugs associated with phlebitis,penicillin,YES
+phlebitis,List drugs associated with phlebitis,palonosetron,NO
+ecchymosis,Which drugs cause ecchymosis?,mitoxantrone,YES
+ecchymosis,Which drugs cause ecchymosis?,ici,NO
+ecchymosis,What medications lead to ecchymosis?,fosphenytoin,YES
+ecchymosis,What medications lead to ecchymosis?,vitrum,NO
+ecchymosis,List drugs associated with ecchymosis,5-aza-2'-deoxycytidine,YES
+ecchymosis,List drugs associated with ecchymosis,aprepitant,NO
+pulmonary oedema,Which drugs cause pulmonary oedema?,isoxsuprine,YES
+pulmonary oedema,Which drugs cause pulmonary oedema?,iotrolan,NO
+pulmonary oedema,What medications lead to pulmonary oedema?,hydroxocobalamin,YES
+pulmonary oedema,What medications lead to pulmonary oedema?,anagrelide,NO
+pulmonary oedema,List drugs associated with pulmonary oedema,lenalidomide,YES
+pulmonary oedema,List drugs associated with pulmonary oedema,clomipramine,NO
+candida infection,Which drugs cause candida infection?,cidofovir,YES
+candida infection,Which drugs cause candida infection?,mivacurium,NO
+candida infection,What medications lead to candida infection?,olanzapine,YES
+candida infection,What medications lead to candida infection?,unoprostone,NO
+candida infection,List drugs associated with candida infection,amoxicillin,YES
+candida infection,List drugs associated with candida infection,cyclobenzaprine,NO
+ear pain,Which drugs cause ear pain?,vigabatrin,YES
+ear pain,Which drugs cause ear pain?,lapatinib,NO
+ear pain,What medications lead to ear pain?,paliperidone,YES
+ear pain,What medications lead to ear pain?,anastrozole,NO
+ear pain,List drugs associated with ear pain,pimecrolimus,YES
+ear pain,List drugs associated with ear pain,anastrozole,NO
+sleep disorder,Which drugs cause sleep disorder?,pindolol,YES
+sleep disorder,Which drugs cause sleep disorder?,exemestane,NO
+sleep disorder,What medications lead to sleep disorder?,ritonavir,YES
+sleep disorder,What medications lead to sleep disorder?,imatinib,NO
+sleep disorder,List drugs associated with sleep disorder,mefloquine,YES
+sleep disorder,List drugs associated with sleep disorder,acarbose,NO
+neoplasm,Which drugs cause neoplasm?,metronidazole,YES
+neoplasm,Which drugs cause neoplasm?,conjugated,NO
+neoplasm,What medications lead to neoplasm?,vinblastine,YES
+neoplasm,What medications lead to neoplasm?,ramipril,NO
+neoplasm,List drugs associated with neoplasm,ropinirole,YES
+neoplasm,List drugs associated with neoplasm,clonazepam,NO
+wheezing,Which drugs cause wheezing?,cgp,YES
+wheezing,Which drugs cause wheezing?,piroxicam,NO
+wheezing,What medications lead to wheezing?,vancocine,YES
+wheezing,What medications lead to wheezing?,amprenavir,NO
+wheezing,List drugs associated with wheezing,amiodarone,YES
+wheezing,List drugs associated with wheezing,succinylcholine,NO
+pulmonary embolism,Which drugs cause pulmonary embolism?,tramadol,YES
+pulmonary embolism,Which drugs cause pulmonary embolism?,temazepam,NO
+pulmonary embolism,What medications lead to pulmonary embolism?,temsirolimus,YES
+pulmonary embolism,What medications lead to pulmonary embolism?,sulfasalazine,NO
+pulmonary embolism,List drugs associated with pulmonary embolism,zyprexa,YES
+pulmonary embolism,List drugs associated with pulmonary embolism,ampicillin,NO
+gynaecomastia,Which drugs cause gynaecomastia?,degarelix,YES
+gynaecomastia,Which drugs cause gynaecomastia?,oxytetracycline,NO
+gynaecomastia,What medications lead to gynaecomastia?,perphenazine,YES
+gynaecomastia,What medications lead to gynaecomastia?,moclobemide,NO
+gynaecomastia,List drugs associated with gynaecomastia,supremon,YES
+gynaecomastia,List drugs associated with gynaecomastia,butorphanol,NO
+acute coronary syndrome,Which drugs cause acute coronary syndrome?,pravastatin,YES
+acute coronary syndrome,Which drugs cause acute coronary syndrome?,disulfiram,NO
+acute coronary syndrome,What medications lead to acute coronary syndrome?,riluzole,YES
+acute coronary syndrome,What medications lead to acute coronary syndrome?,propylthiouracil,NO
+acute coronary syndrome,List drugs associated with acute coronary syndrome,5-aza-2'-deoxycytidine,YES
+acute coronary syndrome,List drugs associated with acute coronary syndrome,pindolol,NO
+deafness,Which drugs cause deafness?,ibuprofen,YES
+deafness,Which drugs cause deafness?,hydroxocobalamin,NO
+deafness,What medications lead to deafness?,phenytoin,YES
+deafness,What medications lead to deafness?,haloperidol,NO
+deafness,List drugs associated with deafness,5-asa,YES
+deafness,List drugs associated with deafness,tetracycline,NO
+infestation nos,Which drugs cause infestation nos?,acth(1-39,YES
+infestation nos,Which drugs cause infestation nos?,ceftizoxime,NO
+infestation nos,What medications lead to infestation nos?,n-carbamylglutamate,YES
+infestation nos,What medications lead to infestation nos?,podophyllotoxin,NO
+infestation nos,List drugs associated with infestation nos,itraconazole,YES
+infestation nos,List drugs associated with infestation nos,orphenadrine,NO
+infestation,Which drugs cause infestation?,omeprazole,YES
+infestation,Which drugs cause infestation?,sulfamethoxazole,NO
+infestation,What medications lead to infestation?,travoprost,YES
+infestation,What medications lead to infestation?,naratriptan,NO
+infestation,List drugs associated with infestation,gabapentin,YES
+infestation,List drugs associated with infestation,tolterodine,NO
+oesophagitis,Which drugs cause oesophagitis?,v,YES
+oesophagitis,Which drugs cause oesophagitis?,metformin,NO
+oesophagitis,What medications lead to oesophagitis?,moxifloxacin,YES
+oesophagitis,What medications lead to oesophagitis?,propranolol,NO
+oesophagitis,List drugs associated with oesophagitis,fenofibrate,YES
+oesophagitis,List drugs associated with oesophagitis,domperidone,NO

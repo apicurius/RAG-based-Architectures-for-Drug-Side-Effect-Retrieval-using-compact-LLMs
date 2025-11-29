@@ -13,7 +13,7 @@ from datetime import datetime
 import sys
 import os
 import time
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 from tqdm import tqdm
 
 # Add parent directory to path
@@ -21,9 +21,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import enhanced architectures
 from src.architectures.enhanced_graphrag import EnhancedGraphRAG
+from src.architectures.enhanced_rag_format_b import EnhancedRAGFormatB
 from src.architectures.advanced_rag_format_b import AdvancedRAGFormatB
 from src.evaluation.advanced_metrics import AdvancedMetrics
-from src.utils.data_processor import DataProcessor
+# Data is already in Pinecone and Neo4j - no local processor needed
 
 # Configure logging
 logging.basicConfig(
@@ -47,8 +48,7 @@ class EnhancedComplexQueryEvaluator:
         with open(config_path, 'r') as f:
             self.config = json.load(f)
 
-        # Initialize data processor for ground truth
-        self.data_processor = DataProcessor(config_path)
+        # Data is already in Pinecone and Neo4j databases
 
         # Initialize advanced metrics
         self.metrics = AdvancedMetrics()
@@ -78,6 +78,8 @@ class EnhancedComplexQueryEvaluator:
 
         if architecture == "enhanced_graphrag":
             arch = EnhancedGraphRAG(self.config_path, model)
+        elif architecture == "enhanced_format_b":
+            arch = EnhancedRAGFormatB(self.config_path, model)
         elif architecture == "advanced_rag_format_b":
             arch = AdvancedRAGFormatB(self.config_path, model)
         else:
@@ -86,42 +88,97 @@ class EnhancedComplexQueryEvaluator:
         self.architectures[key] = arch
         return arch
 
-    def generate_test_queries(self, query_type: str, num_queries: int = 50) -> List[Dict[str, Any]]:
+    def generate_test_queries(self, query_type: str, num_queries: Optional[int] = 50) -> List[Dict[str, Any]]:
         """
-        Generate test queries with ground truth
+        Load test queries from CSV files
 
         Args:
             query_type: Type of queries to generate
-            num_queries: Number of queries
+            num_queries: Number of queries (None for all available)
 
         Returns:
             List of test queries with ground truth
         """
         test_queries = []
 
-        if query_type == "organ_specific":
-            # Use real drug-organ combinations
-            drugs = ['aspirin', 'ibuprofen', 'metformin', 'lisinopril', 'atorvastatin',
-                    'warfarin', 'omeprazole', 'metoprolol', 'gabapentin', 'sertraline']
-            organs = ['heart', 'liver', 'kidney', 'lung', 'stomach']
+        # Map query types to CSV files
+        query_files = {
+            'organ_specific': '../data/processed/comprehensive_organ_queries.csv',
+            'severity_filtered': '../data/processed/comprehensive_severity_queries.csv',
+            'drug_comparison': '../data/processed/comprehensive_comparison_queries.csv',
+            'reverse_lookup': '../data/processed/reverse_queries.csv',
+            'combination': '../data/processed/comprehensive_combination_queries.csv'
+        }
 
-            for i in range(min(num_queries, len(drugs) * len(organs))):
-                drug = drugs[i % len(drugs)]
-                organ = organs[(i // len(drugs)) % len(organs)]
+        if query_type in query_files:
+            # Load queries from CSV
+            csv_path = query_files[query_type]
+            try:
+                df = pd.read_csv(csv_path)
 
-                # Generate ground truth (in production, load from database)
-                ground_truth = self._get_organ_specific_ground_truth(drug, organ)
+                # Limit queries if specified
+                if num_queries is not None:
+                    df = df.head(num_queries)
 
-                test_queries.append({
-                    'query_id': f"organ_{i}",
-                    'query': f"What are the {organ} side effects of {drug}?",
-                    'query_type': 'organ_specific',
-                    'drug': drug,
-                    'organ': organ,
-                    'ground_truth': ground_truth
-                })
+                # Convert DataFrame to list of dicts
+                for i, row in df.iterrows():
+                    query_data = {
+                        'query_id': f"{query_type}_{i}",
+                        'query': row.get('query', row.get('question', '')),
+                        'query_type': query_type
+                    }
 
-        elif query_type == "drug_comparison":
+                    # Add expected answer or ground truth
+                    ground_truth = None
+                    for gt_col in ['ground_truth', 'expected_answer', 'expected_effects']:
+                        if gt_col in row:
+                            ground_truth = row[gt_col]
+                            break
+
+                    if ground_truth is not None:
+                        if isinstance(ground_truth, str):
+                            # Parse JSON-like string or comma-separated list
+                            import ast
+                            try:
+                                query_data['ground_truth'] = ast.literal_eval(ground_truth)
+                            except:
+                                query_data['ground_truth'] = [s.strip() for s in ground_truth.split(',')]
+                        else:
+                            query_data['ground_truth'] = [ground_truth]
+                    else:
+                        query_data['ground_truth'] = []
+
+                    # Add other metadata from CSV
+                    for col in ['drug', 'drug1', 'drug2', 'organ', 'organ_filter', 'severity', 'severity_filter',
+                                'side_effect', 'num_results', 'comparison_type']:
+                        if col in row:
+                            query_data[col] = row[col]
+
+                    # Map filter columns to standard names for compatibility
+                    if 'organ_filter' in query_data and 'organ' not in query_data:
+                        query_data['organ'] = query_data['organ_filter']
+                    if 'severity_filter' in query_data and 'severity' not in query_data:
+                        query_data['severity'] = query_data['severity_filter']
+
+                    test_queries.append(query_data)
+
+                logger.info(f"Loaded {len(test_queries)} queries from {csv_path}")
+            except Exception as e:
+                logger.error(f"Error loading queries from {csv_path}: {e}")
+                # Fall back to generated queries
+                return self._generate_mock_queries(query_type, num_queries)
+
+        else:
+            # Unknown query type - generate mock queries
+            return self._generate_mock_queries(query_type, num_queries)
+
+        return test_queries
+
+    def _generate_mock_queries(self, query_type: str, num_queries: Optional[int] = 50) -> List[Dict[str, Any]]:
+        """Generate mock queries for testing"""
+        test_queries = []
+
+        if query_type == "drug_comparison":
             # Drug pairs for comparison
             drug_pairs = [
                 ('aspirin', 'ibuprofen'),
@@ -148,7 +205,7 @@ class EnhancedComplexQueryEvaluator:
                     'ground_truth': ground_truth
                 })
 
-        elif query_type == "severity_filtered":
+        if query_type == "severity_filtered":
             # Severity-based queries
             drugs = ['warfarin', 'methotrexate', 'chemotherapy', 'insulin', 'digoxin']
             severities = ['severe', 'life-threatening', 'serious']
@@ -201,6 +258,11 @@ class EnhancedComplexQueryEvaluator:
                             query_data['drug'],
                             query_data['organ']
                         )
+                    elif architecture == "enhanced_format_b":
+                        response = arch.complex_query_organ_specific(
+                            query_data['drug'],
+                            query_data['organ']
+                        )
                     else:  # advanced_rag_format_b
                         response = arch.enhanced_complex_organ_query(
                             query_data['drug'],
@@ -213,15 +275,44 @@ class EnhancedComplexQueryEvaluator:
                             query_data['drug1'],
                             query_data['drug2']
                         )
+                    elif architecture == "enhanced_format_b":
+                        response = arch.complex_query_drug_comparison(
+                            query_data['drug1'],
+                            query_data['drug2']
+                        )
                     else:  # advanced_rag_format_b
                         response = arch.enhanced_complex_comparison(
                             query_data['drug1'],
                             query_data['drug2']
                         )
 
+                elif query_data['query_type'] == 'severity_filtered':
+                    if architecture == "enhanced_format_b":
+                        response = arch.complex_query_severity_analysis(
+                            query_data['drug'],
+                            query_data['severity']
+                        )
+                    else:
+                        # Use general complex query handler for others
+                        response = arch.process_complex_query(query_data['query'])
+
+                elif query_data['query_type'] == 'reverse_lookup':
+                    if architecture == "enhanced_format_b":
+                        response = arch.complex_query_reverse_lookup(
+                            query_data.get('side_effect', query_data['query'])
+                        )
+                    else:
+                        # Use general complex query handler for others
+                        response = arch.process_complex_query(query_data['query'])
+
                 else:
                     # Use general complex query handler
-                    response = arch.process_complex_query(query_data['query'])
+                    if architecture == "enhanced_format_b":
+                        # EnhancedRAGFormatB doesn't have process_complex_query
+                        # Fall back to binary query or skip
+                        response = {'error': 'Complex query type not supported'}
+                    else:
+                        response = arch.process_complex_query(query_data['query'])
 
                 # Extract predicted effects from response
                 predicted_effects = self._extract_effects_from_response(response)
@@ -270,7 +361,7 @@ class EnhancedComplexQueryEvaluator:
         }
 
     def run_comprehensive_evaluation(self, architectures: List[str], models: List[str],
-                                    query_types: List[str], queries_per_type: int = 20):
+                                    query_types: List[str], queries_per_type: Optional[int] = 20):
         """
         Run comprehensive evaluation across architectures and query types
 
@@ -278,7 +369,7 @@ class EnhancedComplexQueryEvaluator:
             architectures: List of architectures to evaluate
             models: List of models to use
             query_types: List of query types to test
-            queries_per_type: Number of queries per type
+            queries_per_type: Number of queries per type (None for all available)
 
         Returns:
             Complete evaluation results
@@ -440,22 +531,28 @@ def main():
     """Main evaluation pipeline"""
     parser = argparse.ArgumentParser(description='Enhanced Complex Query Evaluation')
     parser.add_argument('--architectures', nargs='+',
-                       default=['enhanced_graphrag', 'advanced_rag_format_b'],
-                       help='Architectures to evaluate')
+                       default=['enhanced_format_b', 'enhanced_graphrag', 'advanced_rag_format_b'],
+                       help='Architectures to evaluate (enhanced_format_b, enhanced_graphrag, advanced_rag_format_b)')
     parser.add_argument('--models', nargs='+',
                        default=['qwen', 'llama3'],
                        help='Models to use')
     parser.add_argument('--query_types', nargs='+',
                        default=['organ_specific', 'drug_comparison', 'severity_filtered'],
                        help='Query types to test')
-    parser.add_argument('--queries_per_type', type=int, default=10,
-                       help='Number of queries per type')
+    parser.add_argument('--queries_per_type', type=str, default='10',
+                       help='Number of queries per type (integer or "all")')
     parser.add_argument('--config', default='config.json',
                        help='Configuration file path')
     parser.add_argument('--output', default='enhanced_evaluation_results.json',
                        help='Output file for results')
 
     args = parser.parse_args()
+
+    # Parse queries_per_type
+    if args.queries_per_type.lower() == 'all':
+        queries_per_type = None  # Will process all available queries
+    else:
+        queries_per_type = int(args.queries_per_type)
 
     # Initialize evaluator
     evaluator = EnhancedComplexQueryEvaluator(args.config)
@@ -465,7 +562,7 @@ def main():
         architectures=args.architectures,
         models=args.models,
         query_types=args.query_types,
-        queries_per_type=args.queries_per_type
+        queries_per_type=queries_per_type
     )
 
     # Save results

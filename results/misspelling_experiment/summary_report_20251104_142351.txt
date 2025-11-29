@@ -1,0 +1,32 @@
+================================================================================
+MISSPELLING ROBUSTNESS EXPERIMENT - SUMMARY REPORT
+================================================================================
+
+
+PURE_LLM_QWEN
+--------------------------------------------------------------------------------
+accuracy: 0.6056 -> 0.6167 (degradation: -1.83%)
+f1_score: 0.4580 -> 0.4651 (degradation: -1.55%)
+precision: 0.7317 -> 0.7692 (degradation: -5.13%)
+sensitivity: 0.3333 -> 0.3333 (degradation: 0.00%)
+
+FORMAT_A_QWEN
+--------------------------------------------------------------------------------
+accuracy: 0.8278 -> 0.8222 (degradation: 0.67%)
+f1_score: 0.8121 -> 0.7895 (degradation: 2.79%)
+precision: 0.8933 -> 0.9677 (degradation: -8.33%)
+sensitivity: 0.7444 -> 0.6667 (degradation: 10.45%)
+
+FORMAT_B_QWEN
+--------------------------------------------------------------------------------
+accuracy: 0.9444 -> 0.5000 (degradation: 47.06%)
+f1_score: 0.9474 -> 0.0000 (degradation: 100.00%)
+precision: 0.9000 -> 0.0000 (degradation: 100.00%)
+sensitivity: 1.0000 -> 0.0000 (degradation: 100.00%)
+
+GRAPHRAG_QWEN
+--------------------------------------------------------------------------------
+accuracy: 1.0000 -> 0.5000 (degradation: 50.00%)
+f1_score: 1.0000 -> 0.0000 (degradation: 100.00%)
+precision: 1.0000 -> 0.0000 (degradation: 100.00%)
+sensitivity: 1.0000 -> 0.0000 (degradation: 100.00%)

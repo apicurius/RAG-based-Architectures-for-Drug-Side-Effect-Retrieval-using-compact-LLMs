@@ -1,0 +1,167 @@
+{
+  "model": "Qwen 7B",
+  "model_info": {
+    "use_fewshot": true,
+    "temperature": 0.0
+  },
+  "correction_accuracy": {
+    "accuracy": 0.8,
+    "exact_matches": 8,
+    "total_tested": 10,
+    "avg_edit_distance_from_truth": 0.3,
+    "unchanged_rate": 0.1,
+    "unchanged_count": 1,
+    "failure_count": 2,
+    "detailed_results": [
+      {
+        "misspelled_input": "lormetazerpam",
+        "qwen_correction": "lormetazepam",
+        "ground_truth": "lormetazepam",
+        "is_correct": true,
+        "edit_distance_from_truth": 0,
+        "edit_distance_from_input": 1,
+        "unchanged": false,
+        "confidence": 0.865,
+        "raw_response": "lormetazepam"
+      },
+      {
+        "misspelled_input": "grisefulvin",
+        "qwen_correction": "griseofulvin",
+        "ground_truth": "griseofulvin",
+        "is_correct": true,
+        "edit_distance_from_truth": 0,
+        "edit_distance_from_input": 1,
+        "unchanged": false,
+        "confidence": 0.865,
+        "raw_response": "griseofulvin"
+      },
+      {
+        "misspelled_input": "lercanipidine",
+        "qwen_correction": "lercanidipine",
+        "ground_truth": "lercanidipine",
+        "is_correct": true,
+        "edit_distance_from_truth": 0,
+        "edit_distance_from_input": 2,
+        "unchanged": false,
+        "confidence": 0.7949999999999999,
+        "raw_response": "lercanidipine"
+      },
+      {
+        "misspelled_input": "miglitilol",
+        "qwen_correction": "miglitol",
+        "ground_truth": "miglitol",
+        "is_correct": true,
+        "edit_distance_from_truth": 0,
+        "edit_distance_from_input": 2,
+        "unchanged": false,
+        "confidence": 0.7949999999999999,
+        "raw_response": "miglitol"
+      },
+      {
+        "misspelled_input": "floxetine",
+        "qwen_correction": "fluoxetine",
+        "ground_truth": "fluoxetine",
+        "is_correct": true,
+        "edit_distance_from_truth": 0,
+        "edit_distance_from_input": 1,
+        "unchanged": false,
+        "confidence": 0.865,
+        "raw_response": "fluoxetine"
+      },
+      {
+        "misspelled_input": "ropirinole",
+        "qwen_correction": "ropinirole",
+        "ground_truth": "ropinirole",
+        "is_correct": true,
+        "edit_distance_from_truth": 0,
+        "edit_distance_from_input": 2,
+        "unchanged": false,
+        "confidence": 0.7949999999999999,
+        "raw_response": "ropinirole"
+      },
+      {
+        "misspelled_input": "latanaprost",
+        "qwen_correction": "latanoprost",
+        "ground_truth": "latanoprost",
+        "is_correct": true,
+        "edit_distance_from_truth": 0,
+        "edit_distance_from_input": 1,
+        "unchanged": false,
+        "confidence": 0.865,
+        "raw_response": "latanoprost"
+      },
+      {
+        "misspelled_input": "netaglinide",
+        "qwen_correction": "netaglinide",
+        "ground_truth": "nateglinide",
+        "is_correct": false,
+        "edit_distance_from_truth": 2,
+        "edit_distance_from_input": 0,
+        "unchanged": true,
+        "confidence": 0.95,
+        "raw_response": "netaglinide"
+      },
+      {
+        "misspelled_input": "adeflovir",
+        "qwen_correction": "adefovir",
+        "ground_truth": "adefovir",
+        "is_correct": true,
+        "edit_distance_from_truth": 0,
+        "edit_distance_from_input": 1,
+        "unchanged": false,
+        "confidence": 0.865,
+        "raw_response": "adefovir"
+      },
+      {
+        "misspelled_input": "levabnolol",
+        "qwen_correction": "levabunolol",
+        "ground_truth": "levobunolol",
+        "is_correct": false,
+        "edit_distance_from_truth": 1,
+        "edit_distance_from_input": 1,
+        "unchanged": false,
+        "confidence": 0.865,
+        "raw_response": "levabunolol"
+      }
+    ],
+    "failures": [
+      {
+        "misspelled_input": "netaglinide",
+        "qwen_correction": "netaglinide",
+        "ground_truth": "nateglinide",
+        "is_correct": false,
+        "edit_distance_from_truth": 2,
+        "edit_distance_from_input": 0,
+        "unchanged": true,
+        "confidence": 0.95,
+        "raw_response": "netaglinide"
+      },
+      {
+        "misspelled_input": "levabnolol",
+        "qwen_correction": "levabunolol",
+        "ground_truth": "levobunolol",
+        "is_correct": false,
+        "edit_distance_from_truth": 1,
+        "edit_distance_from_input": 1,
+        "unchanged": false,
+        "confidence": 0.865,
+        "raw_response": "levabunolol"
+      }
+    ]
+  },
+  "overcorrection_test": {
+    "over_correction_rate": 0.02,
+    "over_correction_count": 1,
+    "false_changes": [
+      {
+        "correct_original": "copolymer",
+        "wrong_correction": "copolymers",
+        "confidence": 0.865,
+        "edit_distance": 1
+      }
+    ],
+    "tested_count": 50,
+    "skipped": false
+  },
+  "timestamp": "20251109_151823"
+}
