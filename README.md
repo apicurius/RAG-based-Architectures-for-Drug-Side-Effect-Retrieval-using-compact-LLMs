@@ -79,25 +79,6 @@ Tests robustness against misspelled drug names.
 
 ## November 2025 Experiment Results
 
-### Reverse Query Performance
-
-Comparison of architectures on the reverse query task (side effect → list of drugs).
-
-> **Source:** `experiments/results_reverse_query_benchmark_20251128_235601.json`
-
-| Architecture | Avg Recall | Avg Precision | Avg F1 | Avg Latency | Queries |
-|-------------|-----------|--------------|--------|-------------|---------|
-| GraphRAG | 100.00% | 100.00% | 100.00% | 0.09s | 121 |
-| Format B (Chunked) | 98.59% | 99.93% | 99.18% | 84.63s | 121 |
-| Format A | 7.97% | 81.03% | 11.79% | 23.32s | 121 |
-
-**Key Findings:**
-- **GraphRAG achieves perfect performance** (100% recall, 100% precision) with ultra-fast 0.09s latency
-- Format B achieves excellent 98.59% recall with chunked retrieval strategy
-- **Format A fails on reverse queries** (only 7.97% recall) - not suitable for this task
-- GraphRAG is ~900x faster than Format B for reverse queries (0.09s vs 84.6s)
-
-
 ### Binary Classification Performance (19,520 Queries)
 
 Performance on binary queries ("Is [side effect] an adverse effect of [drug]?") using the full evaluation dataset.
@@ -121,6 +102,25 @@ Performance on binary queries ("Is [side effect] an adverse effect of [drug]?") 
 - Format A shows good accuracy (90.86% Qwen, 86.58% Llama3)
 - **Pure LLM baseline performs at 62-63% accuracy**, demonstrating the critical need for retrieval augmentation
 - RAG architectures provide **37-38% absolute improvement** over Pure LLM baseline
+
+### Reverse Query Performance
+
+Comparison of architectures on the reverse query task (side effect → list of drugs).
+
+> **Source:** `experiments/results_reverse_query_benchmark_20251128_235601.json`
+
+| Architecture | Avg Recall | Avg Precision | Avg F1 | Avg Latency | Queries |
+|-------------|-----------|--------------|--------|-------------|---------|
+| GraphRAG | 100.00% | 100.00% | 100.00% | 0.09s | 121 |
+| Format B (Chunked) | 98.59% | 99.93% | 99.18% | 84.63s | 121 |
+| Format A | 7.97% | 81.03% | 11.79% | 23.32s | 121 |
+
+**Key Findings:**
+- **GraphRAG achieves perfect performance** (100% recall, 100% precision) with ultra-fast 0.09s latency
+- Format B achieves excellent 98.59% recall with chunked retrieval strategy
+- **Format A fails on reverse queries** (only 7.97% recall) - not suitable for this task
+- GraphRAG is ~900x faster than Format B for reverse queries (0.09s vs 84.6s)
+
 
 ### Misspelling Robustness (180-Query Test Set)
 
