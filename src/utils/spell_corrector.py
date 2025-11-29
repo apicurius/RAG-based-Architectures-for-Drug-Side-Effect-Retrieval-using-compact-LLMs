@@ -134,7 +134,7 @@ Return ONLY the corrected drug name (or original if correct), no explanation:"""
         # Initialize Qwen 7B via vLLM
         from src.models.vllm_model import VLLMQwenModel
         self.llm = VLLMQwenModel(config_path)
-        logger.info("✅ Spell corrector initialized with Qwen 7B (vLLM)")
+        logger.info("SUCCESS: Spell corrector initialized with Qwen 7B (vLLM)")
 
         self.prompt_template = self.FEWSHOT_PROMPT_TEMPLATE if use_fewshot else self.SIMPLE_PROMPT_TEMPLATE
 
@@ -235,7 +235,7 @@ Return ONLY the corrected drug name (or original if correct), no explanation:"""
         changed_count = sum(1 for r in results if r.changed)
         avg_confidence = sum(r.confidence for r in results) / len(results)
 
-        logger.info(f"✅ Correction complete: {changed_count}/{len(results)} changed, avg confidence: {avg_confidence:.2f}")
+        logger.info(f"SUCCESS: Correction complete: {changed_count}/{len(results)} changed, avg confidence: {avg_confidence:.2f}")
 
         return results
 

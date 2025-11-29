@@ -66,7 +66,7 @@ class FormatBRAG:
         # Initialize token manager for context truncation
         self.token_manager = create_token_manager(model_type=model)
 
-        logger.info(f"✅ Format B RAG initialized with {model} via vLLM and token management")
+        logger.info(f"Format B RAG initialized with {model} via vLLM and token management")
 
     def get_embedding(self, text: str) -> List[float]:
         """Generate embedding using robust client that handles 400 errors"""
@@ -249,12 +249,12 @@ Is {side_effect} an adverse effect of {drug}?
         if not queries:
             return []
 
-        logger.info(f"🚀 FORMAT B BATCH PROCESSING: {len(queries)} queries with optimized embeddings + retrieval + vLLM")
+        logger.info(f"FORMAT B BATCH PROCESSING: {len(queries)} queries with optimized embeddings + retrieval + vLLM")
 
         # Step 1: Batch embedding generation (MAJOR SPEEDUP)
         # Embed full queries (notebook-aligned)
         query_texts = [f"Is {q['side_effect']} an adverse effect of {q['drug']}?" for q in queries]
-        logger.info(f"📝 Generating {len(query_texts)} embeddings in batch (full query mode)...")
+        logger.info(f"Generating {len(query_texts)} embeddings in batch (full query mode)...")
 
         embeddings = self.embedding_client.get_embeddings_batch(
             query_texts,
@@ -262,7 +262,7 @@ Is {side_effect} an adverse effect of {drug}?
         )
 
         # Step 2: Concurrent Pinecone retrieval with progress tracking
-        logger.info(f"🔍 Performing {len(embeddings)} Pinecone queries (concurrent)...")
+        logger.info(f"Performing {len(embeddings)} Pinecone queries (concurrent)...")
         all_contexts = [None] * len(queries)  # Pre-allocate to maintain order
 
         def process_single_query(idx_query_embedding):
@@ -310,9 +310,9 @@ Is {query['side_effect']} an adverse effect of {query['drug']}?
         CHUNK_SIZE = 1000  # Process 1000 queries at a time
         query_data = [(i, query, embedding) for i, (query, embedding) in enumerate(zip(queries, embeddings))]
 
-        logger.info(f"🔍 Processing Pinecone queries in chunks of {CHUNK_SIZE} (memory-safe mode)")
+        logger.info(f"Processing Pinecone queries in chunks of {CHUNK_SIZE} (memory-safe mode)")
 
-        with tqdm(total=len(queries), desc="🔍 Pinecone", unit="query", ncols=100) as pbar:
+        with tqdm(total=len(queries), desc="Pinecone", unit="query", ncols=100) as pbar:
             for chunk_start in range(0, len(query_data), CHUNK_SIZE):
                 chunk_end = min(chunk_start + CHUNK_SIZE, len(query_data))
                 chunk_data = query_data[chunk_start:chunk_end]
@@ -342,7 +342,7 @@ Is {query['side_effect']} an adverse effect of {query['drug']}?
                 all_contexts[i] = f"No specific pairs found for {queries[i]['drug']} and {queries[i]['side_effect']}"
 
         # Step 3: Prepare prompts for batch vLLM processing
-        logger.info(f"🧠 Preparing {len(queries)} prompts for batch vLLM inference...")
+        logger.info(f"Preparing {len(queries)} prompts for batch vLLM inference...")
         prompts = []
 
         for query, context in zip(queries, all_contexts):
@@ -358,7 +358,7 @@ Is {query['side_effect']} an adverse effect of {query['drug']}?
             prompts.append(prompt)
 
         # Step 4: Batch vLLM inference (OPTIMIZED)
-        logger.info(f"⚡ Running batch vLLM inference...")
+        logger.info(f"Running batch vLLM inference...")
         try:
             # Use temperature=0.1 for RAG deterministic outputs
             responses = self.llm.generate_batch(prompts, max_tokens=100, temperature=0.1)
@@ -390,7 +390,7 @@ Is {query['side_effect']} an adverse effect of {query['drug']}?
             })
 
         success_rate = sum(1 for r in results if r['answer'] != 'UNKNOWN') / len(results) * 100
-        logger.info(f"✅ FORMAT B BATCH COMPLETE: {success_rate:.1f}% successful, {len(results)} total results")
+        logger.info(f"FORMAT B BATCH COMPLETE: {success_rate:.1f}% successful, {len(results)} total results")
 
         return results
 
@@ -417,7 +417,7 @@ Is {query['side_effect']} an adverse effect of {query['drug']}?
             "lost in the middle" attention degradation problem.
         """
         if strategy == "monolithic":
-            logger.warning("⚠️  Using monolithic strategy (DEPRECATED). Chunked strategy recommended for >100 pairs.")
+            logger.warning("Using monolithic strategy (DEPRECATED). Chunked strategy recommended for >100 pairs.")
             logger.warning("   Priority 1 evaluation: chunked 98.37% recall vs monolithic 42.15%")
             return self._reverse_query_monolithic(side_effect)
         else:
@@ -570,8 +570,8 @@ Answer:"""
 
         Research shows LLMs perform better on shorter contexts. By chunking:
         - 142 pairs → 87% recall (monolithic)
-        - 915 pairs → 49% recall (monolithic) ⚠️
-        - 915 pairs → ~85-90% recall expected (chunked) ✅
+        - 915 pairs → 49% recall (monolithic) WARNING:
+        - 915 pairs → ~85-90% recall expected (chunked) SUCCESS:
 
         Pros: Higher recall for large result sets (>200 pairs)
         Cons: Slower (multiple LLM calls), higher token usage

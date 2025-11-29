@@ -49,7 +49,7 @@ class VLLMModel:
         try:
             response = requests.get(f"{self.base_url}/v1/models")
             if response.status_code == 200:
-                logger.info(f"✅ Connected to vLLM server at {self.base_url}")
+                logger.info(f"SUCCESS: Connected to vLLM server at {self.base_url}")
                 logger.info(f"   Server is using 4 GPUs with tensor parallelism")
             else:
                 logger.warning(f"vLLM server not responding. Start it with: ./start_vllm_server.sh")
@@ -151,7 +151,7 @@ class VLLMModel:
         if not prompts:
             return []
 
-        logger.info(f"🚀 vLLM CHUNKED PROCESSING: {len(prompts)} prompts in chunks of 2000")
+        logger.info(f"PROCESSING: vLLM CHUNKED PROCESSING: {len(prompts)} prompts in chunks of 2000")
 
         # Process in chunks to prevent vLLM queue overflow
         CHUNK_SIZE = 2000
@@ -199,10 +199,10 @@ class VLLMModel:
                 all_responses.extend(chunk_responses)
 
             chunk_success = len([r for r in chunk_responses if r])
-            logger.info(f"✅ Chunk {chunk_num}/{total_chunks} complete: {chunk_success}/{len(chunk_prompts)} successful")
+            logger.info(f"SUCCESS: Chunk {chunk_num}/{total_chunks} complete: {chunk_success}/{len(chunk_prompts)} successful")
 
         success_count = len([r for r in all_responses if r])
-        logger.info(f"✅ ALL vLLM processing complete: {success_count}/{len(prompts)} successful ({success_count/len(prompts)*100:.1f}%)")
+        logger.info(f"SUCCESS: ALL vLLM processing complete: {success_count}/{len(prompts)} successful ({success_count/len(prompts)*100:.1f}%)")
         return all_responses
 
     def _safe_generate_response(self, prompt: str, max_tokens: int, temperature: float = None) -> str:
@@ -296,7 +296,7 @@ Is {side_effect} an adverse effect of {drug}?"""
         if not queries:
             return []
 
-        logger.info(f"🚀 Processing {len(queries)} queries with optimized batch processing")
+        logger.info(f"PROCESSING: Processing {len(queries)} queries with optimized batch processing")
 
         # Prepare prompts with truncation to avoid 400 errors
         prompts = []
@@ -342,7 +342,7 @@ FINAL ANSWER:"""
             })
 
         success_rate = sum(1 for r in results if r['answer'] != 'UNKNOWN') / len(results) * 100
-        logger.info(f"✅ Batch processing complete: {success_rate:.1f}% successful extractions")
+        logger.info(f"SUCCESS: Batch processing complete: {success_rate:.1f}% successful extractions")
 
         return results
 

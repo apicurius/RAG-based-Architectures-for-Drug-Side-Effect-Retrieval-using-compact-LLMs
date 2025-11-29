@@ -56,7 +56,7 @@ class EntityRecognizer:
             ),
         ]
 
-        logger.info("✅ Entity Recognition module initialized")
+        logger.info("SUCCESS: Entity Recognition module initialized")
 
     def extract_entities(self, query: str) -> Dict[str, Optional[str]]:
         """
@@ -222,6 +222,6 @@ if __name__ == "__main__":
 
         is_valid, error = recognizer.validate_entities(entities['drug'], entities['side_effect'])
         if is_valid:
-            print(f"  ✅ Valid entities")
+            print(f"  SUCCESS: Valid entities")
         else:
-            print(f"  ❌ {error}")
+            print(f"  ERROR: {error}")

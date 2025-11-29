@@ -1,2 +1,0 @@
-accuracy,accuracy_percent,f1_score,precision,sensitivity,specificity,tp,tn,fp,fn,prediction_distribution,elapsed_time,throughput
-1.0,100.0,1.0,1.0,1.0,1.0,9760,9760,0,0,"{'NO': 9760, 'YES': 9760}",10040.43705701828,1.9441384761588134

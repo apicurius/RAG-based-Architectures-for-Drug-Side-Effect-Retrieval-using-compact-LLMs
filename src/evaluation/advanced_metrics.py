@@ -26,7 +26,7 @@ class AdvancedMetrics:
         """
         try:
             self.semantic_model = SentenceTransformer(model_name)
-            logger.info(f"✅ Loaded semantic model: {model_name}")
+            logger.info(f"SUCCESS: Loaded semantic model: {model_name}")
         except Exception as e:
             logger.warning(f"Could not load semantic model: {e}. Falling back to string matching.")
             self.semantic_model = None

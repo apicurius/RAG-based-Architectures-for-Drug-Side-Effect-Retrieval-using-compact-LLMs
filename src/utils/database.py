@@ -72,16 +72,16 @@ class ExactPaperReplication:
             import openai
             if self.config.get("openai_api_key") and "your_" not in self.config.get("openai_api_key", ""):
                 self.openai_client = openai.OpenAI(api_key=self.config["openai_api_key"])
-                logger.info("✅ OpenAI client initialized (embeddings + LLM)")
+                logger.info("SUCCESS: OpenAI client initialized (embeddings + LLM)")
             else:
                 self.openai_client = None
-                logger.warning("⚠️  OpenAI API key not configured")
+                logger.warning("WARNING:  OpenAI API key not configured")
             
             # Pinecone client with exact paper settings
             if self.config.get("pinecone_api_key") and "your_" not in self.config.get("pinecone_api_key", ""):
                 from pinecone import Pinecone, ServerlessSpec
                 self.pinecone_client = Pinecone(api_key=self.config["pinecone_api_key"])
-                logger.info("✅ Pinecone client initialized")
+                logger.info("SUCCESS: Pinecone client initialized")
                 
                 # Paper specifies: 1536-dimensional vectors, cosine similarity, AWS cloud
                 self.pinecone_spec = ServerlessSpec(
@@ -90,7 +90,7 @@ class ExactPaperReplication:
                 )
             else:
                 self.pinecone_client = None
-                logger.warning("⚠️  Pinecone API key not configured")
+                logger.warning("WARNING:  Pinecone API key not configured")
             
             # Neo4j client with exact paper schema
             neo4j_config = [
@@ -105,10 +105,10 @@ class ExactPaperReplication:
                     self.config["neo4j_uri"],
                     auth=(self.config["neo4j_username"], self.config["neo4j_password"])
                 )
-                logger.info("✅ Neo4j client initialized")
+                logger.info("SUCCESS: Neo4j client initialized")
             else:
                 self.neo4j_driver = None
-                logger.warning("⚠️  Neo4j credentials not configured")
+                logger.warning("WARNING:  Neo4j credentials not configured")
                 
         except Exception as e:
             logger.error(f"Error setting up clients: {e}")
@@ -157,7 +157,7 @@ class ExactPaperReplication:
                 logger.info("Waiting for index to be ready...")
                 time.sleep(30)
                 
-            logger.info("✅ Pinecone index ready")
+            logger.info("SUCCESS: Pinecone index ready")
             self.pinecone_index = self.pinecone_client.Index(index_name)
             return True
             
@@ -197,7 +197,7 @@ class ExactPaperReplication:
                 session.run("CREATE INDEX relationship_confidence_index IF NOT EXISTS FOR ()-[r:May_Cause_Side_Effect]-() ON (r.confidence)")
                 session.run("CREATE INDEX relationship_evidence_index IF NOT EXISTS FOR ()-[r:May_Cause_Side_Effect]-() ON (r.evidence_level)")
                 
-                logger.info("✅ Enhanced Neo4j schema setup complete")
+                logger.info("SUCCESS: Enhanced Neo4j schema setup complete")
                 return True
                 
         except Exception as e:
@@ -206,7 +206,7 @@ class ExactPaperReplication:
     
     def index_format_a(self) -> bool:
         """Index Data Format A as per paper: aggregated side effects per drug"""
-        logger.info("📊 Indexing Data Format A (aggregated side effects per drug)")
+        logger.info("INFO: Indexing Data Format A (aggregated side effects per drug)")
         
         if not self.pinecone_index or not self.openai_client:
             logger.error("Required clients not available")
@@ -253,7 +253,7 @@ class ExactPaperReplication:
             if vectors:
                 self.pinecone_index.upsert(vectors, namespace=self.namespace_format_a)
             
-            logger.info("✅ Format A indexing complete")
+            logger.info("SUCCESS: Format A indexing complete")
             return True
             
         except Exception as e:
@@ -265,7 +265,7 @@ class ExactPaperReplication:
         
         By default, indexes the complete dataset. Provide sample_size parameter
         to index only a subset for testing purposes."""
-        logger.info("📊 Indexing Data Format B (individual drug-side effect pairs)")
+        logger.info("INFO: Indexing Data Format B (individual drug-side effect pairs)")
         
         if not self.pinecone_index or not self.openai_client:
             logger.error("Required clients not available")
@@ -419,7 +419,7 @@ class ExactPaperReplication:
             
             # Clear progress data on successful completion
             self.clear_progress()
-            logger.info("✅ Format B indexing complete")
+            logger.info("SUCCESS: Format B indexing complete")
             return True
             
         except Exception as e:
@@ -428,7 +428,7 @@ class ExactPaperReplication:
     
     def index_graph_data(self) -> bool:
         """Index graph data as per paper: Drug→SideEffect relationships"""
-        logger.info("📊 Indexing graph data (Drug→SideEffect relationships)")
+        logger.info("INFO: Indexing graph data (Drug→SideEffect relationships)")
         
         if not self.neo4j_driver:
             logger.error("Neo4j driver not available")
@@ -487,7 +487,7 @@ class ExactPaperReplication:
                     logger.info(f"    Created relationships {i+1} to {min(i+1000, len(relationships))}")
                     session.run("CALL db.awaitIndexes()")  # Wait for indexes
             
-            logger.info("✅ Graph indexing complete")
+            logger.info("SUCCESS: Graph indexing complete")
             return True
             
         except Exception as e:
@@ -502,7 +502,7 @@ class ExactPaperReplication:
         if self.pinecone_index:
             try:
                 stats = self.pinecone_index.describe_index_stats()
-                logger.info("📊 Pinecone Statistics:")
+                logger.info("INFO: Pinecone Statistics:")
                 logger.info(f"  - Total vectors: {stats.get('total_vector_count', 0)}")
                 
                 # Check namespaces
@@ -641,7 +641,7 @@ class ExactPaperReplication:
                     rel_result = session.run("MATCH ()-[r:May_Cause_Side_Effect]->() RETURN count(r) AS count").single()
                     rel_count = rel_result["count"] if rel_result else 0
                     
-                    logger.info("📊 Neo4j Statistics:")
+                    logger.info("INFO: Neo4j Statistics:")
                     logger.info(f"  - Drug nodes: {drug_count}")
                     logger.info(f"  - SideEffect nodes: {se_count}")
                     logger.info(f"  - May_Cause_Side_Effect relationships: {rel_count}")
@@ -659,7 +659,7 @@ class ExactPaperReplication:
             except Exception as e:
                 logger.error(f"Neo4j verification failed: {e}")
         
-        logger.info("✅ Setup verification complete")
+        logger.info("SUCCESS: Setup verification complete")
     
     def save_progress(self, data: dict):
         """Save progress data to file"""
@@ -697,7 +697,7 @@ class ExactPaperReplication:
 
 def main():
     """Main setup function for exact paper replication with organized namespace structure"""
-    logger.info("🚀 EXACT PAPER REPLICATION SETUP WITH ORGANIZED NAMESPACE STRUCTURE")
+    logger.info("PROCESSING: EXACT PAPER REPLICATION SETUP WITH ORGANIZED NAMESPACE STRUCTURE")
     logger.info("RAG-based Architectures for Drug Side Effect Retrieval in LLMs")
     logger.info("="*70)
     
@@ -715,7 +715,7 @@ def main():
     
     if replicator.pinecone_client and replicator.openai_client:
         if replicator.create_pinecone_index():
-            logger.info("✅ Pinecone setup successful")
+            logger.info("SUCCESS: Pinecone setup successful")
             
             # Index Format A
             logger.info("\n📚 Indexing Data Format A...")
@@ -726,9 +726,9 @@ def main():
             replicator.index_format_b()  # Complete dataset
             
         else:
-            logger.error("❌ Pinecone setup failed")
+            logger.error("ERROR: Pinecone setup failed")
     else:
-        logger.warning("⚠️ Skipping Pinecone setup (API keys not configured)")
+        logger.warning("WARNING: Skipping Pinecone setup (API keys not configured)")
     
     # Step 2: Setup Neo4j with exact schema
     logger.info("\n🔗 STEP 2: NEO4J GRAPH DATABASE SETUP")
@@ -737,16 +737,16 @@ def main():
     
     if replicator.neo4j_driver:
         if replicator.setup_neo4j_schema():
-            logger.info("✅ Neo4j schema setup successful")
+            logger.info("SUCCESS: Neo4j schema setup successful")
             
             # Index graph data
             logger.info("\n🔗 Indexing graph relationships...")
             replicator.index_graph_data()
             
         else:
-            logger.error("❌ Neo4j setup failed")
+            logger.error("ERROR: Neo4j setup failed")
     else:
-        logger.warning("⚠️ Skipping Neo4j setup (credentials not configured)")
+        logger.warning("WARNING: Skipping Neo4j setup (credentials not configured)")
     
     # Step 3: Verify setup
     logger.info("\n🔍 STEP 3: VERIFICATION")
@@ -756,18 +756,18 @@ def main():
     logger.info("\n" + "🎉" + "="*68 + "🎉")
     logger.info("EXACT PAPER REPLICATION SETUP COMPLETED!")
     logger.info("="*70)
-    logger.info("✅ Vector Database: Pinecone (1536-dim, cosine)")
-    logger.info("✅ Graph Database: Neo4j (Drug→SideEffect)")
-    logger.info("✅ Embeddings: OpenAI text-embedding-ada-002")
-    logger.info("✅ LLM: OpenAI GPT (replacing AWS Bedrock)")
-    logger.info("✅ Data: Format A + Format B")
-    logger.info("✅ Namespace Structure: Organized for enhanced features")
+    logger.info("SUCCESS: Vector Database: Pinecone (1536-dim, cosine)")
+    logger.info("SUCCESS: Graph Database: Neo4j (Drug→SideEffect)")
+    logger.info("SUCCESS: Embeddings: OpenAI text-embedding-ada-002")
+    logger.info("SUCCESS: LLM: OpenAI GPT (replacing AWS Bedrock)")
+    logger.info("SUCCESS: Data: Format A + Format B")
+    logger.info("SUCCESS: Namespace Structure: Organized for enhanced features")
     logger.info("")
     logger.info("🔬 Ready for experiments:")
     logger.info("   uv run python3 drug_side_effect_rag.py --test-mode")
     logger.info("   uv run python3 drug_side_effect_rag.py --full-evaluation")
     logger.info("")
-    logger.info("🔧 To enhance with rich metadata:")
+    logger.info("CONFIG: To enhance with rich metadata:")
     logger.info("   uv run python3 enhanced_rag_schema_updater.py")
 
 

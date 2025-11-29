@@ -14,8 +14,16 @@ Usage:
 import json
 import time
 import random
-from pathlib import Path
+import json
+import logging
+import time
+import argparse
+import os
 from datetime import datetime
+import sys
+# Add project root to sys.path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from typing import Dict, List, Any
 import logging
 
@@ -27,8 +35,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def load_ground_truth(ground_truth_path: str = '../data/processed/neo4j_ground_truth.json') -> Dict:
-    """Load ground truth mappings"""
+def load_ground_truth() -> Dict:
+    """Load ground truth data from JSON"""
+    # Fix path to be relative to project root or script location
+    ground_truth_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'processed', 'neo4j_ground_truth.json')
     logger.info(f"Loading ground truth from {ground_truth_path}")
     with open(ground_truth_path, 'r') as f:
         ground_truth = json.load(f)
@@ -36,20 +46,30 @@ def load_ground_truth(ground_truth_path: str = '../data/processed/neo4j_ground_t
     return ground_truth
 
 
-def create_stratified_sample(
-    dataset_path: str = '../data/processed/comprehensive_reverse_queries_20251102_225909_case_corrected.json',
-    sample_sizes: Dict[str, int] = None
-) -> List[Dict]:
+def create_stratified_sample(dataset_path: str = None, sample_sizes: Dict[str, int] = None) -> List[Dict]:
     """
-    Create stratified sample from comprehensive dataset
+    Creates a stratified sample of queries from the dataset based on 'tier'.
 
-    Default sampling:
-    - large: All 31 (100% of available)
-    - medium: 40 (14% of 288)
-    - small: 40 (13% of 300)
+    Args:
+        dataset_path (str): Path to the JSON dataset containing 'yes_examples'.
+                            Defaults to a specific processed file.
+        sample_sizes (Dict[str, int]): A dictionary specifying the number of queries
+                                        to sample from each tier (e.g., {'large': 31, 'medium': 40}).
+                                        If None, uses default sizes.
+
+    Returns:
+        List[Dict]: A list of sampled query dictionaries.
+
+    Example default sampling strategy:
+    - large: 31 (all available)
+    - medium: 40 (out of ~200)
+    - small: 40 (out of ~200)
     - rare: 10 (20% of 50)
     Total: ~121 queries
     """
+
+    if dataset_path is None:
+        dataset_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'processed', 'comprehensive_reverse_queries_20251102_225909_case_corrected.json')
 
     if sample_sizes is None:
         sample_sizes = {
@@ -214,17 +234,17 @@ def main():
     ground_truth = load_ground_truth()
 
     # Create stratified sample
-    print("\n📊 Creating stratified sample...")
+    print("\nCreating stratified sample...")
     sampled_queries = create_stratified_sample()
 
     # Save sample for reproducibility
-    sample_file = f"../data/processed/benchmark_sample_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    sample_file = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'processed', f"benchmark_sample_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
     with open(sample_file, 'w') as f:
         json.dump(sampled_queries, f, indent=2)
     logger.info(f"Sample saved to: {sample_file}")
 
     # Initialize architectures
-    print("\n🔧 Initializing architectures...")
+    print("\nInitializing architectures...")
 
     from src.architectures.rag_format_b import FormatBRAG
     from src.architectures.rag_format_a import FormatARAG
@@ -259,8 +279,8 @@ def main():
     with open(output_file, 'w') as f:
         json.dump(all_results, f, indent=2)
 
-    print(f"\n✅ Benchmark complete! Results saved to: {output_file}")
-    print("\n📊 SUMMARY COMPARISON:")
+    print(f"\nBenchmark complete! Results saved to: {output_file}")
+    print("\nSUMMARY COMPARISON:")
     print("-" * 80)
     print(f"{'Architecture':<25} {'Recall':<10} {'Precision':<10} {'F1':<10} {'Latency':<10}")
     print("-" * 80)

@@ -199,7 +199,7 @@ def validate_metrics_against_manuscript() -> None:
     # Accuracy = (1+2)/(1+2+0+1) = 3/4 = 0.75
     assert abs(metrics_str['accuracy'] - 0.75) < 1e-6
 
-    print("✅ All validation tests passed!")
+    print("SUCCESS: All validation tests passed!")
 
 
 if __name__ == "__main__":

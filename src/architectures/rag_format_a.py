@@ -67,7 +67,7 @@ class FormatARAG:
         # Initialize token manager for context truncation
         self.token_manager = create_token_manager(model_type=model)
 
-        logger.info(f"✅ Format A RAG initialized with {model} via vLLM and token management")
+        logger.info(f"SUCCESS: Format A RAG initialized with {model} via vLLM and token management")
 
     def get_embedding(self, text: str) -> List[float]:
         """Generate embedding using robust client that handles 400 errors"""
@@ -250,7 +250,7 @@ Is {side_effect} an adverse effect of {drug}?
         if not queries:
             return []
 
-        logger.info(f"🚀 FORMAT A BATCH PROCESSING: {len(queries)} queries with optimized embeddings + retrieval + vLLM")
+        logger.info(f"PROCESSING: FORMAT A BATCH PROCESSING: {len(queries)} queries with optimized embeddings + retrieval + vLLM")
 
         # Step 1: Batch embedding generation (MAJOR SPEEDUP)
         # Embed full queries (notebook-aligned)
@@ -359,7 +359,7 @@ Is {query['side_effect']} an adverse effect of {query['drug']}?
             prompts.append(prompt)
 
         # Step 4: Batch vLLM inference (OPTIMIZED)
-        logger.info(f"⚡ Running batch vLLM inference...")
+        logger.info(f"RUNNING: Running batch vLLM inference...")
         try:
             # Use temperature=0.1 for RAG deterministic outputs
             responses = self.llm.generate_batch(prompts, max_tokens=100, temperature=0.1)
@@ -387,7 +387,7 @@ Is {query['side_effect']} an adverse effect of {query['drug']}?
             })
 
         success_rate = sum(1 for r in results if r['answer'] != 'UNKNOWN') / len(results) * 100
-        logger.info(f"✅ FORMAT A BATCH COMPLETE: {success_rate:.1f}% successful, {len(results)} total results")
+        logger.info(f"SUCCESS: FORMAT A BATCH COMPLETE: {success_rate:.1f}% successful, {len(results)} total results")
 
         return results
 

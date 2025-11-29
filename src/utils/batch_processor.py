@@ -32,7 +32,7 @@ class GPUBatchProcessor:
         self.optimal_batch_size = optimal_batch_size
         self.max_workers = num_gpus * 2  # 2 threads per GPU for optimal utilization
 
-        logger.info(f"✅ GPU Batch Processor initialized:")
+        logger.info(f"SUCCESS: GPU Batch Processor initialized:")
         logger.info(f"   • GPUs: {num_gpus}")
         logger.info(f"   • Optimal batch size: {optimal_batch_size}")
         logger.info(f"   • Max parallel workers: {self.max_workers}")
@@ -60,7 +60,7 @@ class GPUBatchProcessor:
         batch_size = batch_size or self.optimal_batch_size
         num_batches = (len(items) + batch_size - 1) // batch_size
 
-        logger.info(f"📊 Processing {len(items)} items in {num_batches} batches")
+        logger.info(f"INFO: Processing {len(items)} items in {num_batches} batches")
 
         results = [None] * len(items)
         batch_futures = []
@@ -158,7 +158,7 @@ class ComplexQueryBatchProcessor:
         self.supports_batch = hasattr(architecture, 'query_batch') or \
                             hasattr(architecture, 'generate_batch')
 
-        logger.info(f"✅ Complex Query Batch Processor initialized")
+        logger.info(f"SUCCESS: Complex Query Batch Processor initialized")
         logger.info(f"   • Architecture: {architecture.__class__.__name__}")
         logger.info(f"   • Native batch support: {self.supports_batch}")
 
@@ -377,7 +377,7 @@ def benchmark_batch_processing(architecture, queries: List[Dict], num_gpus: int 
         'efficiency': speedup / num_gpus  # Parallel efficiency
     }
 
-    logger.info(f"\n📊 BENCHMARK RESULTS:")
+    logger.info(f"\nINFO: BENCHMARK RESULTS:")
     logger.info(f"  Sequential (estimated): {sequential_time:.1f}s")
     logger.info(f"  Batch processing: {batch_time:.1f}s")
     logger.info(f"  Speedup: {speedup:.2f}x")

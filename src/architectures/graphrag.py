@@ -57,11 +57,11 @@ class GraphRAG:
                 # Test connection
                 with self.driver.session() as session:
                     session.run("RETURN 1").single()
-                logger.info(f"✅ Neo4j connection established (direct bolt) on attempt {attempt + 1}")
+                logger.info(f"Neo4j connection established (direct bolt) on attempt {attempt + 1}")
                 break
             except Exception as e:
                 if attempt < max_retries - 1:
-                    logger.warning(f"⚠️  Neo4j connection attempt {attempt + 1} failed: {e}")
+                    logger.warning(f"Neo4j connection attempt {attempt + 1} failed: {e}")
                     logger.info(f"   Retrying in {retry_delay}s...")
                     import time
                     time.sleep(retry_delay)
@@ -81,7 +81,7 @@ class GraphRAG:
         else:
             raise ValueError(f"Unknown model: {model}. Use 'qwen' or 'llama3'")
 
-        logger.info(f"✅ GraphRAG initialized with {model} via vLLM")
+        logger.info(f"GraphRAG initialized with {model} via vLLM")
 
     def escape_special_characters(self, input_string: str) -> str:
         """Escape special characters for Neo4j Cypher queries"""
@@ -438,10 +438,10 @@ FINAL ANSWER: [YES or NO]"""
         if not self.driver:
             return [{'answer': 'ERROR', 'confidence': 0.0, 'error': 'No Neo4j connection'} for _ in queries]
 
-        logger.info(f"🚀 GRAPHRAG BATCH PROCESSING: {len(queries)} queries with parallel Neo4j + batch vLLM")
+        logger.info(f"GraphRAG BATCH PROCESSING: {len(queries)} queries with parallel Neo4j + batch vLLM")
 
         # Step 1: Concurrent Neo4j queries
-        logger.info(f"🔍 Running {len(queries)} Neo4j Cypher queries in parallel...")
+        logger.info(f"Running {len(queries)} Neo4j Cypher queries in parallel...")
 
         def process_single_neo4j_query(idx_query):
             """Process a single Neo4j query"""
@@ -501,7 +501,7 @@ FINAL ANSWER: [YES or NO]"""
                 future_to_idx[future] = i
 
             # Collect Neo4j results with progress bar
-            with tqdm(total=len(queries), desc="🔍 Neo4j", unit="query", ncols=100) as pbar:
+            with tqdm(total=len(queries), desc="Neo4j", unit="query", ncols=100) as pbar:
                 for future in as_completed(future_to_idx):
                     try:
                         idx, result = future.result(timeout=30)
@@ -520,7 +520,7 @@ FINAL ANSWER: [YES or NO]"""
                         pbar.update(1)
 
         # Step 2: Prepare prompts for batch vLLM processing
-        logger.info(f"🧠 Preparing {len(queries)} prompts for batch vLLM inference...")
+        logger.info(f"Preparing {len(queries)} prompts for batch vLLM inference...")
         prompts = []
 
         for neo4j_result in neo4j_results:
@@ -538,7 +538,7 @@ FINAL ANSWER: [YES or NO]"""
             prompts.append(prompt)
 
         # Step 3: Batch vLLM inference
-        logger.info(f"⚡ Running batch vLLM inference...")
+        logger.info(f"Running batch vLLM inference...")
         try:
             # Use temperature=0.1 for RAG deterministic outputs
             responses = self.llm.generate_batch(prompts, max_tokens=150, temperature=0.1)
@@ -576,7 +576,7 @@ FINAL ANSWER: [YES or NO]"""
             })
 
         success_rate = sum(1 for r in results if r['answer'] not in ['ERROR', 'UNKNOWN']) / len(results) * 100
-        logger.info(f"✅ GRAPHRAG BATCH COMPLETE: {success_rate:.1f}% successful, {len(results)} total results")
+        logger.info(f"GRAPHRAG BATCH COMPLETE: {success_rate:.1f}% successful, {len(results)} total results")
 
         return results
 

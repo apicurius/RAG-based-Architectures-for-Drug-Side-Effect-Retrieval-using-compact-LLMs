@@ -29,7 +29,6 @@ from src.utils.embedding_client import create_embedding_client
 from src.architectures.rag_format_a import FormatARAG
 from src.architectures.rag_format_b import FormatBRAG
 from src.architectures.graphrag import GraphRAG
-from src.architectures.enhanced_rag_format_b import EnhancedRAGFormatB
 from pinecone import Pinecone
 import openai
 
@@ -119,7 +118,7 @@ class VLLMFormatARAG:
         # Initialize vLLM for reasoning - ULTRA FAST
         self.llm = VLLMModel(config_path)
 
-        logger.info(f"✅ Format A RAG initialized with vLLM (4 GPU tensor parallelism)")
+        logger.info(f"Format A RAG initialized with vLLM (4 GPU tensor parallelism)")
 
     def get_embedding(self, text: str) -> List[float]:
         """Generate embedding using robust client that handles 400 errors"""
@@ -198,11 +197,11 @@ FINAL ANSWER: [YES or NO]"""
             return []
 
         retrieval_logger = logging.getLogger('retrieval')
-        retrieval_logger.info(f"🚀 BATCH RAG PROCESSING: {len(queries)} queries with batch embeddings + retrieval")
+        retrieval_logger.info(f"BATCH RAG PROCESSING: {len(queries)} queries with batch embeddings + retrieval")
 
         # Step 1: Batch embedding generation (MAJOR SPEEDUP)
         query_texts = [f"{q['drug']} {q['side_effect']}" for q in queries]
-        retrieval_logger.info(f"📝 Generating {len(query_texts)} embeddings in batch...")
+        retrieval_logger.info(f"Generating {len(query_texts)} embeddings in batch...")
 
         # Use batch embedding processing instead of individual calls
         embeddings = self.embedding_client.get_embeddings_batch(
@@ -211,7 +210,7 @@ FINAL ANSWER: [YES or NO]"""
         )
 
         # Step 2: Batch Pinecone retrieval
-        retrieval_logger.info(f"🔍 Performing {len(embeddings)} Pinecone queries...")
+        retrieval_logger.info(f"Performing {len(embeddings)} Pinecone queries...")
         contexts = []
 
         for i, (query, embedding) in enumerate(zip(queries, embeddings)):
@@ -245,7 +244,7 @@ FINAL ANSWER: [YES or NO]"""
                 contexts.append(f"No specific data for {query['drug']}")
 
         # Step 3: Prepare prompts for batch vLLM processing
-        retrieval_logger.info(f"🧠 Preparing {len(queries)} prompts for batch vLLM inference...")
+        retrieval_logger.info(f"Preparing {len(queries)} prompts for batch vLLM inference...")
         prompts = []
 
         for query, context in zip(queries, contexts):
@@ -260,7 +259,7 @@ FINAL ANSWER:"""
             prompts.append(prompt)
 
         # Step 4: Batch vLLM inference (OPTIMIZED)
-        retrieval_logger.info(f"⚡ Running batch vLLM inference...")
+        retrieval_logger.info(f"Running batch vLLM inference...")
         try:
             responses = self.llm.generate_batch(prompts, max_tokens=50)
         except Exception as e:
@@ -308,7 +307,7 @@ FINAL ANSWER:"""
             })
 
         success_rate = sum(1 for r in results if r['answer'] != 'UNKNOWN') / len(results) * 100
-        retrieval_logger.info(f"✅ BATCH RAG COMPLETE: {success_rate:.1f}% successful, {len(results)} total results")
+        retrieval_logger.info(f"BATCH RAG COMPLETE: {success_rate:.1f}% successful, {len(results)} total results")
 
         return results
 
@@ -336,7 +335,7 @@ class UltraFastEvaluator:
             balanced_df = pd.concat([positive_samples, negative_samples])
             balanced_df = balanced_df.sample(frac=1, random_state=42).reset_index(drop=True)
 
-            logger.info(f"✅ Balanced dataset: {len(positive_samples)} TRUE + {len(negative_samples)} FALSE")
+            logger.info(f"Balanced dataset: {len(positive_samples)} TRUE + {len(negative_samples)} FALSE")
             return balanced_df
         else:
             return df.sample(n=min(test_size, len(df)), random_state=42)
@@ -375,10 +374,6 @@ class UltraFastEvaluator:
             arch = GraphRAG(self.config_path, model="qwen")
         elif architecture == 'graphrag_llama3':
             arch = GraphRAG(self.config_path, model="llama3")
-        elif architecture == 'enhanced_format_b_qwen':
-            arch = EnhancedRAGFormatB(self.config_path, model="qwen")
-        elif architecture == 'enhanced_format_b_llama3':
-            arch = EnhancedRAGFormatB(self.config_path, model="llama3")
         elif architecture == 'pure_llm_qwen':
             arch = VLLMQwenModel(self.config_path)
         elif architecture == 'pure_llm_llama3':
@@ -399,21 +394,21 @@ class UltraFastEvaluator:
                 'label': row.get('label', None)
             })
 
-        logger.info(f"\n🚀 Processing {len(queries)} queries with OPTIMIZED BATCH PROCESSING...")
+        logger.info(f"\nProcessing {len(queries)} queries with OPTIMIZED BATCH PROCESSING...")
 
         # Always use batch processing for maximum speed
         if hasattr(arch, 'query_batch'):
             # Optimized batch processing with embeddings + vLLM batching
-            logger.info("   ✅ Using optimized batch processing (embeddings + vLLM)")
+            logger.info("   Using optimized batch processing (embeddings + vLLM)")
             batch_start = time.time()
             results = arch.query_batch(queries)
             batch_time = time.time() - batch_start
-            logger.info(f"   ⚡ Batch processing completed in {batch_time:.2f}s ({len(queries)/batch_time:.1f} queries/sec)")
+            logger.info(f"   Batch processing completed in {batch_time:.2f}s ({len(queries)/batch_time:.1f} queries/sec)")
         else:
             # Fallback to individual processing (should not happen with optimized architectures)
-            logger.warning("   ⚠️  Architecture doesn't support batch processing, using individual queries")
+            logger.warning("   Architecture doesn't support batch processing, using individual queries")
             results = []
-            for q in tqdm(queries, desc="🔍 Processing queries individually", unit="query"):
+            for q in tqdm(queries, desc="Processing queries individually", unit="query"):
                 result = arch.query(q['drug'], q['side_effect'])
                 results.append(result)
 
@@ -529,7 +524,7 @@ class UltraFastEvaluator:
         logger.info(f"Time: {elapsed_time:.2f} seconds")
         logger.info(f"Throughput: {len(queries)/elapsed_time:.2f} queries/second")
         logger.info(f"")
-        logger.info(f"🚀 SPEEDUP vs single GPU Qwen: ~{(len(queries)/elapsed_time)/0.5:.1f}x")
+        logger.info(f"SPEEDUP vs single GPU Qwen: ~{(len(queries)/elapsed_time)/0.5:.1f}x")
         logger.info(f"   (Baseline single GPU Qwen: ~0.5 queries/second)")
 
         # Save results
@@ -573,8 +568,8 @@ class UltraFastEvaluator:
                 'detailed_results': output_results
             }, f, indent=2)
 
-        logger.info(f"\n✅ Results saved to {results_file}")
-        logger.info(f"📋 Detailed prompt-answer pairs saved in:")
+        logger.info(f"\nResults saved to {results_file}")
+        logger.info(f"Detailed prompt-answer pairs saved in:")
         logger.info(f"   - CSV: {detailed_csv_path}")
         logger.info(f"   - JSON: {results_file}")
         logger.info(f"   Each entry includes: prompt, full_response, confidence, labels")
@@ -600,17 +595,16 @@ def main():
                            'format_a_qwen', 'format_a_llama3',
                            'format_b_qwen', 'format_b_llama3',
                            'graphrag_qwen', 'graphrag_llama3',
-                           'enhanced_format_b_qwen', 'enhanced_format_b_llama3',
                            'pure_llm_qwen', 'pure_llm_llama3'
                        ],
                        help='Architecture to test')
 
     args = parser.parse_args()
 
-    logger.info("\n" + "🚀"*40)
+    logger.info("\n" + "="*40)
     logger.info("STARTING VLLM ULTRA-FAST EVALUATION")
     logger.info("Make sure vLLM server is running: ./start_vllm_server.sh")
-    logger.info("🚀"*40 + "\n")
+    logger.info("="*40 + "\n")
 
     evaluator = UltraFastEvaluator()
     evaluator.run_batch_evaluation(

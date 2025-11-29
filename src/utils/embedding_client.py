@@ -54,7 +54,7 @@ class RobustEmbeddingClient:
         except Exception:
             self.encoding = tiktoken.get_encoding("cl100k_base")  # Fallback
 
-        logger.info(f"✅ Robust embedding client initialized with model: {model}")
+        logger.info(f"SUCCESS: Robust embedding client initialized with model: {model}")
 
     def sanitize_text(self, text: str) -> str:
         """
@@ -277,7 +277,7 @@ class RobustEmbeddingClient:
         else:
             delay_between_batches = 0.2  # Reduced from 0.5s to 0.2s
 
-        logger.info(f"🚀 BATCH EMBEDDING: {len(texts)} embeddings in batches of {batch_size} (delay: {delay_between_batches}s)")
+        logger.info(f"PROCESSING: BATCH EMBEDDING: {len(texts)} embeddings in batches of {batch_size} (delay: {delay_between_batches}s)")
 
         all_embeddings = []
         total_batches = (len(texts) + batch_size - 1) // batch_size
@@ -354,7 +354,7 @@ class RobustEmbeddingClient:
                     time.sleep(delay_between_batches)
 
         success_count = sum(1 for e in all_embeddings if e is not None)
-        logger.info(f"✅ Batch embedding complete: {success_count}/{len(all_embeddings)} successful ({success_count/len(all_embeddings)*100:.1f}%)")
+        logger.info(f"SUCCESS: Batch embedding complete: {success_count}/{len(all_embeddings)} successful ({success_count/len(all_embeddings)*100:.1f}%)")
         return all_embeddings
 
     @retry(
@@ -435,7 +435,7 @@ if __name__ == "__main__":
 
     # Test normal case
     embedding = client.get_embedding("This is a test drug side effect query")
-    print(f"Normal case: {'✅ Success' if embedding else '❌ Failed'}")
+    print(f"Normal case: {'SUCCESS: Success' if embedding else 'ERROR: Failed'}")
 
     # Test edge cases
     test_cases = [
@@ -443,11 +443,11 @@ if __name__ == "__main__":
         None,  # None input
         "   ",  # Whitespace only
         "A" * 10000,  # Very long string
-        "Special chars: 🔬💊⚠️",  # Unicode characters
+        "Special chars: 🔬💊WARNING:",  # Unicode characters
         "Control chars: \x00\x01\x02",  # Control characters
     ]
 
     for i, test_text in enumerate(test_cases):
         embedding = client.get_embedding(str(test_text) if test_text is not None else None)
-        result = "✅ Handled" if embedding is not None else "⚠️ Handled gracefully"
+        result = "SUCCESS: Handled" if embedding is not None else "WARNING: Handled gracefully"
         print(f"Edge case {i+1}: {result}")
