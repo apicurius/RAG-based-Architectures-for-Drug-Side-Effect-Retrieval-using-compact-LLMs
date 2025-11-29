@@ -20,8 +20,8 @@ data/interim/
 *.pkl
 *.pickle
 
-# Model files
-models/
+# Model files (top-level only, not src/models)
+/models/
 *.pth
 *.pt
 *.h5
